@@ -1,0 +1,178 @@
+{
+  "version": "2025-01-01",
+  "pageId": "personalInfo1",
+  "description": "DS-160个人信息页面翻译数据",
+  "fields": [
+    {
+      "key": "surname_passport",
+      "selectors": [
+        "label[for*='Surname']",
+        "label[for*='SURNAME']",
+        "*[id*='Surname'] + label",
+        "text:Surnames"
+      ],
+      "en": "Surnames (as in passport)",
+      "zh": "姓氏（与护照一致）",
+      "note": "必须与护照拼写完全一致，不含标点或空格",
+      "level": "brief"
+    },
+    {
+      "key": "given_names",
+      "selectors": [
+        "label[for*='GivenName']",
+        "label[for*='GIVENNAME']",
+        "*[id*='GivenName'] + label",
+        "text:Given Names"
+      ],
+      "en": "Given Names (as in passport)",
+      "zh": "名字（与护照一致）",
+      "note": "包含所有名字，按护照顺序排列",
+      "level": "brief"
+    },
+    {
+      "key": "telecode_surname",
+      "selectors": [
+        "label[for*='TelecodeSurname']",
+        "*[id*='TelecodeSurname'] + label",
+        "text:Telecode"
+      ],
+      "en": "Telecode for Surname",
+      "zh": "姓氏电码",
+      "note": "每个汉字对应4位数字电码，用空格分隔",
+      "level": "detailed"
+    },
+    {
+      "key": "telecode_given",
+      "selectors": [
+        "label[for*='TelecodeGiven']",
+        "*[id*='TelecodeGiven'] + label"
+      ],
+      "en": "Telecode for Given Names",
+      "zh": "名字电码",
+      "note": "每个汉字对应4位数字电码，用空格分隔",
+      "level": "detailed"
+    },
+    {
+      "key": "other_names",
+      "selectors": [
+        "label[for*='OtherName']",
+        "text:other names"
+      ],
+      "en": "Have you ever used other names?",
+      "zh": "是否曾用过其他姓名？",
+      "note": "包括曾用名、笔名、宗教名等",
+      "level": "brief"
+    },
+    {
+      "key": "gender",
+      "selectors": [
+        "label[for*='Gender']",
+        "text:Gender"
+      ],
+      "en": "Gender",
+      "zh": "性别",
+      "note": "选择与护照一致的性别",
+      "level": "brief"
+    },
+    {
+      "key": "marital_status",
+      "selectors": [
+        "label[for*='Marital']",
+        "text:Marital Status"
+      ],
+      "en": "Marital Status",
+      "zh": "婚姻状况",
+      "note": "选择当前实际婚姻状况",
+      "level": "brief"
+    },
+    {
+      "key": "birth_date",
+      "selectors": [
+        "label[for*='Birth']",
+        "label[for*='DOB']",
+        "text:Date of Birth"
+      ],
+      "en": "Date of Birth",
+      "zh": "出生日期",
+      "note": "格式：DD/MM/YYYY，必须与护照一致",
+      "level": "brief"
+    },
+    {
+      "key": "birth_city",
+      "selectors": [
+        "label[for*='BirthCity']",
+        "text:City of Birth"
+      ],
+      "en": "City of Birth",
+      "zh": "出生城市",
+      "note": "填写出生时的城市名称",
+      "level": "brief"
+    },
+    {
+      "key": "birth_country",
+      "selectors": [
+        "label[for*='BirthCountry']",
+        "text:Country of Birth"
+      ],
+      "en": "Country of Birth",
+      "zh": "出生国家",
+      "note": "选择出生时的国家",
+      "level": "brief"
+    },
+    {
+      "key": "nationality",
+      "selectors": [
+        "label[for*='Nationality']",
+        "text:Country of Nationality"
+      ],
+      "en": "Country of Nationality",
+      "zh": "国籍",
+      "note": "选择护照签发国家",
+      "level": "brief"
+    },
+    {
+      "key": "dual_nationality",
+      "selectors": [
+        "text:dual national",
+        "text:other nationality"
+      ],
+      "en": "Do you hold or have you held any nationality other than the one indicated above?",
+      "zh": "是否持有或曾持有其他国籍？",
+      "note": "如有双重国籍需如实申报",
+      "level": "detailed"
+    },
+    {
+      "key": "national_id",
+      "selectors": [
+        "label[for*='NationalId']",
+        "text:National Identification Number"
+      ],
+      "en": "National Identification Number",
+      "zh": "身份证号码",
+      "note": "填写身份证上的18位号码",
+      "level": "brief"
+    },
+    {
+      "key": "us_social_security",
+      "selectors": [
+        "text:U.S. Social Security Number",
+        "text:SSN"
+      ],
+      "en": "U.S. Social Security Number",
+      "zh": "美国社会保障号",
+      "note": "如无美国SSN选择"Does Not Apply"",
+      "level": "brief"
+    },
+    {
+      "key": "us_taxpayer_id",
+      "selectors": [
+        "text:U.S. Taxpayer ID Number",
+        "text:TIN"
+      ],
+      "en": "U.S. Taxpayer ID Number",
+      "zh": "美国纳税人识别号",
+      "note": "如无美国TIN选择"Does Not Apply"",
+      "level": "brief"
+    }
+  ]
+}

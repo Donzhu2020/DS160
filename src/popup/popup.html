@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DS-160 中文助手</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <div class="popup-header">
+            <h1>DS-160 中文助手</h1>
+            <div class="version">v1.0.0</div>
+        </div>
+        
+        <div class="popup-content">
+            <div class="status-section">
+                <div class="status-indicator" id="status-indicator">
+                    <div class="status-dot"></div>
+                    <span id="status-text">检测中...</span>
+                </div>
+            </div>
+            
+            <div class="controls-section">
+                <div class="control-group">
+                    <label class="control-label">
+                        <span>启用翻译</span>
+                        <div class="toggle-switch" id="toggle-enabled">
+                            <input type="checkbox" id="enabled-checkbox">
+                            <span class="slider"></span>
+                        </div>
+                    </label>
+                </div>
+                
+                <div class="control-group">
+                    <label class="control-label">
+                        <span>显示模式</span>
+                        <select id="mode-select" class="select-input">
+                            <option value="brief">简洁模式</option>
+                            <option value="detailed">详细模式</option>
+                        </select>
+                    </label>
+                </div>
+                
+                <div class="control-group">
+                    <label class="control-label">
+                        <span>显示注释</span>
+                        <div class="toggle-switch" id="toggle-notes">
+                            <input type="checkbox" id="notes-checkbox">
+                            <span class="slider"></span>
+                        </div>
+                    </label>
+                </div>
+                
+                <div class="control-group">
+                    <label class="control-label">
+                        <span>翻译位置</span>
+                        <select id="position-select" class="select-input">
+                            <option value="right">右侧显示</option>
+                            <option value="below">下方显示</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="stats-section">
+                <div class="stats-item">
+                    <span class="stats-label">已翻译字段</span>
+                    <span class="stats-value" id="translated-count">-</span>
+                </div>
+                <div class="stats-item">
+                    <span class="stats-label">页面类型</span>
+                    <span class="stats-value" id="page-type">-</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="popup-footer">
+            <button class="btn btn-secondary" id="refresh-btn">刷新翻译</button>
+            <button class="btn btn-primary" id="settings-btn">设置</button>
+        </div>
+    </div>
+    
+    <script type="module" src="popup.js"></script>
+</body>
+</html>

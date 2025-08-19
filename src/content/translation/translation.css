@@ -1,0 +1,170 @@
+/* DS-160 中文助手 - 翻译样式 */
+
+/* 防止与DS-160原有样式冲突的命名空间 */
+.ds160-translation-container {
+  /* 确保不影响原有布局 */
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  
+  /* 重置可能的继承样式 */
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  
+  /* 确保在合适的层级显示 */
+  z-index: 1000;
+}
+
+/* 全局翻译控制器样式 */
+.ds160-translation-controller {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  min-width: 200px;
+}
+
+.ds160-translation-controller.collapsed {
+  width: auto;
+  min-width: auto;
+  padding: 8px;
+}
+
+.ds160-translation-controller-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.ds160-translation-controller-toggle {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.ds160-translation-controller-toggle:hover {
+  background: #f3f4f6;
+}
+
+.ds160-translation-controller-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ds160-translation-controller.collapsed .ds160-translation-controller-content {
+  display: none;
+}
+
+.ds160-translation-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ds160-translation-option label {
+  color: #6b7280;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.ds160-translation-switch {
+  width: 40px;
+  height: 20px;
+  background: #d1d5db;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ds160-translation-switch.active {
+  background: #3b82f6;
+}
+
+.ds160-translation-switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.ds160-translation-switch.active::after {
+  transform: translateX(20px);
+}
+
+.ds160-translation-select {
+  padding: 4px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 12px;
+  background: white;
+  cursor: pointer;
+}
+
+.ds160-translation-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+/* 状态指示器 */
+.ds160-translation-status {
+  font-size: 11px;
+  color: #6b7280;
+  text-align: center;
+  padding: 4px 0;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 8px;
+}
+
+.ds160-translation-status.loading {
+  color: #f59e0b;
+}
+
+.ds160-translation-status.error {
+  color: #ef4444;
+}
+
+.ds160-translation-status.success {
+  color: #10b981;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .ds160-translation-controller {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    width: auto;
+    min-width: auto;
+  }
+}
+
+/* 确保不影响DS-160原有的打印样式 */
+@media print {
+  .ds160-translation-container,
+  .ds160-translation-controller {
+    display: none !important;
+  }
+}
