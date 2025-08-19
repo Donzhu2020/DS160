@@ -144,6 +144,507 @@ const page1DynamicTranslations = [
 
 ];
 
+// Page 14 - Security and Background Part 1 页面的翻译
+const page14Translations = [
+  // 页面说明
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblPageNote1',
+    translation: '注意：请提供以下个人安全和背景信息。所有需要解释的问题，请务必完整、准确地回答。根据美国法律，某些特定类别的人可能无法获得签证（除非事先得到豁免）。下面这些问题，有没有哪一个符合你的情况？如果你回答“是”，这不代表你一定拿不到签证，但你可能会被要求亲自去见领事馆官员'
+  },
+  // 传染病问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblCOMM_DISEASE_IND',
+    translation: '您是否患有任何影响公众健康的传染病？（包括软下疳、淋病、腹股沟肉芽肿、麻风病、性病性淋巴肉芽肿、传染期梅毒、活动性肺结核，以及美国卫生与公众服务部指定的其他疾病。）'
+  },
+  // 精神或身体疾病问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblDISORDER_IND',
+    translation: '您是否患有任何可能危及自身或他人安全的精神或身体疾病？'
+  },
+  // 药物滥用问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblDRUG_ABUSE_IND',
+    translation: '您现在或以前是毒品滥用者或瘾君子吗？'
+  },
+  // 解释标签
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblExplain',
+    translation: '请解释'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_Label3',
+    translation: '请解释'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_Label6',
+    translation: '请解释'
+  }
+];
+
+// Page 14 - Security and Background Part 1 动态字段（基于文本匹配）
+const page14DynamicTranslations = [
+  {
+    text: 'Security and Background: Part 1',
+    translation: '安全和背景信息：第1部分'
+  },
+  {
+    text: 'Do you have a communicable disease of public health significance?',
+    translation: '您是否患有具有公共卫生意义的传染病？'
+  },
+  {
+    text: 'Do you have a mental or physical disorder that poses or is likely to pose a threat to the safety or welfare of yourself or others?',
+    translation: '您是否患有对您自己或他人的安全或福利构成或可能构成威胁的精神或身体疾病？'
+  },
+  {
+    text: 'Are you or have you ever been a drug abuser or addict?',
+    translation: '您是否现在或曾经是药物滥用者或成瘾者？'
+  },
+  {
+    text: 'Explain',
+    translation: '请解释'
+  },
+  {
+    text: 'Yes',
+    translation: '是'
+  },
+  {
+    text: 'No',
+    translation: '否'
+  },
+  {
+    text: 'Communicable diseases of public significance include chancroid, gonorrhea, granuloma inguinale, infectious leprosy, lymphogranuloma venereum, infectious stage syphilis, active tuberculosis, and other diseases as determined by the Department of Health and Human Services.',
+    translation: '具有公共意义的传染病包括软下疳、淋病、腹股沟肉芽肿、传染性麻风病、性病性淋巴肉芽肿、传染期梅毒、活动性肺结核，以及卫生与公众服务部确定的其他疾病。'
+  }
+];
+
+// Page 15 - Security and Background Part 2 页面的翻译
+const page15Translations = [
+  // 页面说明（继承自Page 14的页面说明）
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblPageNote1',
+    translation: '注意：请提供以下个人安全和背景信息。所有需要解释的问题，请务必完整、准确地回答。根据美国法律，某些特定类别的人可能无法获得签证（除非事先得到豁免）。下面这些问题，有没有哪一个符合你的情况？如果你回答"是"，这不代表你一定拿不到签证，但你可能会被要求亲自去见领事馆官员'
+  },
+  // 逮捕定罪问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblARREST_IND',
+    translation: '您是否曾因任何罪行或犯罪被逮捕或定罪，即使已获得赦免、大赦或其他类似行动？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblARREST_EXPL',
+    translation: '请解释'
+  },
+  // 管制物质问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblSUBSTANCE_IND',
+    translation: '您是否曾违反或参与阴谋违反任何有关管制物质的法律？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblSUBSTANCE_EXPL',
+    translation: '请解释'
+  },
+  // 卖淫问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblVICE_IND',
+    translation: '您是否来美国从事卖淫或非法商业化色情活动，或在过去10年内从事过卖淫或拉皮条？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lbl_VICE_EXPL',
+    translation: '请解释'
+  },
+  // 洗钱问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblMONEY_LAUNDER_IND',
+    translation: '您是否曾参与或寻求参与洗钱活动？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblMONEY_LAUNDER_EXPL',
+    translation: '请解释'
+  },
+  // 人口贩卖问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblHUMAN_TRAFFICKING_IND',
+    translation: '您有没有在美国或国外从事过人口贩卖活动，或者密谋做过这件事？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblHUMAN_TRAFFICKING_EXPL',
+    translation: '请解释'
+  },
+  // 协助人口贩卖问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblASSIST_PERSON_TRAFFIC_IND',
+    translation: '您有没有故意帮助过在美国或国外从事严重人口贩卖活动的人？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblASSIST_PERSON_TRAFFIC_EXPL',
+    translation: '请解释'
+  },
+  // 人口贩卖相关问题（家属）
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblHUMAN_TRAFFICKING_RELATED_IND',
+    translation: '你是不是在美国或国外犯下人口贩运罪的人的配偶或子女？而且在最近五年内，你是否明知那些贩运活动，并且从中得到了好处？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblHUMAN_TRAFFICKING_RELATED_EXPL',
+    translation: '请解释'
+  }
+];
+
+// Page 15 - Security and Background Part 2 动态字段（基于文本匹配）
+const page15DynamicTranslations = [
+  {
+    text: 'Security and Background: Part 2',
+    translation: '安全和背景信息：第2部分'
+  },
+  {
+    text: 'Have you ever been arrested or convicted for any offense or crime, even though subject of a pardon, amnesty, or other similar action?',
+    translation: '您是否曾因任何罪行或犯罪被逮捕或定罪，即使已获得赦免、大赦或其他类似行动？'
+  },
+  {
+    text: 'Have you ever violated, or engaged in a conspiracy to violate, any law relating to controlled substances?',
+    translation: '您是否曾违反或密谋违反任何与受管制物品相关的法律？'
+  },
+  {
+    text: 'Are you coming to the United States to engage in prostitution or unlawful commercialized vice or have you been engaged in prostitution or procuring prostitutes within the past 10 years?',
+    translation: '您是否来美国从事卖淫或非法商业化色情活动，或在过去10年内从事过卖淫或拉皮条？'
+  },
+  {
+    text: 'Have you ever been involved in, or do you seek to engage in, money laundering?',
+    translation: '您是否曾参与或寻求参与洗钱活动？'
+  },
+  {
+    text: 'Have you ever committed or conspired to commit a human trafficking offense in the United States or outside the United States?',
+    translation: '您是否曾在美国或美国境外犯有或阴谋犯有人口贩卖罪？'
+  },
+  {
+    text: 'Have you ever knowingly aided, abetted, assisted or colluded with an individual who has committed, or conspired to commit a severe human trafficking offense in the United States or outside the United States?',
+    translation: '您是否曾故意帮助、教唆、协助或与在美国或美国境外犯有或阴谋犯有严重人口贩卖罪的个人勾结？'
+  },
+  {
+    text: 'Are you the spouse, son, or daughter of an individual who has committed or conspired to commit a human trafficking offense in the United States or outside the United States and have you within the last five years, knowingly benefited from the trafficking activities?',
+    translation: '您是否是在美国或美国境外犯有或阴谋犯有人口贩卖罪的个人的配偶、儿子或女儿，并且在过去五年内故意从贩卖活动中受益？'
+  },
+  {
+    text: 'Explain',
+    translation: '请解释'
+  },
+  {
+    text: 'Yes',
+    translation: '是'
+  },
+  {
+    text: 'No',
+    translation: '否'
+  }
+];
+
+// Page 16 - Security and Background Part 3 页面的翻译
+const page16Translations = [
+  // 页面说明（继承自之前的安全背景页面说明）
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblPageNote1',
+    translation: '注意：请提供以下个人安全和背景信息。所有需要解释的问题，请务必完整、准确地回答。根据美国法律，某些特定类别的人可能无法获得签证（除非事先得到豁免）。下面这些问题，有没有哪一个符合你的情况？如果你回答"是"，这不代表你一定拿不到签证，但你可能会被要求亲自去见领事馆官员'
+  },
+  // 非法活动问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblILLEGAL_ACTIVITY_IND',
+    translation: '您是否计划在美国从事间谍活动、破坏活动、违反出口管制或任何其他非法活动？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblILLEGAL_ACTIVITY_EXPL',
+    translation: '请解释'
+  },
+  // 恐怖活动问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblTERROR_IND',
+    translation: '您是否计划在美国从事恐怖活动，或您是否曾经从事过恐怖活动？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblTERROR_EXPL',
+    translation: '请解释'
+  },
+  // 恐怖支持问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblTERROR_SUPP_IND',
+    translation: '您是否曾经或打算为恐怖分子或恐怖组织提供经济援助或其他支持？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblTERROR_SUPP_EXPL',
+    translation: '请解释'
+  },
+  // 恐怖组织成员问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblTERROR_MBR_IND',
+    translation: '您是恐怖组织的成员或代表吗？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblTERROR_MBR_EXPL',
+    translation: '请解释'
+  },
+  // 恐怖相关家属问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblTERROR_REL_IND',
+    translation: '您是否是在过去五年内从事恐怖活动（包括为恐怖分子或恐怖组织提供经济援助或其他支持）的个人的配偶、儿子或女儿？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_Label2',
+    translation: '请解释'
+  },
+  // 种族灭绝问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblGENOCIDE_IND',
+    translation: '您是否曾经下令、煽动、犯下、协助或以其他方式参与种族灭绝？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblGENOCIDE_EXPL',
+    translation: '请解释'
+  },
+  // 酷刑问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblVIOLENCE_IND',
+    translation: '您是否曾经犯下、下令、煽动、协助或以其他方式参与酷刑？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblVIOLENCE_EXPL',
+    translation: '请解释'
+  },
+  // 儿童兵问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblCHILD_SOLDIER_IND',
+    translation: '您是否曾经从事招募或使用儿童兵？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblCHILD_SOLDIER_EXPL',
+    translation: '请解释'
+  },
+  // 人口控制问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblABORTION_IND',
+    translation: '您是否曾经直接参与制定或执行人口控制政策，强迫妇女违背自由意愿进行堕胎或强迫男性或女性违背自由意愿进行绝育？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblABORTION_EXPL',
+    translation: '请解释'
+  },
+  // 器官移植问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblTRANSPLANT_IND',
+    translation: '您是否曾经直接参与强制移植人体器官或身体组织？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblTRANSPLANT_EXPL',
+    translation: '请解释'
+  },
+  // 法外杀戮问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblEX_VIOLENCE_IND',
+    translation: '您是否曾经犯下、下令、煽动、协助或以其他方式参与法外杀戮、政治谋杀或其他暴力行为？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblEX_VIOLENCE_EXPL',
+    translation: '请解释'
+  },
+  // 宗教自由违反问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblRELIGIOUS_FREEDOM_IND',
+    translation: '您在担任政府官员期间，是否曾经负责或直接实施过特别严重的宗教自由侵犯行为？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblRELIGIOUS_FREEDOM_EXPL',
+    translation: '请解释'
+  }
+];
+
+// Page 16 - Security and Background Part 3 动态字段（基于文本匹配）
+const page16DynamicTranslations = [
+  {
+    text: 'Security and Background: Part 3',
+    translation: '安全和背景信息：第3部分'
+  },
+  {
+    text: 'Do you seek to engage in espionage, sabotage, export control violations, or any other illegal activity while in the United States?',
+    translation: '您是否计划在美国从事间谍活动、破坏活动、违反出口管制或任何其他非法活动？'
+  },
+  {
+    text: 'Do you seek to engage in terrorist activities while in the United States or have you ever engaged in terrorist activities?',
+    translation: '您是否计划在美国从事恐怖活动，或您是否曾经从事过恐怖活动？'
+  },
+  {
+    text: 'Have you ever or do you intend to provide financial assistance or other support to terrorists or terrorist organizations?',
+    translation: '您是否曾经或打算为恐怖分子或恐怖组织提供经济援助或其他支持？'
+  },
+  {
+    text: 'Are you a member or representative of a terrorist organization?',
+    translation: '您是恐怖组织的成员或代表吗？'
+  },
+  {
+    text: 'Are you the spouse, son, or daughter of an individual who has engaged in terrorist activity, including providing financial assistance or other support to terrorists or terrorist organizations, in the last five years?',
+    translation: '您是否是在过去五年内从事恐怖活动（包括为恐怖分子或恐怖组织提供经济援助或其他支持）的个人的配偶、儿子或女儿？'
+  },
+  {
+    text: 'Have you ever ordered, incited, committed, assisted, or otherwise participated in genocide?',
+    translation: '您是否曾经下令、煽动、犯下、协助或以其他方式参与种族灭绝？'
+  },
+  {
+    text: 'Have you ever committed, ordered, incited, assisted, or otherwise participated in torture?',
+    translation: '您是否曾经犯下、下令、煽动、协助或以其他方式参与酷刑？'
+  },
+  {
+    text: 'Have you ever engaged in the recruitment or the use of child soldiers?',
+    translation: '您是否曾经从事招募或使用儿童兵？'
+  },
+  {
+    text: 'Have you ever been directly involved in the establishment or enforcement of population controls forcing a woman to undergo an abortion against her free choice or a man or a woman to undergo sterilization against his or her free will?',
+    translation: '您是否曾经直接参与制定或执行人口控制政策，强迫妇女违背自由意愿进行堕胎或强迫男性或女性违背自由意愿进行绝育？'
+  },
+  {
+    text: 'Have you ever been directly involved in the coercive transplantation of human organs or bodily tissue?',
+    translation: '您是否曾经直接参与强制移植人体器官或身体组织？'
+  },
+  {
+    text: 'Have you committed, ordered, incited, assisted, or otherwise participated in extrajudicial killings, political killings, or other acts of violence?',
+    translation: '您是否曾经犯下、下令、煽动、协助或以其他方式参与法外杀戮、政治谋杀或其他暴力行为？'
+  },
+  {
+    text: 'Have you, while serving as a government official, been responsible for or directly carried out, at any time, particularly severe violations of religious freedom?',
+    translation: '您在担任政府官员期间，是否曾经负责或直接实施过特别严重的宗教自由侵犯行为？'
+  },
+  {
+    text: 'Explain',
+    translation: '请解释'
+  },
+  {
+    text: 'Yes',
+    translation: '是'
+  },
+  {
+    text: 'No',
+    translation: '否'
+  }
+];
+
+// Page 17 - Security and Background Part 4 页面的翻译
+const page17Translations = [
+  // 页面说明（继承自之前的安全背景页面说明）
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblPageNote1',
+    translation: '注意：请提供以下个人安全和背景信息。所有需要解释的问题，请务必完整、准确地回答。根据美国法律，某些特定类别的人可能无法获得签证（除非事先得到豁免）。下面这些问题，有没有哪一个符合你的情况？如果你回答"是"，这不代表你一定拿不到签证，但你可能会被要求亲自去见领事馆官员'
+  },
+  // 移民欺诈问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblIMMGRATN_FRAUD_IND',
+    translation: '您是否曾经试图通过欺诈、故意虚假陈述或其他非法手段为自己或他人获得签证、入境美国或任何其他美国移民福利？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblIMMGRATN_FRAUD_EXPL',
+    translation: '请解释'
+  },
+  // 驱逐出境问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblDeport_IND',
+    translation: '您是否曾被任何国家驱逐出境或遣返？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblDeport_EXPL',
+    translation: '请解释'
+  }
+];
+
+// Page 17 - Security and Background Part 4 动态字段（基于文本匹配）
+const page17DynamicTranslations = [
+  {
+    text: 'Security and Background: Part 4',
+    translation: '安全和背景信息：第4部分'
+  },
+  {
+    text: 'Have you ever sought to obtain or assist others to obtain a visa, entry into the United States, or any other United States immigration benefit by fraud or willful misrepresentation or other unlawful means?',
+    translation: '您是否曾经试图通过欺诈、故意虚假陈述或其他非法手段为自己或他人获得签证、入境美国或任何其他美国移民福利？'
+  },
+  {
+    text: 'Have you ever been removed or deported from any country?',
+    translation: '您是否曾被任何国家驱逐出境或遣返？'
+  },
+  {
+    text: 'Explain',
+    translation: '请解释'
+  },
+  {
+    text: 'Yes',
+    translation: '是'
+  },
+  {
+    text: 'No',
+    translation: '否'
+  }
+];
+
+// Page 18 - Security and Background Part 5 页面的翻译
+const page18Translations = [
+  // 页面说明（继承自之前的安全背景页面说明）
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblPageNote1',
+    translation: '注意：请提供以下个人安全和背景信息。所有需要解释的问题，请务必完整、准确地回答。根据美国法律，某些特定类别的人可能无法获得签证（除非事先得到豁免）。下面这些问题，有没有哪一个符合你的情况？如果你回答"是"，这不代表你一定拿不到签证，但你可能会被要求亲自去见领事馆官员'
+  },
+  // 儿童监护权问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblCUSTODY_IND',
+    translation: '您是否曾在美国境外拒绝将美国公民子女的监护权交还给美国法院指定的合法监护人？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblCUSTODY_EXPL',
+    translation: '请解释'
+  },
+  // 投票违法问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblVOTE_VIOLATE_IND',
+    translation: '您是否曾在美国违反任何法律或法规进行投票？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblVOTE_VIOLATE_EXPL',
+    translation: '请解释'
+  },
+  // 放弃美国国籍问题
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblRENOUNCE_IND',
+    translation: '您是否曾为了避税目的而放弃美国国籍？'
+  },
+  {
+    id: 'ctl00_SiteContentPlaceHolder_FormView1_lblRENOUNCE_EXPL',
+    translation: '请解释'
+  }
+];
+
+// Page 18 - Security and Background Part 5 动态字段（基于文本匹配）
+const page18DynamicTranslations = [
+  {
+    text: 'Security and Background: Part 5',
+    translation: '安全和背景信息：第5部分'
+  },
+  {
+    text: 'Have you ever withheld custody of a U.S. citizen child outside the United States from a person granted legal custody by a U.S. court?',
+    translation: '您是否曾在美国境外拒绝将美国公民子女的监护权交还给美国法院指定的合法监护人？'
+  },
+  {
+    text: 'Have you voted in the United States in violation of any law or regulation?',
+    translation: '您是否曾在美国违反任何法律或法规进行投票？'
+  },
+  {
+    text: 'Have you ever renounced United States citizenship for the purposes of avoiding taxation?',
+    translation: '您是否曾为了避税目的而放弃美国国籍？'
+  },
+  {
+    text: 'Explain',
+    translation: '请解释'
+  },
+  {
+    text: 'Yes',
+    translation: '是'
+  },
+  {
+    text: 'No',
+    translation: '否'
+  }
+];
+
 // Personal Information 2 页面的翻译
 const page2Translations = [
   {
@@ -1770,6 +2271,16 @@ function detectPageType() {
     return 'page12';
   } else if (url.includes('complete_workeducation3.aspx') || url.includes('WorkEducation3')) {
     return 'page13';
+  } else if (url.includes('complete_securityandbackground1.aspx') || url.includes('SecurityandBackground1')) {
+    return 'page14';
+  } else if (url.includes('complete_securityandbackground2.aspx') || url.includes('SecurityandBackground2')) {
+    return 'page15';
+  } else if (url.includes('complete_securityandbackground3.aspx') || url.includes('SecurityandBackground3')) {
+    return 'page16';
+  } else if (url.includes('complete_securityandbackground4.aspx') || url.includes('SecurityandBackground4')) {
+    return 'page17';
+  } else if (url.includes('complete_securityandbackground5.aspx') || url.includes('SecurityandBackground5')) {
+    return 'page18';
   }
   
   // 备用：通过标题和内容判断
@@ -1799,6 +2310,16 @@ function detectPageType() {
     return 'page12';
   } else if (title.includes('Additional Work') || pageContent.includes('Additional Work/Education') || pageContent.includes('Do you have additional work experience')) {
     return 'page13';
+  } else if (title.includes('Security and Background: Part 1') || pageContent.includes('communicable disease') || pageContent.includes('drug abuser')) {
+    return 'page14';
+  } else if (title.includes('Security and Background: Part 2') || pageContent.includes('arrested or convicted') || pageContent.includes('money laundering')) {
+    return 'page15';
+  } else if (title.includes('Security and Background: Part 3') || pageContent.includes('terrorist activities') || pageContent.includes('genocide')) {
+    return 'page16';
+  } else if (title.includes('Security and Background: Part 4') || pageContent.includes('immigration benefit by fraud') || pageContent.includes('removed or deported')) {
+    return 'page17';
+  } else if (title.includes('Security and Background: Part 5') || pageContent.includes('withheld custody') || pageContent.includes('voted in the United States in violation') || pageContent.includes('renounced United States citizenship')) {
+    return 'page18';
   }
   
   return 'unknown';
@@ -1836,6 +2357,16 @@ function getCurrentPageTranslations() {
       return page12Translations;
     case 'page13':
       return page13Translations;
+    case 'page14':
+      return page14Translations;
+    case 'page15':
+      return page15Translations;
+    case 'page16':
+      return page16Translations;
+    case 'page17':
+      return page17Translations;
+    case 'page18':
+      return page18Translations;
     default:
       console.log('DS-160 Full Translation: Unknown page type, using page1 translations as fallback');
       return page1Translations;
@@ -2450,6 +2981,256 @@ function injectPage13DynamicTranslations() {
   return dynamicSuccessCount;
 }
 
+// Page 14 动态翻译注入函数
+function injectPage14DynamicTranslations() {
+  const pageType = detectPageType();
+  if (pageType !== 'page14') return 0;
+  
+  let dynamicSuccessCount = 0;
+  
+  // 注入page14的动态翻译
+  page14DynamicTranslations.forEach(({ text, translation }) => {
+    try {
+      // 查找包含指定文本的元素
+      const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        {
+          acceptNode: function(node) {
+            if (node.nodeValue && node.nodeValue.trim() === text.trim()) {
+              return NodeFilter.FILTER_ACCEPT;
+            }
+            return NodeFilter.FILTER_REJECT;
+          }
+        }
+      );
+      
+      const textNodes = [];
+      let node;
+      while (node = walker.nextNode()) {
+        textNodes.push(node);
+      }
+      
+      textNodes.forEach(textNode => {
+        const parentElement = textNode.parentElement;
+        if (parentElement && !parentElement.querySelector('.ds160-translation')) {
+          const translationSpan = document.createElement('span');
+          translationSpan.className = 'ds160-translation';
+          translationSpan.style.cssText = 'margin-left: 8px; color: #666; font-size: 13px; font-weight: 500; background: rgba(59, 130, 246, 0.1); padding: 2px 6px; border-radius: 4px; border: 1px solid rgba(59, 130, 246, 0.2);';
+          translationSpan.textContent = ` ${translation}`;
+          
+          parentElement.appendChild(translationSpan);
+          dynamicSuccessCount++;
+        }
+      });
+    } catch (error) {
+      console.error(`DS-160 Full Translation: Error injecting page14 dynamic translation for "${text}":`, error);
+    }
+  });
+  
+  return dynamicSuccessCount;
+}
+
+// Page 15 动态翻译注入函数
+function injectPage15DynamicTranslations() {
+  const pageType = detectPageType();
+  if (pageType !== 'page15') return 0;
+  
+  let dynamicSuccessCount = 0;
+  
+  // 注入page15的动态翻译
+  page15DynamicTranslations.forEach(({ text, translation }) => {
+    try {
+      // 查找包含指定文本的元素
+      const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        {
+          acceptNode: function(node) {
+            if (node.nodeValue && node.nodeValue.trim() === text.trim()) {
+              return NodeFilter.FILTER_ACCEPT;
+            }
+            return NodeFilter.FILTER_REJECT;
+          }
+        }
+      );
+      
+      const textNodes = [];
+      let node;
+      while (node = walker.nextNode()) {
+        textNodes.push(node);
+      }
+      
+      textNodes.forEach(textNode => {
+        const parentElement = textNode.parentElement;
+        if (parentElement && !parentElement.querySelector('.ds160-translation')) {
+          const translationSpan = document.createElement('span');
+          translationSpan.className = 'ds160-translation';
+          translationSpan.style.cssText = 'margin-left: 8px; color: #666; font-size: 13px; font-weight: 500; background: rgba(59, 130, 246, 0.1); padding: 2px 6px; border-radius: 4px; border: 1px solid rgba(59, 130, 246, 0.2);';
+          translationSpan.textContent = ` ${translation}`;
+          
+          parentElement.appendChild(translationSpan);
+          dynamicSuccessCount++;
+        }
+      });
+    } catch (error) {
+      console.error(`DS-160 Full Translation: Error injecting page15 dynamic translation for "${text}":`, error);
+    }
+  });
+  
+  return dynamicSuccessCount;
+}
+
+// Page 16 动态翻译注入函数
+function injectPage16DynamicTranslations() {
+  const pageType = detectPageType();
+  if (pageType !== 'page16') return 0;
+  
+  let dynamicSuccessCount = 0;
+  
+  // 注入page16的动态翻译
+  page16DynamicTranslations.forEach(({ text, translation }) => {
+    try {
+      // 查找包含指定文本的元素
+      const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        {
+          acceptNode: function(node) {
+            if (node.nodeValue && node.nodeValue.trim() === text.trim()) {
+              return NodeFilter.FILTER_ACCEPT;
+            }
+            return NodeFilter.FILTER_REJECT;
+          }
+        }
+      );
+      
+      const textNodes = [];
+      let node;
+      while (node = walker.nextNode()) {
+        textNodes.push(node);
+      }
+      
+      textNodes.forEach(textNode => {
+        const parentElement = textNode.parentElement;
+        if (parentElement && !parentElement.querySelector('.ds160-translation')) {
+          const translationSpan = document.createElement('span');
+          translationSpan.className = 'ds160-translation';
+          translationSpan.style.cssText = 'margin-left: 8px; color: #666; font-size: 13px; font-weight: 500; background: rgba(59, 130, 246, 0.1); padding: 2px 6px; border-radius: 4px; border: 1px solid rgba(59, 130, 246, 0.2);';
+          translationSpan.textContent = ` ${translation}`;
+          
+          parentElement.appendChild(translationSpan);
+          dynamicSuccessCount++;
+        }
+      });
+    } catch (error) {
+      console.error(`DS-160 Full Translation: Error injecting page16 dynamic translation for "${text}":`, error);
+    }
+  });
+  
+  return dynamicSuccessCount;
+}
+
+// Page 17 动态翻译注入函数
+function injectPage17DynamicTranslations() {
+  const pageType = detectPageType();
+  if (pageType !== 'page17') return 0;
+  
+  let dynamicSuccessCount = 0;
+  
+  // 注入page17的动态翻译
+  page17DynamicTranslations.forEach(({ text, translation }) => {
+    try {
+      // 查找包含指定文本的元素
+      const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        {
+          acceptNode: function(node) {
+            if (node.nodeValue && node.nodeValue.trim() === text.trim()) {
+              return NodeFilter.FILTER_ACCEPT;
+            }
+            return NodeFilter.FILTER_REJECT;
+          }
+        }
+      );
+      
+      const textNodes = [];
+      let node;
+      while (node = walker.nextNode()) {
+        textNodes.push(node);
+      }
+      
+      textNodes.forEach(textNode => {
+        const parentElement = textNode.parentElement;
+        if (parentElement && !parentElement.querySelector('.ds160-translation')) {
+          const translationSpan = document.createElement('span');
+          translationSpan.className = 'ds160-translation';
+          translationSpan.style.cssText = 'margin-left: 8px; color: #666; font-size: 13px; font-weight: 500; background: rgba(59, 130, 246, 0.1); padding: 2px 6px; border-radius: 4px; border: 1px solid rgba(59, 130, 246, 0.2);';
+          translationSpan.textContent = ` ${translation}`;
+          
+          parentElement.appendChild(translationSpan);
+          dynamicSuccessCount++;
+        }
+      });
+    } catch (error) {
+      console.error(`DS-160 Full Translation: Error injecting page17 dynamic translation for "${text}":`, error);
+    }
+  });
+  
+  return dynamicSuccessCount;
+}
+
+// Page 18 动态翻译注入函数
+function injectPage18DynamicTranslations() {
+  const pageType = detectPageType();
+  if (pageType !== 'page18') return 0;
+  
+  let dynamicSuccessCount = 0;
+  
+  // 注入page18的动态翻译
+  page18DynamicTranslations.forEach(({ text, translation }) => {
+    try {
+      // 查找包含指定文本的元素
+      const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        {
+          acceptNode: function(node) {
+            if (node.nodeValue && node.nodeValue.trim() === text.trim()) {
+              return NodeFilter.FILTER_ACCEPT;
+            }
+            return NodeFilter.FILTER_REJECT;
+          }
+        }
+      );
+      
+      const textNodes = [];
+      let node;
+      while (node = walker.nextNode()) {
+        textNodes.push(node);
+      }
+      
+      textNodes.forEach(textNode => {
+        const parentElement = textNode.parentElement;
+        if (parentElement && !parentElement.querySelector('.ds160-translation')) {
+          const translationSpan = document.createElement('span');
+          translationSpan.className = 'ds160-translation';
+          translationSpan.style.cssText = 'margin-left: 8px; color: #666; font-size: 13px; font-weight: 500; background: rgba(59, 130, 246, 0.1); padding: 2px 6px; border-radius: 4px; border: 1px solid rgba(59, 130, 246, 0.2);';
+          translationSpan.textContent = ` ${translation}`;
+          
+          parentElement.appendChild(translationSpan);
+          dynamicSuccessCount++;
+        }
+      });
+    } catch (error) {
+      console.error(`DS-160 Full Translation: Error injecting page18 dynamic translation for "${text}":`, error);
+    }
+  });
+  
+  return dynamicSuccessCount;
+}
+
 // 注入所有翻译
 function injectAllTranslations() {
   console.log('DS-160 Full Translation: Starting multi-page injection...');
@@ -2501,9 +3282,14 @@ function injectAllTranslations() {
   const page11DynamicCount = injectPage11DynamicTranslations();
   const page12DynamicCount = injectPage12DynamicTranslations();
   const page13DynamicCount = injectPage13DynamicTranslations();
-  successCount += page1DynamicCount + specificSuccessCount + page4DynamicCount + page5DynamicCount + page6DynamicCount + page7DynamicCount + page8DynamicCount + page9DynamicCount + page10DynamicCount + page11DynamicCount + page12DynamicCount + page13DynamicCount;
+  const page14DynamicCount = injectPage14DynamicTranslations();
+  const page15DynamicCount = injectPage15DynamicTranslations();
+  const page16DynamicCount = injectPage16DynamicTranslations();
+  const page17DynamicCount = injectPage17DynamicTranslations();
+  const page18DynamicCount = injectPage18DynamicTranslations();
+  successCount += page1DynamicCount + specificSuccessCount + page4DynamicCount + page5DynamicCount + page6DynamicCount + page7DynamicCount + page8DynamicCount + page9DynamicCount + page10DynamicCount + page11DynamicCount + page12DynamicCount + page13DynamicCount + page14DynamicCount + page15DynamicCount + page16DynamicCount + page17DynamicCount + page18DynamicCount;
   
-  console.log(`DS-160 Full Translation: Injection completed! Basic: ${successCount - page1DynamicCount - specificSuccessCount - page4DynamicCount - page5DynamicCount - page6DynamicCount - page7DynamicCount - page8DynamicCount - page9DynamicCount - page10DynamicCount - page11DynamicCount - page12DynamicCount - page13DynamicCount}, Page1 Dynamic: ${page1DynamicCount}, Page3 Specific: ${specificSuccessCount}, Page4 Dynamic: ${page4DynamicCount}, Page5 Dynamic: ${page5DynamicCount}, Page6 Dynamic: ${page6DynamicCount}, Page7 Dynamic: ${page7DynamicCount}, Page8 Dynamic: ${page8DynamicCount}, Page9 Dynamic: ${page9DynamicCount}, Page10 Dynamic: ${page10DynamicCount}, Page11 Dynamic: ${page11DynamicCount}, Page12 Dynamic: ${page12DynamicCount}, Page13 Dynamic: ${page13DynamicCount}, Not found: ${notFoundCount}, Found but failed: ${foundButFailedCount}`);
+  console.log(`DS-160 Full Translation: Injection completed! Basic: ${successCount - page1DynamicCount - specificSuccessCount - page4DynamicCount - page5DynamicCount - page6DynamicCount - page7DynamicCount - page8DynamicCount - page9DynamicCount - page10DynamicCount - page11DynamicCount - page12DynamicCount - page13DynamicCount - page14DynamicCount - page15DynamicCount - page16DynamicCount - page17DynamicCount - page18DynamicCount}, Page1 Dynamic: ${page1DynamicCount}, Page3 Specific: ${specificSuccessCount}, Page4 Dynamic: ${page4DynamicCount}, Page5 Dynamic: ${page5DynamicCount}, Page6 Dynamic: ${page6DynamicCount}, Page7 Dynamic: ${page7DynamicCount}, Page8 Dynamic: ${page8DynamicCount}, Page9 Dynamic: ${page9DynamicCount}, Page10 Dynamic: ${page10DynamicCount}, Page11 Dynamic: ${page11DynamicCount}, Page12 Dynamic: ${page12DynamicCount}, Page13 Dynamic: ${page13DynamicCount}, Page14 Dynamic: ${page14DynamicCount}, Page15 Dynamic: ${page15DynamicCount}, Page16 Dynamic: ${page16DynamicCount}, Page17 Dynamic: ${page17DynamicCount}, Page18 Dynamic: ${page18DynamicCount}, Not found: ${notFoundCount}, Found but failed: ${foundButFailedCount}`);
   return successCount;
 }
 
@@ -2716,7 +3502,12 @@ if (typeof chrome !== 'undefined' && chrome.runtime) {
         'page10': 'Family Information: Spouse',
         'page11': 'Present Work/Education/Training Information',
         'page12': 'Previous Work/Education/Training Information',
-        'page13': 'Additional Work/Education/Training Information'
+        'page13': 'Additional Work/Education/Training Information',
+        'page14': 'Security and Background: Part 1',
+        'page15': 'Security and Background: Part 2',
+        'page16': 'Security and Background: Part 3',
+        'page17': 'Security and Background: Part 4',
+        'page18': 'Security and Background: Part 5'
       };
       
       sendResponse({
@@ -3121,5 +3912,148 @@ setInterval(() => {
     }
   }
 }, 2200);
+
+// 专门针对page14的检查机制
+setInterval(() => {
+  const pageType = detectPageType();
+  if (pageType === 'page14') {
+    // 检查page14特有的字段
+    const pageNoteField = document.querySelector('span[id*="lblPageNote1"]');
+    const diseaseField = document.querySelector('label[id*="lblCOMM_DISEASE_IND"]');
+    const disorderField = document.querySelector('label[id*="lblDISORDER_IND"]');
+    const drugField = document.querySelector('label[id*="lblDRUG_ABUSE_IND"]');
+    const explainField1 = document.querySelector('label[id*="lblExplain"]');
+    const explainField2 = document.querySelector('label[id*="Label3"]');
+    const explainField3 = document.querySelector('label[id*="Label6"]');
+    
+    let page14NeedsReinject = false;
+    
+    [pageNoteField, diseaseField, disorderField, drugField, explainField1, explainField2, explainField3].forEach(element => {
+      if (element && !element.querySelector('.ds160-translation')) {
+        page14NeedsReinject = true;
+      }
+    });
+    
+    if (page14NeedsReinject) {
+      console.log('DS-160 Full Translation: Page 14 specific check - missing translations detected, re-injecting...');
+      injectAllTranslations();
+    }
+  }
+}, 2300);
+
+// 专门针对page15的检查机制
+setInterval(() => {
+  const pageType = detectPageType();
+  if (pageType === 'page15') {
+    // 检查page15特有的字段
+    const pageNoteField = document.querySelector('span[id*="lblPageNote1"]');
+    const arrestField = document.querySelector('label[id*="lblARREST_IND"]');
+    const substanceField = document.querySelector('label[id*="lblSUBSTANCE_IND"]');
+    const viceField = document.querySelector('label[id*="lblVICE_IND"]');
+    const moneyLaunderField = document.querySelector('label[id*="lblMONEY_LAUNDER_IND"]');
+    const humanTraffickingField = document.querySelector('label[id*="lblHUMAN_TRAFFICKING_IND"]');
+    const assistTraffickingField = document.querySelector('label[id*="lblASSIST_PERSON_TRAFFIC_IND"]');
+    const relatedTraffickingField = document.querySelector('label[id*="lblHUMAN_TRAFFICKING_RELATED_IND"]');
+    
+    let page15NeedsReinject = false;
+    
+    [pageNoteField, arrestField, substanceField, viceField, moneyLaunderField, 
+     humanTraffickingField, assistTraffickingField, relatedTraffickingField].forEach(element => {
+      if (element && !element.querySelector('.ds160-translation')) {
+        page15NeedsReinject = true;
+      }
+    });
+    
+    if (page15NeedsReinject) {
+      console.log('DS-160 Full Translation: Page 15 specific check - missing translations detected, re-injecting...');
+      injectAllTranslations();
+    }
+  }
+}, 2400);
+
+// 专门针对page16的检查机制
+setInterval(() => {
+  const pageType = detectPageType();
+  if (pageType === 'page16') {
+    // 检查page16特有的字段
+    const pageNoteField = document.querySelector('span[id*="lblPageNote1"]');
+    const illegalActivityField = document.querySelector('label[id*="lblILLEGAL_ACTIVITY_IND"]');
+    const terrorField = document.querySelector('label[id*="lblTERROR_IND"]');
+    const terrorSuppField = document.querySelector('label[id*="lblTERROR_SUPP_IND"]');
+    const terrorMbrField = document.querySelector('label[id*="lblTERROR_MBR_IND"]');
+    const terrorRelField = document.querySelector('label[id*="lblTERROR_REL_IND"]');
+    const genocideField = document.querySelector('label[id*="lblGENOCIDE_IND"]');
+    const violenceField = document.querySelector('label[id*="lblVIOLENCE_IND"]');
+    const childSoldierField = document.querySelector('label[id*="lblCHILD_SOLDIER_IND"]');
+    const abortionField = document.querySelector('label[id*="lblABORTION_IND"]');
+    const transplantField = document.querySelector('label[id*="lblTRANSPLANT_IND"]');
+    const exViolenceField = document.querySelector('label[id*="lblEX_VIOLENCE_IND"]');
+    const religiousFreedomField = document.querySelector('label[id*="lblRELIGIOUS_FREEDOM_IND"]');
+    
+    let page16NeedsReinject = false;
+    
+    [pageNoteField, illegalActivityField, terrorField, terrorSuppField, terrorMbrField, 
+     terrorRelField, genocideField, violenceField, childSoldierField, abortionField, transplantField, 
+     exViolenceField, religiousFreedomField].forEach(element => {
+      if (element && !element.querySelector('.ds160-translation')) {
+        page16NeedsReinject = true;
+      }
+    });
+    
+    if (page16NeedsReinject) {
+      console.log('DS-160 Full Translation: Page 16 specific check - missing translations detected, re-injecting...');
+      injectAllTranslations();
+    }
+  }
+}, 2500);
+
+// 专门针对page17的检查机制
+setInterval(() => {
+  const pageType = detectPageType();
+  if (pageType === 'page17') {
+    // 检查page17特有的字段
+    const pageNoteField = document.querySelector('span[id*="lblPageNote1"]');
+    const immigrationFraudField = document.querySelector('label[id*="lblIMMGRATN_FRAUD_IND"]');
+    const deportField = document.querySelector('label[id*="lblDeport_IND"]');
+    
+    let page17NeedsReinject = false;
+    
+    [pageNoteField, immigrationFraudField, deportField].forEach(element => {
+      if (element && !element.querySelector('.ds160-translation')) {
+        page17NeedsReinject = true;
+      }
+    });
+    
+    if (page17NeedsReinject) {
+      console.log('DS-160 Full Translation: Page 17 specific check - missing translations detected, re-injecting...');
+      injectAllTranslations();
+    }
+  }
+}, 2600);
+
+// 专门针对page18的检查机制
+setInterval(() => {
+  const pageType = detectPageType();
+  if (pageType === 'page18') {
+    // 检查page18特有的字段
+    const pageNoteField = document.querySelector('span[id*="lblPageNote1"]');
+    const custodyField = document.querySelector('label[id*="lblCUSTODY_IND"]');
+    const votingField = document.querySelector('label[id*="lblVOTE_VIOLATE_IND"]');
+    const renounceField = document.querySelector('label[id*="lblRENOUNCE_IND"]');
+    
+    let page18NeedsReinject = false;
+    
+    [pageNoteField, custodyField, votingField, renounceField].forEach(element => {
+      if (element && !element.querySelector('.ds160-translation')) {
+        page18NeedsReinject = true;
+      }
+    });
+    
+    if (page18NeedsReinject) {
+      console.log('DS-160 Full Translation: Page 18 specific check - missing translations detected, re-injecting...');
+      injectAllTranslations();
+    }
+  }
+}, 2700);
 
 console.log('DS-160 Full Translation: Multi-page dynamic script loaded successfully!');
