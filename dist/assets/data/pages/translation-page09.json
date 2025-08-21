@@ -1,0 +1,442 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page9",
+  "description": "Family Information: Relatives - 家庭信息：亲属",
+  "fields": [
+    {
+      "key": "lblPageNote1",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPageNote1"
+      ],
+      "en": "lbl Page Note1",
+      "zh": {
+        "brief": "注意：请提供以下有关您的生身父母的信息。如果您是被收养的，请提供收养父母的信息。",
+        "detailed": "注意：请提供以下有关您的生身父母的信息。如果您是被收养的，请提供收养父母的信息。"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Label9",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_Label9"
+      ],
+      "en": "Label9",
+      "zh": {
+        "brief": "父亲的全名和出生日期",
+        "detailed": "父亲的全名和出生日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Label14",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_Label14"
+      ],
+      "en": "Label14",
+      "zh": {
+        "brief": "母亲的全名和出生日期",
+        "detailed": "母亲的全名和出生日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblFATHER_SURNAME",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblFATHER_SURNAME"
+      ],
+      "en": "S U R N A M E",
+      "zh": {
+        "brief": "姓氏",
+        "detailed": "姓氏"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblFATHER_GIVEN_NAME",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblFATHER_GIVEN_NAME"
+      ],
+      "en": "N A M E",
+      "zh": {
+        "brief": "名字",
+        "detailed": "名字"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblFATHER_DOB",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblFATHER_DOB"
+      ],
+      "en": "D O B",
+      "zh": {
+        "brief": "出生日期",
+        "detailed": "出生日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblFATHER_LIVE_IN_US_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblFATHER_LIVE_IN_US_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您的父亲是否在美国？",
+        "detailed": "您的父亲是否在美国？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblFATHER_US_STATUS",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblFATHER_US_STATUS"
+      ],
+      "en": "S T A T U S",
+      "zh": {
+        "brief": "父亲的身份",
+        "detailed": "父亲的身份"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblMOTHER_SURNAME",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblMOTHER_SURNAME"
+      ],
+      "en": "S U R N A M E",
+      "zh": {
+        "brief": "姓氏",
+        "detailed": "姓氏"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblMOTHER_GIVEN_NAME",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblMOTHER_GIVEN_NAME"
+      ],
+      "en": "N A M E",
+      "zh": {
+        "brief": "名字",
+        "detailed": "名字"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblMOTHER_DOB",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblMOTHER_DOB"
+      ],
+      "en": "D O B",
+      "zh": {
+        "brief": "出生日期",
+        "detailed": "出生日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblMOTHER_LIVE_IN_US_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblMOTHER_LIVE_IN_US_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您的母亲是否在美国？",
+        "detailed": "您的母亲是否在美国？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblMOTHER_US_STATUS",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblMOTHER_US_STATUS"
+      ],
+      "en": "S T A T U S",
+      "zh": {
+        "brief": "母亲的身份",
+        "detailed": "母亲的身份"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblUS_IMMED_RELATIVE_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblUS_IMMED_RELATIVE_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "除了父母之外，您是否有任何直系亲属在美国？",
+        "detailed": "除了父母之外，您是否有任何直系亲属在美国？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "father_s_full_name_and_date_of_birth",
+      "selectors": [
+        "text:\"Father\"s Full Name and Date of Birth\""
+      ],
+      "en": "Father\"s Full Name and Date of Birth",
+      "zh": {
+        "brief": "父亲的全名和出生日期",
+        "detailed": "父亲的全名和出生日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "mother_s_full_name_and_date_of_birth",
+      "selectors": [
+        "text:\"Mother\"s Full Name and Date of Birth\""
+      ],
+      "en": "Mother\"s Full Name and Date of Birth",
+      "zh": {
+        "brief": "母亲的全名和出生日期",
+        "detailed": "母亲的全名和出生日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "surnames",
+      "selectors": [
+        "text:\"Surnames\""
+      ],
+      "en": "Surnames",
+      "zh": {
+        "brief": "姓氏",
+        "detailed": "姓氏"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "given_names",
+      "selectors": [
+        "text:\"Given Names\""
+      ],
+      "en": "Given Names",
+      "zh": {
+        "brief": "名字",
+        "detailed": "名字"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "date_of_birth",
+      "selectors": [
+        "text:\"Date of Birth\""
+      ],
+      "en": "Date of Birth",
+      "zh": {
+        "brief": "出生日期",
+        "detailed": "出生日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "is_your_father_in_the_u_s__",
+      "selectors": [
+        "text:\"Is your father in the U.S.?\""
+      ],
+      "en": "Is your father in the U.S.?",
+      "zh": {
+        "brief": "您的父亲是否在美国？",
+        "detailed": "您的父亲是否在美国？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "father_s_status",
+      "selectors": [
+        "text:\"Father\"s Status\""
+      ],
+      "en": "Father\"s Status",
+      "zh": {
+        "brief": "父亲的身份",
+        "detailed": "父亲的身份"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "is_your_mother_in_the_u_s__",
+      "selectors": [
+        "text:\"Is your mother in the U.S.?\""
+      ],
+      "en": "Is your mother in the U.S.?",
+      "zh": {
+        "brief": "您的母亲是否在美国？",
+        "detailed": "您的母亲是否在美国？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "mother_s_status",
+      "selectors": [
+        "text:\"Mother\"s Status\""
+      ],
+      "en": "Mother\"s Status",
+      "zh": {
+        "brief": "母亲的身份",
+        "detailed": "母亲的身份"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "do_you_have_any_immediate_relatives__not_including_parents__in_the_united_states_",
+      "selectors": [
+        "text:\"Do you have any immediate relatives, not including parents, in the United States?\""
+      ],
+      "en": "Do you have any immediate relatives, not including parents, in the United States?",
+      "zh": {
+        "brief": "除了父母之外，您是否有任何直系亲属在美国？",
+        "detailed": "除了父母之外，您是否有任何直系亲属在美国？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "add_another",
+      "selectors": [
+        "text:\"Add Another\""
+      ],
+      "en": "Add Another",
+      "zh": {
+        "brief": "添加另一个",
+        "detailed": "添加另一个"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "remove",
+      "selectors": [
+        "text:\"Remove\""
+      ],
+      "en": "Remove",
+      "zh": {
+        "brief": "移除",
+        "detailed": "移除"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "relationship_to_you",
+      "selectors": [
+        "text:\"Relationship to You\""
+      ],
+      "en": "Relationship to You",
+      "zh": {
+        "brief": "与您的关系",
+        "detailed": "与您的关系"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "relatives_status",
+      "selectors": [
+        "text:\"Relative's Status\""
+      ],
+      "en": "Relative's Status",
+      "zh": {
+        "brief": "亲属状态",
+        "detailed": "亲属状态"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "other_relatives_question",
+      "selectors": [
+        "text:\"Do you have any other relatives in the United States?\""
+      ],
+      "en": "Do you have any other relatives in the United States?",
+      "zh": {
+        "brief": "您在美国还有其他亲属吗？",
+        "detailed": "您在美国还有其他亲属吗？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    }
+  ]
+}

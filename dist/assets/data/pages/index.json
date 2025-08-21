@@ -1,0 +1,96 @@
+{
+  "version": "2025-01-01",
+  "description": "DS-160 Translation Data Index",
+  "pages": [
+    {
+      "pageId": "page1",
+      "file": "translation-page01.json",
+      "fieldCount": 30
+    },
+    {
+      "pageId": "page10",
+      "file": "translation-page10.json",
+      "fieldCount": 23
+    },
+    {
+      "pageId": "page11",
+      "file": "translation-page11.json",
+      "fieldCount": 28
+    },
+    {
+      "pageId": "page12",
+      "file": "translation-page12.json",
+      "fieldCount": 53
+    },
+    {
+      "pageId": "page13",
+      "file": "translation-page13.json",
+      "fieldCount": 46
+    },
+    {
+      "pageId": "page14",
+      "file": "translation-page14.json",
+      "fieldCount": 14
+    },
+    {
+      "pageId": "page15",
+      "file": "translation-page15.json",
+      "fieldCount": 24
+    },
+    {
+      "pageId": "page16",
+      "file": "translation-page16.json",
+      "fieldCount": 39
+    },
+    {
+      "pageId": "page17",
+      "file": "translation-page17.json",
+      "fieldCount": 9
+    },
+    {
+      "pageId": "page18",
+      "file": "translation-page18.json",
+      "fieldCount": 12
+    },
+    {
+      "pageId": "page2",
+      "file": "translation-page02.json",
+      "fieldCount": 6
+    },
+    {
+      "pageId": "page3",
+      "file": "translation-page03.json",
+      "fieldCount": 9
+    },
+    {
+      "pageId": "page4",
+      "file": "translation-page04.json",
+      "fieldCount": 12
+    },
+    {
+      "pageId": "page5",
+      "file": "translation-page05.json",
+      "fieldCount": 27
+    },
+    {
+      "pageId": "page6",
+      "file": "translation-page06.json",
+      "fieldCount": 41
+    },
+    {
+      "pageId": "page7",
+      "file": "translation-page07.json",
+      "fieldCount": 25
+    },
+    {
+      "pageId": "page8",
+      "file": "translation-page08.json",
+      "fieldCount": 33
+    },
+    {
+      "pageId": "page9",
+      "file": "translation-page09.json",
+      "fieldCount": 26
+    }
+  ]
+}

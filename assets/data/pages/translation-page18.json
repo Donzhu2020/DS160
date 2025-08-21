@@ -1,0 +1,187 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page18",
+  "description": "Photo Upload - 照片上传",
+  "fields": [
+    {
+      "key": "lblCUSTODY_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblCUSTODY_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾在美国境外拒绝将美国公民子女的监护权交还给美国法院指定的合法监护人？",
+        "detailed": "您是否曾在美国境外拒绝将美国公民子女的监护权交还给美国法院指定的合法监护人？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblCUSTODY_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblCUSTODY_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblVOTE_VIOLATE_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblVOTE_VIOLATE_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾在美国违反任何法律或法规进行投票？",
+        "detailed": "您是否曾在美国违反任何法律或法规进行投票？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblVOTE_VIOLATE_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblVOTE_VIOLATE_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblRENOUNCE_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblRENOUNCE_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾为了避税目的而放弃美国国籍？",
+        "detailed": "您是否曾为了避税目的而放弃美国国籍？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblRENOUNCE_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblRENOUNCE_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_ever_withheld_custody_of_a_u_s__citizen_child_outside_the_united_states_from_a_person_granted_legal_custody_by_a_u_s__court_",
+      "selectors": [
+        "text:\"Have you ever withheld custody of a U.S. citizen child outside the United States from a person granted legal custody by a U.S. court?\""
+      ],
+      "en": "Have you ever withheld custody of a U.S. citizen child outside the United States from a person granted legal custody by a U.S. court?",
+      "zh": {
+        "brief": "您是否曾在美国境外拒绝将美国公民子女的监护权交还给美国法院指定的合法监护人？",
+        "detailed": "您是否曾在美国境外拒绝将美国公民子女的监护权交还给美国法院指定的合法监护人？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_voted_in_the_united_states_in_violation_of_any_law_or_regulation_",
+      "selectors": [
+        "text:\"Have you voted in the United States in violation of any law or regulation?\""
+      ],
+      "en": "Have you voted in the United States in violation of any law or regulation?",
+      "zh": {
+        "brief": "您是否曾在美国违反任何法律或法规进行投票？",
+        "detailed": "您是否曾在美国违反任何法律或法规进行投票？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_ever_renounced_united_states_citizenship_for_the_purposes_of_avoiding_taxation_",
+      "selectors": [
+        "text:\"Have you ever renounced United States citizenship for the purposes of avoiding taxation?\""
+      ],
+      "en": "Have you ever renounced United States citizenship for the purposes of avoiding taxation?",
+      "zh": {
+        "brief": "您是否曾为了避税目的而放弃美国国籍？",
+        "detailed": "您是否曾为了避税目的而放弃美国国籍？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "explain",
+      "selectors": [
+        "text:\"Explain\""
+      ],
+      "en": "Explain",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "yes",
+      "selectors": [
+        "text:\"Yes\""
+      ],
+      "en": "Yes",
+      "zh": {
+        "brief": "是",
+        "detailed": "是"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "no",
+      "selectors": [
+        "text:\"No\""
+      ],
+      "en": "No",
+      "zh": {
+        "brief": "否",
+        "detailed": "否"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    }
+  ]
+}

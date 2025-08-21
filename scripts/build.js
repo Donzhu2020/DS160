@@ -1,6 +1,6 @@
 import { execSync } from 'child_process';
-import { copyFileSync, mkdirSync, existsSync, readFileSync, writeFileSync } from 'fs';
-import { resolve, dirname } from 'path';
+import { copyFileSync, mkdirSync, existsSync, readFileSync, writeFileSync, readdirSync } from 'fs';
+import { resolve, dirname, join } from 'path';
 
 console.log('Building DS-160 Chinese Helper extension...');
 
@@ -12,6 +12,7 @@ const distDir = 'dist';
 const dirs = [
   'dist/popup',
   'dist/assets/data',
+  'dist/assets/data/pages',
   'dist/icons'
 ];
 
@@ -21,8 +22,8 @@ dirs.forEach(dir => {
   }
 });
 
-// 复制文件
-const filesToCopy = [
+// 复制基础文件
+const basicFilesToCopy = [
   { src: 'manifest.json', dest: 'dist/manifest.json' },
   { src: 'src/popup/popup.html', dest: 'dist/popup/popup.html' },
   { src: 'src/popup/popup.css', dest: 'dist/popup/popup.css' },
@@ -31,7 +32,7 @@ const filesToCopy = [
   { src: 'assets/data/translation-contact-info.json', dest: 'dist/assets/data/translation-contact-info.json' }
 ];
 
-filesToCopy.forEach(({ src, dest }) => {
+basicFilesToCopy.forEach(({ src, dest }) => {
   try {
     // 确保目标目录存在
     const destDir = dirname(dest);
@@ -45,6 +46,25 @@ filesToCopy.forEach(({ src, dest }) => {
     console.error(`Failed to copy ${src}:`, error.message);
   }
 });
+
+// 复制所有页面翻译文件
+const pagesDir = 'assets/data/pages';
+if (existsSync(pagesDir)) {
+  const pageFiles = readdirSync(pagesDir).filter(file => file.endsWith('.json'));
+  pageFiles.forEach(file => {
+    const src = join(pagesDir, file);
+    const dest = join('dist/assets/data/pages', file);
+    try {
+      copyFileSync(src, dest);
+      console.log(`Copied page translation: ${src} -> ${dest}`);
+    } catch (error) {
+      console.error(`Failed to copy page translation ${src}:`, error.message);
+    }
+  });
+  console.log(`Copied ${pageFiles.length} page translation files`);
+} else {
+  console.warn('Pages directory not found, skipping page translation files');
+}
 
 // 创建简单的图标文件（占位符）
 const iconSizes = [16, 48, 128];
@@ -71,6 +91,13 @@ manifest.action.default_popup = 'popup/popup.html';
 
 writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
 console.log('Fixed manifest.json paths');
+
+// Fix ES6 imports in content scripts
+try {
+  execSync('node scripts/fix-content-script.js', { stdio: 'inherit' });
+} catch (error) {
+  console.warn('Failed to fix content script imports:', error.message);
+}
 
 console.log('Build completed successfully!');
 console.log('\nTo load the extension in Chrome:');

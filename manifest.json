@@ -33,7 +33,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["assets/data/*.json"],
+      "resources": ["assets/data/*.json", "assets/data/pages/*.json"],
       "matches": ["https://ceac.state.gov/*"]
     }
   ]

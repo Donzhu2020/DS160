@@ -3,9 +3,14 @@ export interface TranslationField {
   key: string;
   selectors: string[];
   en: string;
-  zh: string;
-  note: string;
-  level: 'brief' | 'detailed';
+  zh: {
+    brief: string;    // 简洁模式的翻译
+    detailed: string; // 详细模式的翻译
+  };
+  note: {
+    brief: string;    // 简洁模式的注释
+    detailed: string; // 详细模式的注释
+  };
 }
 
 export interface TranslationData {

@@ -1,0 +1,382 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page7",
+  "description": "Family Information: Relatives - 家庭信息：亲属",
+  "fields": [
+    {
+      "key": "lblPPT_TYPE",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPPT_TYPE"
+      ],
+      "en": "T Y P E",
+      "zh": {
+        "brief": "护照/旅行证件类型",
+        "detailed": "护照/旅行证件类型"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPPT_NUM",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPPT_NUM"
+      ],
+      "en": "N U M",
+      "zh": {
+        "brief": "护照/旅行证件号码",
+        "detailed": "护照/旅行证件号码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPPT_BOOK_NUM",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPPT_BOOK_NUM"
+      ],
+      "en": "N U M",
+      "zh": {
+        "brief": "护照本号，护照首页最右侧竖排的10位数字",
+        "detailed": "护照本号，护照首页最右侧竖排的10位数字"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPPT_ISSUED_CNTRY",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPPT_ISSUED_CNTRY"
+      ],
+      "en": "C N T R Y",
+      "zh": {
+        "brief": "签发护照/旅行证件的国家/机构",
+        "detailed": "签发护照/旅行证件的国家/机构"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPPT_ISSUED",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPPT_ISSUED"
+      ],
+      "en": "I S S U E D",
+      "zh": {
+        "brief": "护照/旅行证件是在哪里签发的？",
+        "detailed": "护照/旅行证件是在哪里签发的？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPPT_ISSUED_IN_CITY",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPPT_ISSUED_IN_CITY"
+      ],
+      "en": "C I T Y",
+      "zh": {
+        "brief": "城市，你在哪个城市申请的护照",
+        "detailed": "城市，你在哪个城市申请的护照"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPPT_ISSUED_IN_STATE",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPPT_ISSUED_IN_STATE"
+      ],
+      "en": "S T A T E",
+      "zh": {
+        "brief": "州/省，护照首页有写",
+        "detailed": "州/省，护照首页有写"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPPT_ISSUED_IN_CNTRY",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPPT_ISSUED_IN_CNTRY"
+      ],
+      "en": "C N T R Y",
+      "zh": {
+        "brief": "国家/地区",
+        "detailed": "国家/地区"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPPT_ISSUED_DTE",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPPT_ISSUED_DTE"
+      ],
+      "en": "D T E",
+      "zh": {
+        "brief": "签发日期",
+        "detailed": "签发日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPPT_EXPIRE_DTE",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPPT_EXPIRE_DTE"
+      ],
+      "en": "D T E",
+      "zh": {
+        "brief": "有效期至",
+        "detailed": "有效期至"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblLOST_PPT_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblLOST_PPT_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾经丢失过护照或护照被盗？",
+        "detailed": "您是否曾经丢失过护照或护照被盗？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlLostPPT_ctl00_lblLOST_PPT_NUM",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlLostPPT_ctl00_lblLOST_PPT_NUM"
+      ],
+      "en": "N U M",
+      "zh": {
+        "brief": "护照/旅行证件号码",
+        "detailed": "护照/旅行证件号码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlLostPPT_ctl00_lblLOST_PPT_NATL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlLostPPT_ctl00_lblLOST_PPT_NATL"
+      ],
+      "en": "N A T L",
+      "zh": {
+        "brief": "签发护照/旅行证件的国家/机构",
+        "detailed": "签发护照/旅行证件的国家/机构"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlLostPPT_ctl00_lblPREV_PASSPORT_LOST_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlLostPPT_ctl00_lblPREV_PASSPORT_LOST_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "passport_travel_document_type",
+      "selectors": [
+        "text:\"Passport/Travel Document Type\""
+      ],
+      "en": "Passport/Travel Document Type",
+      "zh": {
+        "brief": "护照/旅行证件类型",
+        "detailed": "护照/旅行证件类型"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "country_authority_that_issued_passport_travel_document",
+      "selectors": [
+        "text:\"Country/Authority that Issued Passport/Travel Document\""
+      ],
+      "en": "Country/Authority that Issued Passport/Travel Document",
+      "zh": {
+        "brief": "签发护照/旅行证件的国家/机构",
+        "detailed": "签发护照/旅行证件的国家/机构"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "where_was_the_passport_travel_document_issued_",
+      "selectors": [
+        "text:\"Where was the Passport/Travel Document Issued?\""
+      ],
+      "en": "Where was the Passport/Travel Document Issued?",
+      "zh": {
+        "brief": "护照/旅行证件是在哪里签发的？",
+        "detailed": "护照/旅行证件是在哪里签发的？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "city",
+      "selectors": [
+        "text:\"City\""
+      ],
+      "en": "City",
+      "zh": {
+        "brief": "城市",
+        "detailed": "城市"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "state_province",
+      "selectors": [
+        "text:\"State/Province\""
+      ],
+      "en": "State/Province",
+      "zh": {
+        "brief": "州/省",
+        "detailed": "州/省"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "country_region",
+      "selectors": [
+        "text:\"Country/Region\""
+      ],
+      "en": "Country/Region",
+      "zh": {
+        "brief": "国家/地区",
+        "detailed": "国家/地区"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "issuance_date",
+      "selectors": [
+        "text:\"Issuance Date\""
+      ],
+      "en": "Issuance Date",
+      "zh": {
+        "brief": "签发日期",
+        "detailed": "签发日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_ever_lost_a_passport_or_had_one_stolen_",
+      "selectors": [
+        "text:\"Have you ever lost a passport or had one stolen?\""
+      ],
+      "en": "Have you ever lost a passport or had one stolen?",
+      "zh": {
+        "brief": "您是否曾经丢失过护照或护照被盗？",
+        "detailed": "您是否曾经丢失过护照或护照被盗？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "explain",
+      "selectors": [
+        "text:\"Explain\""
+      ],
+      "en": "Explain",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "add_another",
+      "selectors": [
+        "text:\"Add Another\""
+      ],
+      "en": "Add Another",
+      "zh": {
+        "brief": "添加另一个",
+        "detailed": "添加另一个"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "remove",
+      "selectors": [
+        "text:\"Remove\""
+      ],
+      "en": "Remove",
+      "zh": {
+        "brief": "移除",
+        "detailed": "移除"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    }
+  ]
+}

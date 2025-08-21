@@ -1,0 +1,193 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page3",
+  "description": "Travel Information - 旅行信息（优化版）",
+  "fields": [
+    {
+      "key": "Travel_Information_Title",
+      "selectors": [
+        "text:Travel Information"
+      ],
+      "en": "Travel Information",
+      "zh": {
+        "brief": "旅行信息",
+        "detailed": "旅行信息"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Travel_Plans_Note",
+      "selectors": [
+        "text:NOTE: Provide the following information concerning your travel plans."
+      ],
+      "en": "NOTE: Provide the following information concerning your travel plans.",
+      "zh": {
+        "brief": "注意：请提供以下关于您旅行计划的信息。",
+        "detailed": "注意：请提供以下关于您旅行计划的信息。"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Purpose_of_Trip_US",
+      "selectors": [
+        "text:Purpose of Trip to the U.S",
+        "text:Purpose of Trip to the U.S."
+      ],
+      "en": "Purpose of Trip to the U.S",
+      "zh": {
+        "brief": "赴美目的",
+        "detailed": "赴美旅行目的"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "请选择最符合您此次赴美目的的选项"
+      }
+    },
+    {
+      "key": "Specify_Purpose",
+      "selectors": [
+        "text:Specify"
+      ],
+      "en": "Specify",
+      "zh": {
+        "brief": "具体说明",
+        "detailed": "请具体说明您的访问目的"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "如选择了需要具体说明的访问类型，请在此详细描述"
+      }
+    },
+    {
+      "key": "Address_Where_You_Will_Stay",
+      "selectors": [
+        "text:Address Where You Will Stay in the U.S."
+      ],
+      "en": "Address Where You Will Stay in the U.S.",
+      "zh": {
+        "brief": "在美住址",
+        "detailed": "您在美国期间的住址"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "请提供您在美国期间的详细住址信息"
+      }
+    },
+    {
+      "key": "Street_Address_Line_1",
+      "selectors": [
+        "text:Street Address (Line 1)"
+      ],
+      "en": "Street Address (Line 1)",
+      "zh": {
+        "brief": "街道地址1",
+        "detailed": "街道地址（第1行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "City",
+      "selectors": [
+        "text:City"
+      ],
+      "en": "City",
+      "zh": {
+        "brief": "城市",
+        "detailed": "城市"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "State",
+      "selectors": [
+        "text:State"
+      ],
+      "en": "State",
+      "zh": {
+        "brief": "州",
+        "detailed": "州"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Person_Entity_Paying",
+      "selectors": [
+        "text:Person/Entity Paying for Your Trip"
+      ],
+      "en": "Person/Entity Paying for Your Trip",
+      "zh": {
+        "brief": "为您旅行费用付款的人员/机构",
+        "detailed": "为您旅行费用付款的人员/机构"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Travel_Plans_Question",
+      "selectors": [
+        "text:Have you made specific travel plans?",
+        "text:specific travel plans"
+      ],
+      "en": "Have you made specific travel plans?",
+      "zh": {
+        "brief": "您是否已制定具体的旅行计划？",
+        "detailed": "您是否已制定具体的旅行计划？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "根据您的回答，后续会显示不同的字段"
+      }
+    },
+    {
+      "key": "Intended_Date_of_Arrival",
+      "selectors": [
+        "text:Intended Date of Arrival",
+        "text:Intended Date of Arrival in the U.S.",
+        "text:Date of Arrival"
+      ],
+      "en": "Intended Date of Arrival",
+      "zh": {
+        "brief": "预计到达日期",
+        "detailed": "预计到达美国日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "请填写您计划到达美国的具体日期"
+      }
+    },
+    {
+      "key": "Intended_Length_of_Stay",
+      "selectors": [
+        "text:Intended Length of Stay in the U.S.",
+        "text:Length of Stay",
+        "text:Intended Length of Stay"
+      ],
+      "en": "Intended Length of Stay in the U.S.",
+      "zh": {
+        "brief": "预计在美停留时间",
+        "detailed": "预计在美国停留时间长度"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "请选择或填写您计划在美国停留的时间长度"
+      }
+    }
+  ]
+}

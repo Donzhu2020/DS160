@@ -1,23 +1,51 @@
 {
   "manifest_version": 3,
   "name": "DS-160 中文助手",
-  "version": "1.1.0",
-  "description": "DS-160表单中文翻译助手 - 完整版",
+  "version": "1.0.0",
+  "description": "DS-160表单中文翻译与填写助手",
   "permissions": [
-    "storage"
+    "storage",
+    "scripting"
   ],
   "host_permissions": [
-    "https://ceac.state.gov/*",
-    "https://*/*"
+    "https://ceac.state.gov/*"
   ],
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content/full-translation.js"],
-      "run_at": "document_idle"
+      "matches": [
+        "https://ceac.state.gov/*"
+      ],
+      "js": [
+        "content/translation.js"
+      ],
+      "css": [
+        "content/translation.css"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
     }
   ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
   "action": {
+    "default_popup": "popup/popup.html",
     "default_title": "DS-160 中文助手"
-  }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/data/*.json",
+        "assets/data/pages/*.json"
+      ],
+      "matches": [
+        "https://ceac.state.gov/*"
+      ]
+    }
+  ]
 }

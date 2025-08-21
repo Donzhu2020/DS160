@@ -1,0 +1,142 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page17",
+  "description": "SEVIS Information - SEVIS信息",
+  "fields": [
+    {
+      "key": "lblIMMGRATN_FRAUD_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblIMMGRATN_FRAUD_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾经试图通过欺诈、故意虚假陈述或其他非法手段为自己或他人获得签证、入境美国或任何其他美国移民福利？",
+        "detailed": "您是否曾经试图通过欺诈、故意虚假陈述或其他非法手段为自己或他人获得签证、入境美国或任何其他美国移民福利？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblIMMGRATN_FRAUD_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblIMMGRATN_FRAUD_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblDeport_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblDeport_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾被任何国家驱逐出境或遣返？",
+        "detailed": "您是否曾被任何国家驱逐出境或遣返？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblDeport_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblDeport_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_ever_sought_to_obtain_or_assist_others_to_obtain_a_visa__entry_into_the_united_states__or_any_other_united_states_immigration_benefit_by_fraud_or_willful_misrepresentation_or_other_unlawful_means_",
+      "selectors": [
+        "text:\"Have you ever sought to obtain or assist others to obtain a visa, entry into the United States, or any other United States immigration benefit by fraud or willful misrepresentation or other unlawful means?\""
+      ],
+      "en": "Have you ever sought to obtain or assist others to obtain a visa, entry into the United States, or any other United States immigration benefit by fraud or willful misrepresentation or other unlawful means?",
+      "zh": {
+        "brief": "您是否曾经试图通过欺诈、故意虚假陈述或其他非法手段为自己或他人获得签证、入境美国或任何其他美国移民福利？",
+        "detailed": "您是否曾经试图通过欺诈、故意虚假陈述或其他非法手段为自己或他人获得签证、入境美国或任何其他美国移民福利？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_ever_been_removed_or_deported_from_any_country_",
+      "selectors": [
+        "text:\"Have you ever been removed or deported from any country?\""
+      ],
+      "en": "Have you ever been removed or deported from any country?",
+      "zh": {
+        "brief": "您是否曾被任何国家驱逐出境或遣返？",
+        "detailed": "您是否曾被任何国家驱逐出境或遣返？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "explain",
+      "selectors": [
+        "text:\"Explain\""
+      ],
+      "en": "Explain",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "yes",
+      "selectors": [
+        "text:\"Yes\""
+      ],
+      "en": "Yes",
+      "zh": {
+        "brief": "是",
+        "detailed": "是"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "no",
+      "selectors": [
+        "text:\"No\""
+      ],
+      "en": "No",
+      "zh": {
+        "brief": "否",
+        "detailed": "否"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    }
+  ]
+}

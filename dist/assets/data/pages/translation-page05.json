@@ -1,0 +1,504 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page5",
+  "description": "Previous US Travel - 以前的美国旅行",
+  "fields": [
+    {
+      "key": "lblPageNote1",
+      "selectors": [
+        "text:Previous U.S. Travel",
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPageNote1"
+      ],
+      "en": "lbl Page Note1",
+      "zh": {
+        "brief": "注意：请提供下面关于以前赴美旅行的信息。对于所有要求解释的问题，请提供完整、准确的信息。",
+        "detailed": "注意：请提供下面关于以前赴美旅行的信息。对于所有要求解释的问题，请提供完整、准确的信息。"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPREV_US_TRAVEL_IND",
+      "selectors": [
+        "text:Have you ever been in the U.S.?",
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPREV_US_TRAVEL_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "你曾经到过美国吗？",
+        "detailed": "你曾经到过美国吗？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPreviousUSVisitsInfo",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPreviousUSVisitsInfo"
+      ],
+      "en": "lbl Previous U S Visits Info",
+      "zh": {
+        "brief": "请提供您最近五次赴美访问的信息：",
+        "detailed": "请提供您最近五次赴美访问的信息："
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPREV_US_VISIT_ctl00_lblPREV_US_VISIT_DTE",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPREV_US_VISIT_ctl00_lblPREV_US_VISIT_DTE"
+      ],
+      "en": "D T E",
+      "zh": {
+        "brief": "到达日期",
+        "detailed": "到达日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPREV_US_VISIT_ctl00_lblPREV_US_VISIT_LOS",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPREV_US_VISIT_ctl00_lblPREV_US_VISIT_LOS"
+      ],
+      "en": "L O S",
+      "zh": {
+        "brief": "停留时间长度",
+        "detailed": "停留时间长度"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPREV_US_DRIVER_LIC_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPREV_US_DRIVER_LIC_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否持有或曾经持有美国驾驶执照？",
+        "detailed": "您是否持有或曾经持有美国驾驶执照？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPREV_VISA_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPREV_VISA_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾经获得过美国签证？",
+        "detailed": "您是否曾经获得过美国签证？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPREV_VISA_SAME_TYPE_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPREV_VISA_SAME_TYPE_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您申请的是同一类型的签证吗？",
+        "detailed": "您申请的是同一类型的签证吗？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPREV_VISA_REFUSED_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPREV_VISA_REFUSED_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾经被拒发美国签证，或在入境口岸被拒绝入境美国，或撤回过入境申请？",
+        "detailed": "您是否曾经被拒发美国签证，或在入境口岸被拒绝入境美国，或撤回过入境申请？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblIV_PETITION_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblIV_PETITION_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "是否有人曾为您向美国公民及移民服务局提交过移民申请？",
+        "detailed": "是否有人曾为您向美国公民及移民服务局提交过移民申请？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPREV_VISA_SAME_CNTRY_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPREV_VISA_SAME_CNTRY_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否在签发上述签证的同一国家或地点申请，且该国家或地点是您的主要居住地？",
+        "detailed": "您是否在签发上述签证的同一国家或地点申请，且该国家或地点是您的主要居住地？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPREV_VISA_TEN_PRINT_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPREV_VISA_TEN_PRINT_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否已按过十指指纹？",
+        "detailed": "您是否已按过十指指纹？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "date_arrived",
+      "selectors": [
+        "text:\"Date Arrived\""
+      ],
+      "en": "Date Arrived",
+      "zh": {
+        "brief": "到达日期",
+        "detailed": "到达日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "length_of_stay",
+      "selectors": [
+        "text:\"Length of Stay\""
+      ],
+      "en": "Length of Stay",
+      "zh": {
+        "brief": "停留时间长度",
+        "detailed": "停留时间长度"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "add_another",
+      "selectors": [
+        "text:\"Add Another\""
+      ],
+      "en": "Add Another",
+      "zh": {
+        "brief": "添加另一个",
+        "detailed": "添加另一个"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "remove",
+      "selectors": [
+        "text:\"Remove\""
+      ],
+      "en": "Remove",
+      "zh": {
+        "brief": "移除",
+        "detailed": "移除"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "do_not_know",
+      "selectors": [
+        "text:\"Do not know\""
+      ],
+      "en": "Do not know",
+      "zh": {
+        "brief": "不知道",
+        "detailed": "不知道"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "previous_u_s__visas",
+      "selectors": [
+        "text:\"Previous U.S. Visas\""
+      ],
+      "en": "Previous U.S. Visas",
+      "zh": {
+        "brief": "以往美国签证",
+        "detailed": "以往美国签证"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "date_last_visa_was_issued",
+      "selectors": [
+        "text:\"Date Last Visa Was Issued\""
+      ],
+      "en": "Date Last Visa Was Issued",
+      "zh": {
+        "brief": "最后一次签证签发日期",
+        "detailed": "最后一次签证签发日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "do_not_know",
+      "selectors": [
+        "text:\"Do Not Know\""
+      ],
+      "en": "Do Not Know",
+      "zh": {
+        "brief": "不知道",
+        "detailed": "不知道"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "are_you_applying_for_the_same_type_of_visa_",
+      "selectors": [
+        "text:\"Are you applying for the same type of visa?\""
+      ],
+      "en": "Are you applying for the same type of visa?",
+      "zh": {
+        "brief": "您申请的是同一类型的签证吗？",
+        "detailed": "您申请的是同一类型的签证吗？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "are_you_applying_in_the_same_country_or_location_where_the_visa_above_was_issued__and_is_this_country_or_location_your_place_of_principal_residence_",
+      "selectors": [
+        "text:\"Are you applying in the same country or location where the visa above was issued, and is this country or location your place of principal residence?\""
+      ],
+      "en": "Are you applying in the same country or location where the visa above was issued, and is this country or location your place of principal residence?",
+      "zh": {
+        "brief": "您是否在签发上述签证的同一国家或地点申请，且该国家或地点是您的主要居住地？",
+        "detailed": "您是否在签发上述签证的同一国家或地点申请，且该国家或地点是您的主要居住地？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "are_you_applying_in_the_same_country_or_location_where_the_visa_above_was_issued__and_is_this_country_or_location_your_place_of_principal_of_residence_",
+      "selectors": [
+        "text:\"Are you applying in the same country or location where the visa above was issued, and is this country or location your place of principal of residence?\""
+      ],
+      "en": "Are you applying in the same country or location where the visa above was issued, and is this country or location your place of principal of residence?",
+      "zh": {
+        "brief": "您是否在签发上述签证的同一国家或地点申请，且该国家或地点是您的主要居住地？",
+        "detailed": "您是否在签发上述签证的同一国家或地点申请，且该国家或地点是您的主要居住地？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_been_ten_printed_",
+      "selectors": [
+        "text:\"Have you been ten-printed?\""
+      ],
+      "en": "Have you been ten-printed?",
+      "zh": {
+        "brief": "您是否已按过十指指纹？",
+        "detailed": "您是否已按过十指指纹？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "has_your_u_s__visa_ever_been_lost_or_stolen_",
+      "selectors": [
+        "text:\"Has your U.S. Visa ever been lost or stolen?\""
+      ],
+      "en": "Has your U.S. Visa ever been lost or stolen?",
+      "zh": {
+        "brief": "您的美国签证是否曾经丢失或被盗？",
+        "detailed": "您的美国签证是否曾经丢失或被盗？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "has_your_u_s__visa_ever_been_cancelled_or_revoked_",
+      "selectors": [
+        "text:\"Has your U.S. Visa ever been cancelled or revoked?\""
+      ],
+      "en": "Has your U.S. Visa ever been cancelled or revoked?",
+      "zh": {
+        "brief": "您的美国签证是否曾经被取消或撤销？",
+        "detailed": "您的美国签证是否曾经被取消或撤销？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "explain",
+      "selectors": [
+        "text:\"Explain\""
+      ],
+      "en": "Explain",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Drivers_License_Number",
+      "selectors": [
+        "text:Driver's License Number"
+      ],
+      "en": "Driver's License Number",
+      "zh": {
+        "brief": "驾照号码",
+        "detailed": "驾照号码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "State_of_Drivers_License",
+      "selectors": [
+        "text:State of Driver's License"
+      ],
+      "en": "State of Driver's License",
+      "zh": {
+        "brief": "驾照签发州",
+        "detailed": "驾照签发州"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Date_Last_Visa_Issued",
+      "selectors": [
+        "text:Date Last Visa Was Issued"
+      ],
+      "en": "Date Last Visa Was Issued",
+      "zh": {
+        "brief": "上次签证签发日期",
+        "detailed": "上次签证签发日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Visa_Number",
+      "selectors": [
+        "text:Visa Number"
+      ],
+      "en": "Visa Number",
+      "zh": {
+        "brief": "签证号码",
+        "detailed": "签证号码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Visa_Lost_Stolen",
+      "selectors": [
+        "text:Has your U.S. Visa ever been lost or stolen?"
+      ],
+      "en": "Has your U.S. Visa ever been lost or stolen?",
+      "zh": {
+        "brief": "您的美国签证是否曾经丢失或被盗？",
+        "detailed": "您的美国签证是否曾经丢失或被盗？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Visa_Cancelled_Revoked",
+      "selectors": [
+        "text:Has your U.S. Visa ever been cancelled or revoked?"
+      ],
+      "en": "Has your U.S. Visa ever been cancelled or revoked?",
+      "zh": {
+        "brief": "您的美国签证是否曾经被取消或撤销？",
+        "detailed": "您的美国签证是否曾经被取消或撤销？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    }
+  ]
+}

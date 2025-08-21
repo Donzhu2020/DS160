@@ -1,5 +1,49 @@
-import { g as getSettings, s as saveSettings } from "../storage.js";
-class PopupController {
+
+(function() {
+  'use strict';
+  
+  // Inlined storage module
+  const DEFAULT_SETTINGS = {
+  enabled: true,
+  mode: "brief",
+  showNotes: true,
+  position: "right"
+};
+const STORAGE_KEYS = {
+  SETTINGS: "ds160_translation_settings",
+  INJECTION_STATE: "ds160_injection_state"
+};
+async function getSettings() {
+  try {
+    const result = await chrome.storage.local.get(STORAGE_KEYS.SETTINGS);
+    return { ...DEFAULT_SETTINGS, ...result[STORAGE_KEYS.SETTINGS] };
+  } catch (error) {
+    console.error("Error loading settings:", error);
+    return DEFAULT_SETTINGS;
+  }
+}
+async function saveSettings(settings) {
+  try {
+    const currentSettings = await getSettings();
+    const newSettings = { ...currentSettings, ...settings };
+    await chrome.storage.local.set({ [STORAGE_KEYS.SETTINGS]: newSettings });
+  } catch (error) {
+    console.error("Error saving settings:", error);
+  }
+}
+function onSettingsChange(callback) {
+  chrome.storage.onChanged.addListener((changes, namespace) => {
+    if (namespace === "local" && changes[STORAGE_KEYS.SETTINGS]) {
+      callback(changes[STORAGE_KEYS.SETTINGS].newValue);
+    }
+  });
+}
+
+//# sourceMappingURL=storage.js.map
+
+  
+  // Main script
+  class PopupController {
   constructor() {
     this.settings = null;
     this.isCurrentPageDS160 = false;
@@ -113,13 +157,19 @@ class PopupController {
       if (this.isCurrentPageDS160) {
         const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
         if (tab.id) {
-          chrome.tabs.sendMessage(tab.id, {
+          await chrome.tabs.sendMessage(tab.id, {
             type: "UPDATE_SETTINGS",
             settings: this.settings
           });
+          if (key === "mode" || key === "position" || key === "showNotes") {
+            this.showSuccess("设置已更新，翻译已刷新");
+          } else {
+            this.showSuccess("设置已保存");
+          }
         }
+      } else {
+        this.showSuccess("设置已保存");
       }
-      this.showSuccess("设置已保存");
     } catch (error) {
       console.error("Error updating setting:", error);
       this.showError("设置保存失败");
@@ -199,3 +249,5 @@ document.addEventListener("DOMContentLoaded", () => {
   new PopupController();
 });
 //# sourceMappingURL=popup.js.map
+
+})();

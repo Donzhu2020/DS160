@@ -1,0 +1,187 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page4",
+  "description": "Travel Companions - 旅行同伴",
+  "fields": [
+    {
+      "key": "lblPageNote1",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPageNote1"
+      ],
+      "en": "lbl Page Note1",
+      "zh": {
+        "brief": "注意：请提供以下随行人员信息。",
+        "detailed": "注意：请提供以下随行人员信息。"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Label9",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_Label9"
+      ],
+      "en": "Label9",
+      "zh": {
+        "brief": "与您同行的人",
+        "detailed": "与您同行的人"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblOtherPersonsTravelingWithYou",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblOtherPersonsTravelingWithYou"
+      ],
+      "en": "lbl Other Persons Traveling With You",
+      "zh": {
+        "brief": "是否有人与您同行？",
+        "detailed": "是否有人与您同行？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblGroupTravel",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblGroupTravel"
+      ],
+      "en": "lbl Group Travel",
+      "zh": {
+        "brief": "您是否作为团体或组织的一部分旅行？",
+        "detailed": "您是否作为团体或组织的一部分旅行？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPersonsTraveling",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPersonsTraveling"
+      ],
+      "en": "lbl Persons Traveling",
+      "zh": {
+        "brief": "输入与您同行的人员",
+        "detailed": "输入与您同行的人员"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dlTravelCompanions_ctl00_lblTRAV_COMP_SURNAME",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dlTravelCompanions_ctl00_lblTRAV_COMP_SURNAME"
+      ],
+      "en": "S U R N A M E",
+      "zh": {
+        "brief": "与您同行人员的姓氏",
+        "detailed": "与您同行人员的姓氏"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dlTravelCompanions_ctl00_lblTRAV_COM_GIVEN_NAME",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dlTravelCompanions_ctl00_lblTRAV_COM_GIVEN_NAME"
+      ],
+      "en": "N A M E",
+      "zh": {
+        "brief": "与您同行人员的名字",
+        "detailed": "与您同行人员的名字"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dlTravelCompanions_ctl00_lblTCRelationship",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dlTravelCompanions_ctl00_lblTCRelationship"
+      ],
+      "en": "lbl T C Relationship",
+      "zh": {
+        "brief": "与此人的关系",
+        "detailed": "与此人的关系"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "enter_the_name_of_the_group_you_are_traveling_with",
+      "selectors": [
+        "text:\"Enter the name of the group you are traveling with\""
+      ],
+      "en": "Enter the name of the group you are traveling with",
+      "zh": {
+        "brief": "输入您要与之同行的团体名称",
+        "detailed": "输入您要与之同行的团体名称"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "group_name",
+      "selectors": [
+        "text:\"Group Name\""
+      ],
+      "en": "Group Name",
+      "zh": {
+        "brief": "团体名称",
+        "detailed": "团体名称"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "add_another",
+      "selectors": [
+        "text:\"Add Another\""
+      ],
+      "en": "Add Another",
+      "zh": {
+        "brief": "添加另一个",
+        "detailed": "添加另一个"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "remove",
+      "selectors": [
+        "text:\"Remove\""
+      ],
+      "en": "Remove",
+      "zh": {
+        "brief": "移除",
+        "detailed": "移除"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    }
+  ]
+}

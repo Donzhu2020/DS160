@@ -1,15 +1,100 @@
-import { s as saveSettings, g as getSettings, o as onSettingsChange } from "../storage.js";
-function findElementBySelectors(selectors) {
+
+(function() {
+  'use strict';
+  
+  // Inlined storage module
+  const DEFAULT_SETTINGS = {
+  enabled: true,
+  mode: "brief",
+  showNotes: true,
+  position: "right"
+};
+const STORAGE_KEYS = {
+  SETTINGS: "ds160_translation_settings",
+  INJECTION_STATE: "ds160_injection_state"
+};
+async function getSettings() {
+  try {
+    const result = await chrome.storage.local.get(STORAGE_KEYS.SETTINGS);
+    return { ...DEFAULT_SETTINGS, ...result[STORAGE_KEYS.SETTINGS] };
+  } catch (error) {
+    console.error("Error loading settings:", error);
+    return DEFAULT_SETTINGS;
+  }
+}
+async function saveSettings(settings) {
+  try {
+    const currentSettings = await getSettings();
+    const newSettings = { ...currentSettings, ...settings };
+    await chrome.storage.local.set({ [STORAGE_KEYS.SETTINGS]: newSettings });
+  } catch (error) {
+    console.error("Error saving settings:", error);
+  }
+}
+function onSettingsChange(callback) {
+  chrome.storage.onChanged.addListener((changes, namespace) => {
+    if (namespace === "local" && changes[STORAGE_KEYS.SETTINGS]) {
+      callback(changes[STORAGE_KEYS.SETTINGS].newValue);
+    }
+  });
+}
+
+//# sourceMappingURL=storage.js.map
+
+  
+  // Main script
+  function findElementBySelectors(selectors) {
   var _a;
   for (const selector of selectors) {
     try {
       if (selector.startsWith("text:")) {
         const text = selector.substring(5);
-        const elements = document.querySelectorAll("label, span, div, p");
+        const elements = document.querySelectorAll("*");
+        let exactMatch = null;
+        let bestMatch = null;
         for (const el of elements) {
-          if ((_a = el.textContent) == null ? void 0 : _a.toLowerCase().includes(text.toLowerCase())) {
-            return el;
+          if (el.textContent && el.offsetParent !== null) {
+            const textContent = el.textContent.trim();
+            if (textContent === text) {
+              console.log(`✅ Found exact text match for "${text}":`, el.tagName, el.id, el.className);
+              exactMatch = el;
+              break;
+            }
+            if (textContent.includes(text)) {
+              if (!bestMatch || textContent.length < bestMatch.textContent.length) {
+                if (textContent.length < text.length * 2.5) {
+                  console.log(`📍 Found smaller container for "${text}":`, el.tagName, el.className, `"${textContent.substring(0, 50)}"`);
+                  bestMatch = el;
+                }
+              }
+            }
           }
+        }
+        if (exactMatch) return exactMatch;
+        if (bestMatch) {
+          console.log(`⚡ Using best match for "${text}":`, bestMatch.tagName, bestMatch.className);
+          return bestMatch;
+        }
+        console.log(`No element found for text: "${text}"`);
+        continue;
+      }
+      if (selector.includes(":contains(")) {
+        const match = selector.match(/^(.*?):contains\(['"]?(.*?)['"]?\)$/);
+        if (match) {
+          const [, baseSelector, containsText] = match;
+          const baseElements = baseSelector === "*" ? document.querySelectorAll("*") : document.querySelectorAll(baseSelector || "*");
+          for (const el of baseElements) {
+            if ((_a = el.textContent) == null ? void 0 : _a.includes(containsText)) {
+              return el;
+            }
+          }
+        }
+        continue;
+      }
+      if (selector.includes("[") && selector.includes("*=")) {
+        const element2 = document.querySelector(selector);
+        if (element2) {
+          return element2;
         }
         continue;
       }
@@ -30,21 +115,30 @@ function createTranslationElement(zh, note, showNote, position) {
   const style = document.createElement("style");
   style.textContent = `
     .translation-wrapper {
-      display: inline-block;
-      margin-left: ${position === "right" ? "8px" : "0"};
-      margin-top: ${position === "below" ? "4px" : "0"};
+      display: inline !important;
+      margin-left: 8px !important;
+      margin-top: 0 !important;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       font-size: 13px;
       line-height: 1.4;
+      vertical-align: baseline !important;
+      position: static !important;
+      float: none !important;
+      clear: none !important;
     }
     
     .translation-text {
       color: #666;
       font-weight: 500;
       background: rgba(59, 130, 246, 0.1);
-      padding: 2px 6px;
-      border-radius: 4px;
+      padding: 1px 4px;
+      border-radius: 3px;
       border: 1px solid rgba(59, 130, 246, 0.2);
+      display: inline;
+      white-space: normal;
+      word-wrap: break-word;
+      max-width: 300px;
+      font-size: 12px;
     }
     
     .translation-note {
@@ -80,14 +174,57 @@ function createTranslationElement(zh, note, showNote, position) {
 }
 function hasTranslation(element) {
   var _a;
-  return ((_a = element.parentElement) == null ? void 0 : _a.querySelector(".ds160-translation-container")) !== null;
+  if (element.hasAttribute("data-ds160-translated")) {
+    return true;
+  }
+  const elementText = ((_a = element.textContent) == null ? void 0 : _a.trim()) || "";
+  if (!elementText) return false;
+  const nextSibling = element.nextElementSibling;
+  if (nextSibling && nextSibling.classList.contains("ds160-translation-container")) {
+    return true;
+  }
+  const parent = element.parentElement;
+  if (parent) {
+    const existingTranslations = parent.querySelectorAll(".ds160-translation-container");
+    for (const translation of existingTranslations) {
+      const forElement = translation.getAttribute("data-for-element");
+      if (forElement && forElement.includes(elementText.substring(0, 15))) {
+        return true;
+      }
+    }
+  }
+  const wrapper = element.closest('span[style*="position: relative"]');
+  if (wrapper && wrapper.querySelector(".ds160-translation-container")) {
+    return true;
+  }
+  return false;
 }
 function removeTranslation(element) {
   var _a;
-  const container = (_a = element.parentElement) == null ? void 0 : _a.querySelector(".ds160-translation-container");
-  if (container) {
-    container.remove();
+  element.removeAttribute("data-ds160-translated");
+  const elementText = ((_a = element.textContent) == null ? void 0 : _a.trim()) || "";
+  if (!elementText) return;
+  const nextSibling = element.nextElementSibling;
+  if (nextSibling && nextSibling.classList.contains("ds160-translation-container")) {
+    nextSibling.remove();
   }
+  const parent = element.parentElement;
+  if (parent) {
+    const translationContainers = parent.querySelectorAll(".ds160-translation-container");
+    for (const container of translationContainers) {
+      const forElement = container.getAttribute("data-for-element");
+      if (forElement && forElement.includes(elementText.substring(0, 15))) {
+        container.remove();
+      }
+    }
+  }
+  const wrapper = element.closest('span[style*="position: relative"]');
+  if (wrapper) {
+    const translationsInWrapper = wrapper.querySelectorAll(".ds160-translation-container");
+    translationsInWrapper.forEach((t) => t.remove());
+  }
+  const internalTranslations = element.querySelectorAll(".ds160-translation-container");
+  internalTranslations.forEach((t) => t.remove());
 }
 function waitForDOM() {
   return new Promise((resolve) => {
@@ -179,10 +316,29 @@ class TranslationInjector {
     if (hasTranslation(targetElement)) {
       return false;
     }
+    const currentMode = this.settings.mode;
+    let translationText;
+    let noteText;
+    if (typeof field.zh === "object") {
+      translationText = field.zh[currentMode];
+      if (!translationText || translationText.trim() === "") {
+        translationText = currentMode === "brief" ? field.zh.detailed : field.zh.brief;
+      }
+    } else {
+      translationText = field.zh;
+    }
+    if (field.note && typeof field.note === "object") {
+      noteText = field.note[currentMode] || field.note.brief;
+    } else {
+      noteText = field.note || "";
+    }
+    if (!translationText || translationText.trim() === "") {
+      return false;
+    }
     const translationElement = createTranslationElement(
-      field.zh,
-      field.note,
-      this.settings.showNotes && field.level === "detailed",
+      translationText,
+      noteText,
+      this.settings.showNotes && noteText.trim() !== "",
       this.settings.position
     );
     this.insertTranslationElement(targetElement, translationElement);
@@ -193,9 +349,44 @@ class TranslationInjector {
    * 插入翻译元素到适当位置
    */
   insertTranslationElement(targetElement, translationElement) {
+    var _a;
     const parent = targetElement.parentElement;
     if (!parent) {
       return;
+    }
+    const tagName = targetElement.tagName.toLowerCase();
+    if (tagName === "div" && targetElement.classList.contains("field")) {
+      const textNodes = Array.from(targetElement.childNodes).filter(
+        (node) => {
+          var _a2;
+          return node.nodeType === Node.TEXT_NODE && ((_a2 = node.textContent) == null ? void 0 : _a2.trim());
+        }
+      );
+      if (textNodes.length > 0) {
+        const lastTextNode = textNodes[textNodes.length - 1];
+        if ((_a = lastTextNode.textContent) == null ? void 0 : _a.trim()) {
+          try {
+            const textSpan = document.createElement("span");
+            textSpan.textContent = lastTextNode.textContent;
+            translationElement.style.cssText = `
+              display: inline !important;
+              margin-left: 4px !important;
+              background: rgba(34, 197, 94, 0.1) !important;
+              color: #059669 !important;
+              padding: 1px 3px !important;
+              border-radius: 2px !important;
+              font-size: 10px !important;
+              font-weight: 500 !important;
+              white-space: nowrap !important;
+            `;
+            lastTextNode.replaceWith(textSpan, translationElement);
+            console.log("🎯 Inline text replacement for field div");
+            return;
+          } catch (error) {
+            console.warn("Failed to insert inline translation:", error);
+          }
+        }
+      }
     }
     if (this.settings.position === "right") {
       targetElement.insertAdjacentElement("afterend", translationElement);
@@ -492,6 +683,59 @@ class TranslationUIController {
   }
 }
 const translationCache = /* @__PURE__ */ new Map();
+const mergedTranslationCache = /* @__PURE__ */ new Map();
+const pageAssociations = {
+  "page1": ["page1"],
+  // 暂时只加载自己，减少干扰
+  "page2": ["page2"],
+  // 暂时只加载自己
+  "page3": ["page3"],
+  // 暂时只加载page3，确保精确度
+  "page4": ["page4"],
+  // 暂时只加载自己
+  "page5": ["page5"],
+  // 暂时只加载自己
+  // 为其他页面添加默认关联（只加载自己）
+  "page6": ["page6"],
+  "page7": ["page7"],
+  "page8": ["page8"],
+  "page9": ["page9"],
+  "page10": ["page10"],
+  "page11": ["page11"],
+  "page12": ["page12"],
+  "page13": ["page13"],
+  "page14": ["page14"],
+  "page15": ["page15"],
+  "page16": ["page16"],
+  "page17": ["page17"],
+  "page18": ["page18"]
+};
+async function loadMergedTranslationData(pageId) {
+  if (mergedTranslationCache.has(pageId)) {
+    return mergedTranslationCache.get(pageId);
+  }
+  try {
+    const associatedPages = pageAssociations[pageId] || [pageId];
+    console.log(`Loading translation data for ${pageId} and associated pages:`, associatedPages);
+    const translationDataList = [];
+    for (const pageToLoad of associatedPages) {
+      const data = await loadTranslationData(pageToLoad);
+      if (data) {
+        translationDataList.push(data);
+      }
+    }
+    if (translationDataList.length === 0) {
+      console.warn(`No translation data loaded for page ${pageId} and its associations`);
+      return null;
+    }
+    const mergedData = mergeTranslationData(pageId, translationDataList);
+    mergedTranslationCache.set(pageId, mergedData);
+    return mergedData;
+  } catch (error) {
+    console.error("Error loading merged translation data:", error);
+    return null;
+  }
+}
 async function loadTranslationData(pageId) {
   if (translationCache.has(pageId)) {
     return translationCache.get(pageId);
@@ -517,37 +761,193 @@ async function loadTranslationData(pageId) {
     return null;
   }
 }
+function mergeTranslationData(primaryPageId, translationDataList) {
+  if (translationDataList.length === 0) {
+    throw new Error("Cannot merge empty translation data list");
+  }
+  const primaryData = translationDataList[0];
+  const mergedFields = [...primaryData.fields];
+  const existingKeys = new Set(primaryData.fields.map((field) => field.key));
+  for (let i = 1; i < translationDataList.length; i++) {
+    const additionalData = translationDataList[i];
+    for (const field of additionalData.fields) {
+      if (!existingKeys.has(field.key)) {
+        mergedFields.push(field);
+        existingKeys.add(field.key);
+      }
+    }
+  }
+  console.log(`Merged translation data: ${mergedFields.length} total fields from ${translationDataList.length} pages`);
+  return {
+    version: primaryData.version,
+    pageId: primaryPageId,
+    description: `${primaryData.description} (merged with ${translationDataList.length - 1} additional pages)`,
+    fields: mergedFields
+  };
+}
 function getDataFileForPage(pageId) {
+  if (pageId.startsWith("page") && pageId.match(/^page\d+$/)) {
+    const pageNumber = pageId.replace("page", "").padStart(2, "0");
+    return `pages/translation-page${pageNumber}.json`;
+  }
+  const legacyFileMap = {
+    "personalInfo": "translation-personal-info.json",
+    "personalInfo1": "translation-personal-info.json",
+    "contactInfo": "translation-contact-info.json",
+    "general": "pages/translation-page01.json"
+    // 默认使用第一页
+  };
+  if (legacyFileMap[pageId]) {
+    return legacyFileMap[pageId];
+  }
   const pageContent = document.body.textContent || "";
-  if (pageContent.includes("Surnames") && pageContent.includes("Given Names")) {
-    return "translation-personal-info.json";
+  const contentPatterns = [
+    { pattern: /Surnames.*Given Names/i, file: "pages/translation-page01.json" },
+    { pattern: /Nationality.*National.*Identification/i, file: "pages/translation-page02.json" },
+    { pattern: /Travel.*Information.*Address.*stay/i, file: "pages/translation-page03.json" },
+    { pattern: /Travel.*Companions/i, file: "pages/translation-page04.json" },
+    { pattern: /Previous.*US.*Travel/i, file: "pages/translation-page05.json" },
+    { pattern: /Point.*Contact.*Information/i, file: "pages/translation-page06.json" },
+    { pattern: /Family.*Information.*Relatives/i, file: "pages/translation-page07.json" },
+    { pattern: /Family.*Information.*Spouse/i, file: "pages/translation-page08.json" },
+    { pattern: /Work.*Education.*Training.*Information/i, file: "pages/translation-page09.json" },
+    { pattern: /Security.*Background.*Part\s*1/i, file: "pages/translation-page12.json" },
+    { pattern: /Security.*Background.*Part\s*2/i, file: "pages/translation-page13.json" },
+    { pattern: /Security.*Background.*Part\s*3/i, file: "pages/translation-page14.json" },
+    { pattern: /Security.*Background.*Part\s*4/i, file: "pages/translation-page15.json" },
+    { pattern: /Security.*Background.*Part\s*5/i, file: "pages/translation-page16.json" },
+    { pattern: /SEVIS.*Information/i, file: "pages/translation-page17.json" },
+    { pattern: /Upload.*Photo/i, file: "pages/translation-page18.json" }
+  ];
+  for (const { pattern, file } of contentPatterns) {
+    if (pattern.test(pageContent)) {
+      return file;
+    }
   }
-  if (pageContent.includes("Home Address") || pageContent.includes("Phone Number")) {
-    return "translation-contact-info.json";
-  }
+  console.warn(`No translation file found for page: ${pageId}, content patterns did not match`);
   return null;
 }
 function validateTranslationData(data) {
-  return data && typeof data.version === "string" && typeof data.pageId === "string" && Array.isArray(data.fields) && data.fields.every(
-    (field) => field.key && Array.isArray(field.selectors) && field.en && field.zh && ["brief", "detailed"].includes(field.level)
-  );
+  console.log("Validating translation data:", data);
+  if (!data) {
+    console.error("Validation failed: data is null or undefined");
+    return false;
+  }
+  if (typeof data.version !== "string") {
+    console.error("Validation failed: version is not a string");
+    return false;
+  }
+  if (typeof data.pageId !== "string") {
+    console.error("Validation failed: pageId is not a string");
+    return false;
+  }
+  if (!Array.isArray(data.fields)) {
+    console.error("Validation failed: fields is not an array");
+    return false;
+  }
+  for (let i = 0; i < data.fields.length; i++) {
+    const field = data.fields[i];
+    if (!field.key) {
+      console.error(`Validation failed: field[${i}].key is missing`);
+      return false;
+    }
+    if (!Array.isArray(field.selectors)) {
+      console.error(`Validation failed: field[${i}].selectors is not an array`);
+      return false;
+    }
+    if (!field.en) {
+      console.error(`Validation failed: field[${i}].en is missing`);
+      return false;
+    }
+    if (!field.zh) {
+      console.error(`Validation failed: field[${i}].zh is missing`);
+      return false;
+    }
+    const zhValid = typeof field.zh === "object" && typeof field.zh.brief === "string" && typeof field.zh.detailed === "string" || typeof field.zh === "string";
+    if (!zhValid) {
+      console.error(`Validation failed: field[${i}].zh format is invalid`, field.zh);
+      return false;
+    }
+    const noteValid = field.note && typeof field.note === "object" && typeof field.note.brief === "string" && typeof field.note.detailed === "string" || typeof field.note === "string" || field.note === void 0 || field.note === null;
+    if (!noteValid) {
+      console.error(`Validation failed: field[${i}].note format is invalid`, field.note);
+      return false;
+    }
+  }
+  console.log("Validation passed successfully");
+  return true;
 }
 function detectCurrentPage() {
   const url = window.location.href;
+  const title = document.title;
   const pageContent = document.body.textContent || "";
-  if (pageContent.includes("Surnames") && pageContent.includes("Given Names")) {
-    return "personalInfo";
+  console.log("Detecting page type...");
+  console.log("URL:", url);
+  console.log("Title:", title);
+  console.log("Page content preview:", pageContent.substring(0, 500));
+  const urlPageMatch = url.match(/(?:page|step)[\s_-]*(\d+)/i);
+  if (urlPageMatch) {
+    const pageNum = parseInt(urlPageMatch[1]);
+    if (pageNum >= 1 && pageNum <= 18) {
+      console.log(`Found page number in URL: page${pageNum}`);
+      return `page${pageNum}`;
+    }
   }
-  if (pageContent.includes("Home Address")) {
-    return "contactInfo";
+  const pagePatterns = [
+    { pattern: /Personal\s+Information\s+1|Surnames.*Given\s+Names/i, pageId: "page1" },
+    { pattern: /Personal\s+Information\s+2|Nationality.*National.*Identification/i, pageId: "page2" },
+    // 优先检查特定的URL模式，这些更可靠
+    { pattern: /complete_contact\.aspx|Address\s+and\s+Phone\s+Information/i, pageId: "page6" },
+    { pattern: /Passport_Visa_Info\.aspx|Passport\s+Information/i, pageId: "page7" },
+    // Passport Information page
+    { pattern: /complete_uscontact\.aspx|U\.?S\.?\s+Point\s+of\s+Contact\s+Information/i, pageId: "page8" },
+    // U.S. Point of Contact Information page
+    { pattern: /complete_family1\.aspx|Family\s+Information:\s*Relatives/i, pageId: "page9" },
+    // Family Information: Relatives page
+    { pattern: /complete_family2\.aspx|Family\s+Information:\s*Spouse/i, pageId: "page10" },
+    // Family Information: Spouse page
+    { pattern: /complete_workeducation3\.aspx|Additional\s+Work\/Education\/Training\s+Information/i, pageId: "page13" },
+    { pattern: /complete_workeducation2\.aspx|Previous\s+Work\/Education\/Training\s+Information|Work\/Education\/Training\s+Information\s+2/i, pageId: "page12" },
+    { pattern: /complete_workeducation1\.aspx|Present\s+Work\/Education\/Training\s+Information/i, pageId: "page11" },
+    // Prioritize Security and Background pages over other patterns
+    { pattern: /complete_securityandbackground1\.aspx|Security\s+and\s+Background:\s*Part\s*1/i, pageId: "page14" },
+    { pattern: /complete_securityandbackground2\.aspx|Security\s+and\s+Background:\s*Part\s*2/i, pageId: "page15" },
+    { pattern: /complete_securityandbackground3\.aspx|Security\s+and\s+Background:\s*Part\s*3/i, pageId: "page16" },
+    { pattern: /complete_securityandbackground4\.aspx|Security\s+and\s+Background:\s*Part\s*4/i, pageId: "page17" },
+    { pattern: /complete_securityandbackground5\.aspx|Security\s+and\s+Background:\s*Part\s*5/i, pageId: "page18" },
+    { pattern: /previousustravel|Previous\s+U\.?S\.?\s+Travel\s*$/i, pageId: "page5" },
+    { pattern: /Travel\s+Information(?!\s*(Previous|Companions))/i, pageId: "page3" },
+    { pattern: /Travel\s+Companions(?!\s*Information)/i, pageId: "page4" },
+    { pattern: /SEVIS\s+Information/i, pageId: "page19" },
+    { pattern: /Upload\s+Photo|Photo\s+Upload/i, pageId: "page20" }
+  ];
+  for (const { pattern, pageId } of pagePatterns) {
+    const contentMatch = pattern.test(pageContent);
+    const titleMatch = pattern.test(title);
+    const urlMatch = pattern.test(url);
+    if (contentMatch || titleMatch || urlMatch) {
+      console.log(`Detected DS-160 page: ${pageId} based on pattern match`, {
+        content: contentMatch,
+        title: titleMatch,
+        url: urlMatch
+      });
+      return pageId;
+    }
+  }
+  if (pageContent.includes("Surnames") && pageContent.includes("Given Names")) {
+    return "page1";
+  }
+  if (pageContent.includes("Home Address") || pageContent.includes("Phone Number")) {
+    return "page6";
   }
   if (url.includes("personal")) {
-    return "personalInfo";
+    return "page1";
   }
   if (url.includes("contact")) {
-    return "contactInfo";
+    return "page6";
   }
-  return "general";
+  console.warn("Unable to detect specific DS-160 page, defaulting to page1");
+  return "page1";
 }
 let injector = null;
 let uiController = null;
@@ -561,10 +961,10 @@ async function initializeTranslation() {
     console.log("Loaded settings:", settings);
     injector = new TranslationInjector(settings);
     uiController = new TranslationUIController(settings);
-    const translationData = await loadTranslationData(pageType);
+    const translationData = await loadMergedTranslationData(pageType);
     if (translationData) {
       injector.setTranslationData(translationData);
-      console.log(`Loaded translation data for ${pageType}:`, translationData.fields.length, "fields");
+      console.log(`Loaded merged translation data for ${pageType}:`, translationData.fields.length, "fields");
       if (settings.enabled) {
         injector.injectTranslations();
       }
@@ -638,3 +1038,5 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 initializeTranslation();
 //# sourceMappingURL=translation.js.map
+
+})();

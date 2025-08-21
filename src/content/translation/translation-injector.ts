@@ -83,11 +83,42 @@ export class TranslationInjector {
       return false;
     }
 
+    // 根据当前模式选择翻译文本和注释，支持新旧格式
+    const currentMode = this.settings.mode;
+    let translationText: string;
+    let noteText: string;
+
+    // 处理翻译文本（支持新旧格式）
+    if (typeof field.zh === 'object') {
+      // 新格式：对象形式，优先使用当前模式，如果为空则使用另一个模式
+      translationText = field.zh[currentMode];
+      if (!translationText || translationText.trim() === '') {
+        translationText = currentMode === 'brief' ? field.zh.detailed : field.zh.brief;
+      }
+    } else {
+      // 旧格式：字符串形式
+      translationText = field.zh;
+    }
+
+    // 处理注释文本（支持新旧格式）
+    if (field.note && typeof field.note === 'object') {
+      // 新格式：对象形式
+      noteText = field.note[currentMode] || field.note.brief;
+    } else {
+      // 旧格式：字符串形式或undefined
+      noteText = field.note || '';
+    }
+
+    // 如果翻译文本为空，跳过该字段
+    if (!translationText || translationText.trim() === '') {
+      return false;
+    }
+
     // 创建翻译元素
     const translationElement = createTranslationElement(
-      field.zh,
-      field.note,
-      this.settings.showNotes && field.level === 'detailed',
+      translationText,
+      noteText,
+      this.settings.showNotes && noteText.trim() !== '',
       this.settings.position
     );
 
@@ -105,6 +136,45 @@ export class TranslationInjector {
     const parent = targetElement.parentElement;
     if (!parent) {
       return;
+    }
+
+    // 特殊处理：对于包含标签文本的DIV，尝试在文本后面内联插入
+    const tagName = targetElement.tagName.toLowerCase();
+    if (tagName === 'div' && targetElement.classList.contains('field')) {
+      // 查找DIV内的文本节点
+      const textNodes = Array.from(targetElement.childNodes).filter(node => 
+        node.nodeType === Node.TEXT_NODE && node.textContent?.trim()
+      );
+      
+      if (textNodes.length > 0) {
+        const lastTextNode = textNodes[textNodes.length - 1];
+        if (lastTextNode.textContent?.trim()) {
+          try {
+            // 在文本节点后插入翻译，实现内联效果
+            const textSpan = document.createElement('span');
+            textSpan.textContent = lastTextNode.textContent;
+            
+            translationElement.style.cssText = `
+              display: inline !important;
+              margin-left: 4px !important;
+              background: rgba(34, 197, 94, 0.1) !important;
+              color: #059669 !important;
+              padding: 1px 3px !important;
+              border-radius: 2px !important;
+              font-size: 10px !important;
+              font-weight: 500 !important;
+              white-space: nowrap !important;
+            `;
+            
+            // 替换文本节点为 文本+翻译
+            lastTextNode.replaceWith(textSpan, translationElement);
+            console.log('🎯 Inline text replacement for field div');
+            return;
+          } catch (error) {
+            console.warn('Failed to insert inline translation:', error);
+          }
+        }
+      }
     }
 
     if (this.settings.position === 'right') {

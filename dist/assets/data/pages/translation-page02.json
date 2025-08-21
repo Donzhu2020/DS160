@@ -1,0 +1,97 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page2",
+  "description": "Personal Information 2 - 个人信息第2页",
+  "fields": [
+    {
+      "key": "lblAPP_NATL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_NATL"
+      ],
+      "en": "N A T L",
+      "zh": {
+        "brief": "所属国家/地区",
+        "detailed": "所属国家/地区（国籍）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_OTH_NATL_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_OTH_NATL_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "是否持有或曾持有除上述国籍外的其他国籍？",
+        "detailed": "是否持有或曾持有除上述国籍外的其他国籍？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPermResOtherCntryInd",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPermResOtherCntryInd"
+      ],
+      "en": "lbl Perm Res Other Cntry Ind",
+      "zh": {
+        "brief": "除了您的原籍国之外，您在其他国家或地区有永居身份吗？",
+        "detailed": "除了您的原籍国之外，您在其他国家或地区有永居身份吗？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_NATIONAL_ID",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_NATIONAL_ID"
+      ],
+      "en": "I D",
+      "zh": {
+        "brief": "身份证号码",
+        "detailed": "身份证号码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_SSN",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_SSN"
+      ],
+      "en": "S S N",
+      "zh": {
+        "brief": "美国社会保障号",
+        "detailed": "美国社会保障号"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_TAX_ID",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_TAX_ID"
+      ],
+      "en": "I D",
+      "zh": {
+        "brief": "美国纳税人识别号",
+        "detailed": "美国纳税人识别号"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    }
+  ]
+}

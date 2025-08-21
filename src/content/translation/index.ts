@@ -1,6 +1,6 @@
 import { TranslationInjector } from './translation-injector';
 import { TranslationUIController } from './ui-controller';
-import { loadTranslationData, detectCurrentPage } from './translation-loader';
+import { loadMergedTranslationData, detectCurrentPage } from './translation-loader';
 import { getSettings, onSettingsChange } from '@/shared/storage';
 import { waitForDOM } from '@/shared/dom-utils';
 
@@ -32,11 +32,11 @@ async function initializeTranslation(): Promise<void> {
     // 创建UI控制器
     uiController = new TranslationUIController(settings);
     
-    // 加载翻译数据
-    const translationData = await loadTranslationData(pageType);
+    // 加载合并的翻译数据（包含关联页面）
+    const translationData = await loadMergedTranslationData(pageType);
     if (translationData) {
       injector.setTranslationData(translationData);
-      console.log(`Loaded translation data for ${pageType}:`, translationData.fields.length, 'fields');
+      console.log(`Loaded merged translation data for ${pageType}:`, translationData.fields.length, 'fields');
       
       // 开始注入翻译
       if (settings.enabled) {

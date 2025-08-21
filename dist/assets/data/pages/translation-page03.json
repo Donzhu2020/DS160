@@ -1,0 +1,397 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page3",
+  "description": "Travel Information - 旅行信息（优化版）",
+  "fields": [
+    {
+      "key": "Travel_Information_Title",
+      "selectors": [
+        "text:Travel Information"
+      ],
+      "en": "Travel Information",
+      "zh": {
+        "brief": "旅行信息",
+        "detailed": "旅行信息"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Travel_Plans_Note",
+      "selectors": [
+        "text:NOTE: Provide the following information concerning your travel plans."
+      ],
+      "en": "NOTE: Provide the following information concerning your travel plans.",
+      "zh": {
+        "brief": "注意：请提供以下关于您旅行计划的信息。",
+        "detailed": "注意：请提供以下关于您旅行计划的信息。"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Purpose_of_Trip_US",
+      "selectors": [
+        "text:Purpose of Trip to the U.S",
+        "text:Purpose of Trip to the U.S."
+      ],
+      "en": "Purpose of Trip to the U.S",
+      "zh": {
+        "brief": "赴美目的",
+        "detailed": "赴美旅行目的"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "请选择最符合您此次赴美目的的选项"
+      }
+    },
+    {
+      "key": "Specify_Purpose",
+      "selectors": [
+        "text:Specify"
+      ],
+      "en": "Specify",
+      "zh": {
+        "brief": "具体说明",
+        "detailed": "请具体说明您的访问目的"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "如选择了需要具体说明的访问类型，请在此详细描述"
+      }
+    },
+    {
+      "key": "Address_Where_You_Will_Stay",
+      "selectors": [
+        "text:Address Where You Will Stay in the U.S."
+      ],
+      "en": "Address Where You Will Stay in the U.S.",
+      "zh": {
+        "brief": "在美住址",
+        "detailed": "您在美国期间的住址"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "请提供您在美国期间的详细住址信息"
+      }
+    },
+    {
+      "key": "Street_Address_Line_1",
+      "selectors": [
+        "text:Street Address (Line 1)"
+      ],
+      "en": "Street Address (Line 1)",
+      "zh": {
+        "brief": "街道地址1",
+        "detailed": "街道地址（第1行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "City",
+      "selectors": [
+        "text:City"
+      ],
+      "en": "City",
+      "zh": {
+        "brief": "城市",
+        "detailed": "城市"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "State",
+      "selectors": [
+        "text:State"
+      ],
+      "en": "State",
+      "zh": {
+        "brief": "州",
+        "detailed": "州"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Person_Entity_Paying",
+      "selectors": [
+        "text:Person/Entity Paying for Your Trip"
+      ],
+      "en": "Person/Entity Paying for Your Trip",
+      "zh": {
+        "brief": "为您旅行费用付款的人员/机构",
+        "detailed": "为您旅行费用付款的人员/机构"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Travel_Plans_Question",
+      "selectors": [
+        "text:Have you made specific travel plans?",
+        "text:specific travel plans"
+      ],
+      "en": "Have you made specific travel plans?",
+      "zh": {
+        "brief": "您是否已制定具体的旅行计划？",
+        "detailed": "您是否已制定具体的旅行计划？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "根据您的回答，后续会显示不同的字段"
+      }
+    },
+    {
+      "key": "Intended_Date_of_Arrival",
+      "selectors": [
+        "text:Intended Date of Arrival",
+        "text:Intended Date of Arrival in the U.S."
+      ],
+      "en": "Intended Date of Arrival",
+      "zh": {
+        "brief": "预计到达日期",
+        "detailed": "预计到达美国日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "请填写您计划到达美国的具体日期"
+      }
+    },
+    {
+      "key": "Intended_Length_of_Stay",
+      "selectors": [
+        "text:Intended Length of Stay in the U.S.",
+        "text:Length of Stay",
+        "text:Intended Length of Stay"
+      ],
+      "en": "Intended Length of Stay in the U.S.",
+      "zh": {
+        "brief": "预计在美停留时间",
+        "detailed": "预计在美国停留时间长度"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "请选择或填写您计划在美国停留的时间长度"
+      }
+    },
+    {
+      "key": "Complete_Itinerary",
+      "selectors": [
+        "text:Provide a complete itinerary for your travel to the U.S.:"
+      ],
+      "en": "Provide a complete itinerary for your travel to the U.S.:",
+      "zh": {
+        "brief": "请提供完整的赴美旅行行程表：",
+        "detailed": "请提供完整的赴美旅行行程表："
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Date_of_Arrival_US_Dynamic",
+      "selectors": [
+        "text:Date of Arrival in U.S."
+      ],
+      "en": "Date of Arrival in U.S.",
+      "zh": {
+        "brief": "到达美国日期",
+        "detailed": "到达美国日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Arrival_Flight_Dynamic",
+      "selectors": [
+        "text:Arrival Flight (if known)",
+        "text:Arrival Flight",
+        "label[for*=\"flight\"]",
+        "label:contains(\"Arrival Flight\")"
+      ],
+      "en": "Arrival Flight (if known)",
+      "zh": {
+        "brief": "到达航班（如已知）",
+        "detailed": "到达航班（如已知）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Arrival_City_Dynamic",
+      "selectors": [
+        "text:Arrival City",
+        "label[for*=\"city\"]",
+        "label:contains(\"Arrival City\")"
+      ],
+      "en": "Arrival City",
+      "zh": {
+        "brief": "到达城市",
+        "detailed": "到达城市"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Date_of_Departure_Dynamic",
+      "selectors": [
+        "text:Date of Departure from U.S.",
+        "text:Date of Departure",
+        "label:contains(\"Departure\")"
+      ],
+      "en": "Date of Departure from U.S.",
+      "zh": {
+        "brief": "离开美国日期",
+        "detailed": "离开美国日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Departure_Flight_Dynamic",
+      "selectors": [
+        "text:Departure Flight (if known)",
+        "text:Departure Flight",
+        "label:contains(\"Departure Flight\")"
+      ],
+      "en": "Departure Flight (if known)",
+      "zh": {
+        "brief": "离开航班（如已知）",
+        "detailed": "离开航班（如已知）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Departure_City_Dynamic",
+      "selectors": [
+        "text:Departure City",
+        "label:contains(\"Departure City\")"
+      ],
+      "en": "Departure City",
+      "zh": {
+        "brief": "离开城市",
+        "detailed": "离开城市"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Locations_to_Visit_Dynamic",
+      "selectors": [
+        "text:Provide the locations you plan to visit in the U.S.:"
+      ],
+      "en": "Provide the locations you plan to visit in the U.S.:",
+      "zh": {
+        "brief": "请提供您计划在美国访问的地点：",
+        "detailed": "请提供您计划在美国访问的地点："
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Location_Dynamic",
+      "selectors": [
+        "text:Location"
+      ],
+      "en": "Location",
+      "zh": {
+        "brief": "地点",
+        "detailed": "地点"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Street_Address_Line_2_Optional",
+      "selectors": [
+        "text:Street Address (Line 2) *Optional"
+      ],
+      "en": "Street Address (Line 2) *Optional",
+      "zh": {
+        "brief": "街道地址2（可选）",
+        "detailed": "街道地址（第2行，可选）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "ZIP_Code_if_known",
+      "selectors": [
+        "text:ZIP Code (if known)"
+      ],
+      "en": "ZIP Code (if known)",
+      "zh": {
+        "brief": "邮政编码（如已知）",
+        "detailed": "邮政编码（如已知）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Street_Address_Line_2_Optional_Asterisk",
+      "selectors": [
+        "text:Street Address (Line 2) *Optional"
+      ],
+      "en": "Street Address (Line 2) *Optional",
+      "zh": {
+        "brief": "街道地址2 *可选",
+        "detailed": "街道地址（第2行）*可选"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Optional",
+      "selectors": [
+        "text:*Optional"
+      ],
+      "en": "*Optional",
+      "zh": {
+        "brief": "*可选",
+        "detailed": "*可选"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    }
+  ]
+}

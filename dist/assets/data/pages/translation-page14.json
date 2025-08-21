@@ -1,0 +1,217 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page14",
+  "description": "Security and Background: Part 3 - 安全和背景信息第3部分",
+  "fields": [
+    {
+      "key": "lblPageNote1",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPageNote1"
+      ],
+      "en": "lbl Page Note1",
+      "zh": {
+        "brief": "注意：请提供以下个人安全和背景信息。所有需要解释的问题，请务必完整、准确地回答。根据美国法律，某些特定类别的人可能无法获得签证。下面这些问题，有没有哪一个符合你的情况？如果你回答“是”，这不代表你一定拿不到签证，但你可能会被要求亲自去见领事馆官员",
+        "detailed": "注意：请提供以下个人安全和背景信息。所有需要解释的问题，请务必完整、准确地回答。根据美国法律，某些特定类别的人可能无法获得签证（除非事先得到豁免）。下面这些问题，有没有哪一个符合你的情况？如果你回答“是”，这不代表你一定拿不到签证，但你可能会被要求亲自去见领事馆官员"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblCOMM_DISEASE_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblCOMM_DISEASE_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否患有任何影响公众健康的传染病？",
+        "detailed": "您是否患有任何影响公众健康的传染病？（包括软下疳、淋病、腹股沟肉芽肿、麻风病、性病性淋巴肉芽肿、传染期梅毒、活动性肺结核，以及美国卫生与公众服务部指定的其他疾病。）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblDISORDER_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblDISORDER_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否患有任何可能危及自身或他人安全的精神或身体疾病？",
+        "detailed": "您是否患有任何可能危及自身或他人安全的精神或身体疾病？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblDRUG_ABUSE_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblDRUG_ABUSE_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您现在或以前是毒品滥用者或瘾君子吗？",
+        "detailed": "您现在或以前是毒品滥用者或瘾君子吗？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblExplain",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblExplain"
+      ],
+      "en": "lbl Explain",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Label3",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_Label3"
+      ],
+      "en": "Label3",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Label6",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_Label6"
+      ],
+      "en": "Label6",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "do_you_have_a_communicable_disease_of_public_health_significance_",
+      "selectors": [
+        "text:\"Do you have a communicable disease of public health significance?\""
+      ],
+      "en": "Do you have a communicable disease of public health significance?",
+      "zh": {
+        "brief": "您是否患有具有公共卫生意义的传染病？",
+        "detailed": "您是否患有具有公共卫生意义的传染病？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "do_you_have_a_mental_or_physical_disorder_that_poses_or_is_likely_to_pose_a_threat_to_the_safety_or_welfare_of_yourself_or_others_",
+      "selectors": [
+        "text:\"Do you have a mental or physical disorder that poses or is likely to pose a threat to the safety or welfare of yourself or others?\""
+      ],
+      "en": "Do you have a mental or physical disorder that poses or is likely to pose a threat to the safety or welfare of yourself or others?",
+      "zh": {
+        "brief": "您是否患有对您自己或他人的安全或福利构成或可能构成威胁的精神或身体疾病？",
+        "detailed": "您是否患有对您自己或他人的安全或福利构成或可能构成威胁的精神或身体疾病？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "are_you_or_have_you_ever_been_a_drug_abuser_or_addict_",
+      "selectors": [
+        "text:\"Are you or have you ever been a drug abuser or addict?\""
+      ],
+      "en": "Are you or have you ever been a drug abuser or addict?",
+      "zh": {
+        "brief": "您是否现在或曾经是药物滥用者或成瘾者？",
+        "detailed": "您是否现在或曾经是药物滥用者或成瘾者？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "explain",
+      "selectors": [
+        "text:\"Explain\""
+      ],
+      "en": "Explain",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "yes",
+      "selectors": [
+        "text:\"Yes\""
+      ],
+      "en": "Yes",
+      "zh": {
+        "brief": "是",
+        "detailed": "是"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "no",
+      "selectors": [
+        "text:\"No\""
+      ],
+      "en": "No",
+      "zh": {
+        "brief": "否",
+        "detailed": "否"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "communicable_diseases_of_public_significance_include_chancroid__gonorrhea__granuloma_inguinale__infectious_leprosy__lymphogranuloma_venereum__infectious_stage_syphilis__active_tuberculosis__and_other_diseases_as_determined_by_the_department_of_health_and_human_services_",
+      "selectors": [
+        "text:\"Communicable diseases of public significance include chancroid, gonorrhea, granuloma inguinale, infectious leprosy, lymphogranuloma venereum, infectious stage syphilis, active tuberculosis, and other diseases as determined by the Department of Health and Human Services.\""
+      ],
+      "en": "Communicable diseases of public significance include chancroid, gonorrhea, granuloma inguinale, infectious leprosy, lymphogranuloma venereum, infectious stage syphilis, active tuberculosis, and other diseases as determined by the Department of Health and Human Services.",
+      "zh": {
+        "brief": "具有公共意义的传染病包括软下疳、淋病、腹股沟肉芽肿、传染性麻风病、性病性淋巴肉芽肿、传染期梅毒、活动性肺结核，以及卫生与公众服务部确定的其他疾病。",
+        "detailed": "具有公共意义的传染病包括软下疳、淋病、腹股沟肉芽肿、传染性麻风病、性病性淋巴肉芽肿、传染期梅毒、活动性肺结核，以及卫生与公众服务部确定的其他疾病。"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    }
+  ]
+}

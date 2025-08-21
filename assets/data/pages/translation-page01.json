@@ -1,0 +1,457 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page1",
+  "description": "Personal Information 1 - 个人信息第1页",
+  "fields": [
+    {
+      "key": "lblAPP_SURNAME",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_SURNAME"
+      ],
+      "en": "S U R N A M E",
+      "zh": {
+        "brief": "姓氏",
+        "detailed": "姓氏（拼音，与护照一致）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "必须与护照上的拼写完全一致，使用拼音或英文转写"
+      }
+    },
+    {
+      "key": "lblAPP_GIVEN_NAME",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_GIVEN_NAME"
+      ],
+      "en": "N A M E",
+      "zh": {
+        "brief": "名字",
+        "detailed": "名字（拼音，与护照一致）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "包含所有名字，按护照顺序，用空格分隔"
+      }
+    },
+    {
+      "key": "lblAPP_FULL_NAME_NATIVE",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_FULL_NAME_NATIVE"
+      ],
+      "en": "N A T I V E",
+      "zh": {
+        "brief": "中文姓名",
+        "detailed": "请在此处填写您的中文汉字姓名(本表只有此处使用中文)"
+      },
+      "note": {
+        "brief": "使用中文",
+        "detailed": "这是唯一可以使用中文的字段，请填写完整中文姓名"
+      }
+    },
+    {
+      "key": "lblOtherNamesUsed",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblOtherNamesUsed"
+      ],
+      "en": "lbl Other Names Used",
+      "zh": {
+        "brief": "是否用过其他姓名？",
+        "detailed": "是否用过其他姓名？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblTelecodeQuestion",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblTelecodeQuestion"
+      ],
+      "en": "lbl Telecode Question",
+      "zh": {
+        "brief": "是否有代表你姓名的电码？",
+        "detailed": "是否有代表你姓名的电码？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_GENDER",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_GENDER"
+      ],
+      "en": "G E N D E R",
+      "zh": {
+        "brief": "性别",
+        "detailed": "性别"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_MARITAL_STATUS",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_MARITAL_STATUS"
+      ],
+      "en": "S T A T U S",
+      "zh": {
+        "brief": "婚姻状况",
+        "detailed": "婚姻状况"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblDatePlaceOfBirth",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblDatePlaceOfBirth"
+      ],
+      "en": "lbl Date Place Of Birth",
+      "zh": {
+        "brief": "出生日期和地点",
+        "detailed": "出生日期和地点"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_DOB",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_DOB"
+      ],
+      "en": "D O B",
+      "zh": {
+        "brief": "出生日期",
+        "detailed": "出生日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_POB_CITY",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_POB_CITY"
+      ],
+      "en": "C I T Y",
+      "zh": {
+        "brief": "出生城市",
+        "detailed": "出生城市"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_POB_ST_PROVINCE",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_POB_ST_PROVINCE"
+      ],
+      "en": "P R O V I N C E",
+      "zh": {
+        "brief": "出生省/州",
+        "detailed": "出生省/州"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_POB_CNTRY",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_POB_CNTRY"
+      ],
+      "en": "C N T R Y",
+      "zh": {
+        "brief": "出生国家/地区",
+        "detailed": "出生国家/地区"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPageNote1",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPageNote1"
+      ],
+      "en": "lbl Page Note1",
+      "zh": {
+        "brief": "注意：本页信息必须与您护照上的信息一致。",
+        "detailed": "注意：本页信息必须与您护照上的信息一致。"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lbl_APP_SURNAME_EXAMPLE",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lbl_APP_SURNAME_EXAMPLE"
+      ],
+      "en": "E X A M P L E",
+      "zh": {
+        "brief": "",
+        "detailed": "（例如：wang）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_GIVEN_NAME_EXAMPLE",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_GIVEN_NAME_EXAMPLE"
+      ],
+      "en": "E X A M P L E",
+      "zh": {
+        "brief": "",
+        "detailed": "（例如：xiaoming）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "DListAlias_ctl00_lblSURNAME",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_DListAlias_ctl00_lblSURNAME"
+      ],
+      "en": "lbl S U R N A M E",
+      "zh": {
+        "brief": "曾用姓氏",
+        "detailed": "曾用姓氏（婚前姓、宗教姓、职业姓、别名等）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "DListAlias_ctl00_lblGIVEN_NAME",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_DListAlias_ctl00_lblGIVEN_NAME"
+      ],
+      "en": "N A M E",
+      "zh": {
+        "brief": "曾用名字",
+        "detailed": "曾用名字"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_TelecodeSURNAME",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_TelecodeSURNAME"
+      ],
+      "en": "Telecode S U R N A M E",
+      "zh": {
+        "brief": "姓氏电码",
+        "detailed": "姓氏电码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_TelecodeGIVEN_NAME",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_TelecodeGIVEN_NAME"
+      ],
+      "en": "N A M E",
+      "zh": {
+        "brief": "名字电码",
+        "detailed": "名字电码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "personal_information_1",
+      "selectors": [
+        "text:\"Personal Information 1\""
+      ],
+      "en": "Personal Information 1",
+      "zh": {
+        "brief": "个人信息 1",
+        "detailed": "个人信息 1"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "date_and_place_of_birth",
+      "selectors": [
+        "text:\"Date and Place of Birth\""
+      ],
+      "en": "Date and Place of Birth",
+      "zh": {
+        "brief": "出生日期和地点",
+        "detailed": "出生日期和地点"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "do_you_have_a_telecode_that_represents_your_name_",
+      "selectors": [
+        "text:\"Do you have a telecode that represents your name?\""
+      ],
+      "en": "Do you have a telecode that represents your name?",
+      "zh": {
+        "brief": "是否有代表你姓名的电码？",
+        "detailed": "是否有代表你姓名的电码？"
+      },
+      "note": {
+        "brief": "使用中文",
+        "detailed": "电码是中文姓名的4位数字代码，如果没有可选择'Does Not Apply'"
+      }
+    },
+    {
+      "key": "have_you_ever_used_other_names__i_e___maiden__religious__professional__alias__etc___",
+      "selectors": [
+        "text:\"Have you ever used other names (i.e., maiden, religious, professional, alias, etc.)?\""
+      ],
+      "en": "Have you ever used other names (i.e., maiden, religious, professional, alias, etc.)?",
+      "zh": {
+        "brief": "是否曾用过其他姓名？",
+        "detailed": "是否曾用过其他姓名？（如：婚前姓名、宗教姓名、职业姓名、别名等）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "does_not_apply_technology_not_available",
+      "selectors": [
+        "text:\"Does Not Apply/Technology Not Available\""
+      ],
+      "en": "Does Not Apply/Technology Not Available",
+      "zh": {
+        "brief": "不适用/技术不可用",
+        "detailed": "不适用/技术不可用"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "other_surnames_used__maiden__religious__professional__aliases__etc__",
+      "selectors": [
+        "text:\"Other Surnames Used (maiden, religious, professional, aliases, etc.)\""
+      ],
+      "en": "Other Surnames Used (maiden, religious, professional, aliases, etc.)",
+      "zh": {
+        "brief": "曾用姓氏",
+        "detailed": "曾用姓氏（婚前姓、宗教姓、职业姓、别名等）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "other_given_names_used",
+      "selectors": [
+        "text:\"Other Given Names Used\""
+      ],
+      "en": "Other Given Names Used",
+      "zh": {
+        "brief": "曾用名字",
+        "detailed": "曾用名字"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "yes",
+      "selectors": [
+        "text:\"Yes\""
+      ],
+      "en": "Yes",
+      "zh": {
+        "brief": "是",
+        "detailed": "是"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "no",
+      "selectors": [
+        "text:\"No\""
+      ],
+      "en": "No",
+      "zh": {
+        "brief": "否",
+        "detailed": "否"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "telecode_surnames",
+      "selectors": [
+        "text:\"Telecode Surnames\""
+      ],
+      "en": "Telecode Surnames",
+      "zh": {
+        "brief": "姓氏电码",
+        "detailed": "姓氏电码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "telecode_given_names",
+      "selectors": [
+        "text:\"Telecode Given Names\""
+      ],
+      "en": "Telecode Given Names",
+      "zh": {
+        "brief": "名字电码",
+        "detailed": "名字电码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    }
+  ]
+}

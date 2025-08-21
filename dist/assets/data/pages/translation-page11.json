@@ -1,0 +1,472 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page11",
+  "description": "Present Work/Education/Training Information - 当前工作/教育/培训信息",
+  "fields": [
+    {
+      "key": "lblPageNote1",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPageNote1"
+      ],
+      "en": "lbl Page Note1",
+      "zh": {
+        "brief": "注意：请提供以下关于您当前工作及教育的信息。",
+        "detailed": "注意：请提供以下关于您当前工作及教育的信息。"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPRESENT_OCCUPATION",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPRESENT_OCCUPATION"
+      ],
+      "en": "O C C U P A T I O N",
+      "zh": {
+        "brief": "主要职业",
+        "detailed": "主要职业"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblName",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblName"
+      ],
+      "en": "lbl Name",
+      "zh": {
+        "brief": "当前工作单位或学校的名称",
+        "detailed": "当前工作单位或学校的名称"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblEmpSchAddr1",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblEmpSchAddr1"
+      ],
+      "en": "lbl Emp Sch Addr1",
+      "zh": {
+        "brief": "街道地址",
+        "detailed": "街道地址（第一行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblEmpSchAddr2",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblEmpSchAddr2"
+      ],
+      "en": "lbl Emp Sch Addr2",
+      "zh": {
+        "brief": "街道地址",
+        "detailed": "街道地址（第二行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblStreetAddress2Optional",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblStreetAddress2Optional"
+      ],
+      "en": "lbl Street Address2 Optional",
+      "zh": {
+        "brief": "*可选",
+        "detailed": "*可选"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblEmpSchCity",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblEmpSchCity"
+      ],
+      "en": "lbl Emp Sch City",
+      "zh": {
+        "brief": "城市",
+        "detailed": "城市"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblEmpSchStateProvince",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblEmpSchStateProvince"
+      ],
+      "en": "lbl Emp Sch State Province",
+      "zh": {
+        "brief": "州/省",
+        "detailed": "州/省"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblWORK_EDUC_ADDR_POSTAL_CD",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblWORK_EDUC_ADDR_POSTAL_CD"
+      ],
+      "en": "C D",
+      "zh": {
+        "brief": "邮政编码",
+        "detailed": "邮政编码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblEmpSchCountry",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblEmpSchCountry"
+      ],
+      "en": "lbl Emp Sch Country",
+      "zh": {
+        "brief": "国家/地区",
+        "detailed": "国家/地区"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblWORK_EDUC_TEL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblWORK_EDUC_TEL"
+      ],
+      "en": "T E L",
+      "zh": {
+        "brief": "电话号码",
+        "detailed": "电话号码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblWORK_EDUC_START_DTE",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblWORK_EDUC_START_DTE"
+      ],
+      "en": "D T E",
+      "zh": {
+        "brief": "开始日期",
+        "detailed": "开始日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblWORK_EDUC_MONTHLY_INCOME",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblWORK_EDUC_MONTHLY_INCOME"
+      ],
+      "en": "I N C O M E",
+      "zh": {
+        "brief": "月收入",
+        "detailed": "月收入（本地货币，如果受雇）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblWORK_EDUC_DUTIES",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblWORK_EDUC_DUTIES"
+      ],
+      "en": "D U T I E S",
+      "zh": {
+        "brief": "简要描述您的职责：",
+        "detailed": "简要描述您的职责："
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "present_work_education_training_information",
+      "selectors": [
+        "text:\"Present Work/Education/Training Information\""
+      ],
+      "en": "Present Work/Education/Training Information",
+      "zh": {
+        "brief": "当前工作/教育/培训信息",
+        "detailed": "当前工作/教育/培训信息"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "primary_occupation",
+      "selectors": [
+        "text:\"Primary Occupation\""
+      ],
+      "en": "Primary Occupation",
+      "zh": {
+        "brief": "主要职业",
+        "detailed": "主要职业"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "present_employer_or_school_name",
+      "selectors": [
+        "text:\"Present Employer or School Name\""
+      ],
+      "en": "Present Employer or School Name",
+      "zh": {
+        "brief": "当前工作单位或学校的名称",
+        "detailed": "当前工作单位或学校的名称"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "street_address__line_1_",
+      "selectors": [
+        "text:\"Street Address (Line 1)\""
+      ],
+      "en": "Street Address (Line 1)",
+      "zh": {
+        "brief": "街道地址",
+        "detailed": "街道地址（第一行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "street_address__line_2_",
+      "selectors": [
+        "text:\"Street Address (Line 2)\""
+      ],
+      "en": "Street Address (Line 2)",
+      "zh": {
+        "brief": "街道地址",
+        "detailed": "街道地址（第二行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "_optional",
+      "selectors": [
+        "text:\"*Optional\""
+      ],
+      "en": "*Optional",
+      "zh": {
+        "brief": "*可选",
+        "detailed": "*可选"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "city",
+      "selectors": [
+        "text:\"City\""
+      ],
+      "en": "City",
+      "zh": {
+        "brief": "城市",
+        "detailed": "城市"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "state_province",
+      "selectors": [
+        "text:\"State/Province\""
+      ],
+      "en": "State/Province",
+      "zh": {
+        "brief": "州/省",
+        "detailed": "州/省"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "postal_zone_zip_code",
+      "selectors": [
+        "text:\"Postal Zone/ZIP Code\""
+      ],
+      "en": "Postal Zone/ZIP Code",
+      "zh": {
+        "brief": "邮政编码",
+        "detailed": "邮政编码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "country_region",
+      "selectors": [
+        "text:\"Country/Region\""
+      ],
+      "en": "Country/Region",
+      "zh": {
+        "brief": "国家/地区",
+        "detailed": "国家/地区"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "phone_number",
+      "selectors": [
+        "text:\"Phone Number\""
+      ],
+      "en": "Phone Number",
+      "zh": {
+        "brief": "电话号码",
+        "detailed": "电话号码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "does_not_apply",
+      "selectors": [
+        "text:\"Does Not Apply\""
+      ],
+      "en": "Does Not Apply",
+      "zh": {
+        "brief": "不适用",
+        "detailed": "不适用"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "start_date",
+      "selectors": [
+        "text:\"Start Date\""
+      ],
+      "en": "Start Date",
+      "zh": {
+        "brief": "开始日期",
+        "detailed": "开始日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "monthly_income_in_local_currency__if_employed_",
+      "selectors": [
+        "text:\"Monthly Income in Local Currency (if employed)\""
+      ],
+      "en": "Monthly Income in Local Currency (if employed)",
+      "zh": {
+        "brief": "月收入",
+        "detailed": "月收入（本地货币，如果受雇）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "start_date_text",
+      "selectors": [
+        "text:Start Date"
+      ],
+      "en": "Start Date",
+      "zh": {
+        "brief": "开始日期",
+        "detailed": "开始日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "monthly_income_text",
+      "selectors": [
+        "text:Monthly Income in Local Currency (if employed)"
+      ],
+      "en": "Monthly Income in Local Currency (if employed)",
+      "zh": {
+        "brief": "月收入（当地货币）",
+        "detailed": "月收入（当地货币，如果受雇）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "briefly_describe_duties",
+      "selectors": [
+        "text:Briefly describe your duties"
+      ],
+      "en": "Briefly describe your duties",
+      "zh": {
+        "brief": "简要描述工作职责",
+        "detailed": "简要描述您的工作职责"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    }
+  ]
+}

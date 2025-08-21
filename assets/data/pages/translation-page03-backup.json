@@ -1,0 +1,367 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page3",
+  "description": "Travel Information - 旅行信息",
+  "fields": [
+    {
+      "key": "Label1",
+      "selectors": [
+        "text:Travel Information",
+        "#ctl00_SiteContentPlaceHolder_FormView1_Label1",
+        "h1",
+        ".pageHeader",
+        "*[class*='header']"
+      ],
+      "en": "Label1",
+      "zh": {
+        "brief": "旅行信息",
+        "detailed": "旅行信息"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPageNote1",
+      "selectors": [
+        "text:Provide the following information",
+        "text:travel plans",
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPageNote1",
+        "p",
+        ".note"
+      ],
+      "en": "lbl Page Note1",
+      "zh": {
+        "brief": "注意：请提供以下有关您旅行计划的信息",
+        "detailed": "注意：请提供以下有关您旅行计划的信息"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPrincipalPOT",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPrincipalPOT",
+        "text:Provide the following information"
+      ],
+      "en": "lbl Principal P O T",
+      "zh": {
+        "brief": "请提供以下信息：",
+        "detailed": "请提供以下信息："
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dlPrincipalAppTravel_ctl00_lblPurposeOfTrip",
+      "selectors": [
+        "text:Purpose of Trip",
+        "text:Purpose",
+        "#ctl00_SiteContentPlaceHolder_FormView1_dlPrincipalAppTravel_ctl00_lblPurposeOfTrip",
+        "label"
+      ],
+      "en": "lbl Purpose Of Trip",
+      "zh": {
+        "brief": "赴美访问目的",
+        "detailed": "赴美访问目的"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblSpecificTravel",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblSpecificTravel"
+      ],
+      "en": "lbl Specific Travel",
+      "zh": {
+        "brief": "您是否已经制定了具体的旅行计划？",
+        "detailed": "您是否已经制定了具体的旅行计划？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblIntendtoTravel",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblIntendtoTravel",
+        "text:Intended Date of Arrival"
+      ],
+      "en": "lbl Intendto Travel",
+      "zh": {
+        "brief": "计划到达日期",
+        "detailed": "计划到达日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblDateFormat1",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblDateFormat1",
+        "text:(Format: DD-MMM-YYYY)"
+      ],
+      "en": "lbl Date Format1",
+      "zh": {
+        "brief": "",
+        "detailed": "（格式：日-月-年）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblIntendtoStay",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblIntendtoStay",
+        "text:Intended Length of Stay in U.S."
+      ],
+      "en": "lbl Intendto Stay",
+      "zh": {
+        "brief": "计划在美停留时间",
+        "detailed": "计划在美停留时间"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblWhoIsPaying",
+      "selectors": [
+        "text:Person/Entity Paying",
+        "text:Paying for Your Trip",
+        "text:Who Is Paying",
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblWhoIsPaying"
+      ],
+      "en": "lbl Who Is Paying",
+      "zh": {
+        "brief": "为您的旅行费用付款的人员/机构",
+        "detailed": "为您的旅行费用付款的人员/机构"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Purpose_of_Trip_to_the_US",
+      "selectors": [
+        "text:Purpose of Trip to the U.S.",
+        "text:Purpose of Trip",
+        "label:contains('Purpose')"
+      ],
+      "en": "Purpose of Trip to the U.S.",
+      "zh": {
+        "brief": "赴美目的",
+        "detailed": "赴美旅行目的"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "请选择最符合您此次赴美目的的选项"
+      }
+    },
+    {
+      "key": "Specify_Purpose",
+      "selectors": [
+        "text:Specify",
+        "label:contains('Specify')"
+      ],
+      "en": "Specify",
+      "zh": {
+        "brief": "具体说明",
+        "detailed": "请具体说明您的访问目的"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "如选择了需要具体说明的访问类型，请在此详细描述"
+      }
+    },
+    {
+      "key": "Have_you_made_specific_travel_plans",
+      "selectors": [
+        "text:Have you made specific travel plans",
+        "text:specific travel plans"
+      ],
+      "en": "Have you made specific travel plans?",
+      "zh": {
+        "brief": "您是否已制定具体的旅行计划？",
+        "detailed": "您是否已制定具体的旅行计划？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "如果尚未确定具体行程，请选择\"否\""
+      }
+    },
+    {
+      "key": "Intended_Date_of_Arrival",
+      "selectors": [
+        "text:Intended Date of Arrival",
+        "text:Date of Arrival"
+      ],
+      "en": "Intended Date of Arrival",
+      "zh": {
+        "brief": "预计到达日期",
+        "detailed": "预计到达美国日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "请填写您计划到达美国的具体日期"
+      }
+    },
+    {
+      "key": "Date_Format_DD_MMM_YYYY",
+      "selectors": [
+        "text:Format: DD-MMM-YYYY",
+        "text:DD-MMM-YYYY"
+      ],
+      "en": "(Format: DD-MMM-YYYY)",
+      "zh": {
+        "brief": "（格式：日-月-年）",
+        "detailed": "（日期格式：日-月-年，如：15-JAN-2025）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Intended_Length_of_Stay",
+      "selectors": [
+        "text:Intended Length of Stay in U.S.",
+        "text:Length of Stay"
+      ],
+      "en": "Intended Length of Stay in U.S.",
+      "zh": {
+        "brief": "预计在美停留时间",
+        "detailed": "预计在美国停留时间长度"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "请选择或填写您计划在美国停留的时间长度"
+      }
+    },
+    {
+      "key": "Address_Where_You_Will_Stay",
+      "selectors": [
+        "text:Address Where You Will Stay in the U.S.",
+        "text:Address Where You Will Stay"
+      ],
+      "en": "Address Where You Will Stay in the U.S.",
+      "zh": {
+        "brief": "在美住址",
+        "detailed": "您在美国期间的居住地址"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "请填写您在美国期间计划居住的完整地址"
+      }
+    },
+    {
+      "key": "Street_Address_Line_1",
+      "selectors": [
+        "text:Street Address (Line 1)",
+        "text:Street Address"
+      ],
+      "en": "Street Address (Line 1)",
+      "zh": {
+        "brief": "街道地址（第一行）",
+        "detailed": "街道地址（第一行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "请填写门牌号码和街道名称"
+      }
+    },
+    {
+      "key": "Street_Address_Line_2",
+      "selectors": [
+        "text:Street Address (Line 2)",
+        "text:Optional"
+      ],
+      "en": "Street Address (Line 2) *Optional",
+      "zh": {
+        "brief": "街道地址（第二行）*可选",
+        "detailed": "街道地址（第二行）*可选"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "如需要，可填写公寓号、楼层等补充地址信息"
+      }
+    },
+    {
+      "key": "City",
+      "selectors": [
+        "text:City"
+      ],
+      "en": "City",
+      "zh": {
+        "brief": "城市",
+        "detailed": "城市"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "State",
+      "selectors": [
+        "text:State"
+      ],
+      "en": "State",
+      "zh": {
+        "brief": "州",
+        "detailed": "州"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "请选择相应的美国州"
+      }
+    },
+    {
+      "key": "ZIP_Code",
+      "selectors": [
+        "text:ZIP Code (if known)",
+        "text:ZIP Code"
+      ],
+      "en": "ZIP Code (if known)",
+      "zh": {
+        "brief": "邮政编码（如知道）",
+        "detailed": "邮政编码（如知道）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "如果知道邮政编码请填写，格式如：12345 或 12345-1234"
+      }
+    },
+    {
+      "key": "Person_Entity_Paying",
+      "selectors": [
+        "text:Person/Entity Paying for Your Trip",
+        "text:Person/Entity Paying"
+      ],
+      "en": "Person/Entity Paying for Your Trip",
+      "zh": {
+        "brief": "为您旅行费用付款的人员/机构",
+        "detailed": "为您的旅行费用付款的人员/机构"
+      },
+      "note": {
+        "brief": "",
+        "detailed": "请选择谁将支付您此次美国之行的费用"
+      }
+    }
+  ]
+}

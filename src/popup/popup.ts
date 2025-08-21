@@ -153,14 +153,22 @@ class PopupController {
       if (this.isCurrentPageDS160) {
         const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
         if (tab.id) {
-          chrome.tabs.sendMessage(tab.id, { 
+          await chrome.tabs.sendMessage(tab.id, { 
             type: 'UPDATE_SETTINGS', 
             settings: this.settings 
           });
+          
+          // 对于影响显示的设置，显示特别的反馈
+          if (key === 'mode' || key === 'position' || key === 'showNotes') {
+            this.showSuccess('设置已更新，翻译已刷新');
+          } else {
+            this.showSuccess('设置已保存');
+          }
         }
+      } else {
+        this.showSuccess('设置已保存');
       }
       
-      this.showSuccess('设置已保存');
     } catch (error) {
       console.error('Error updating setting:', error);
       this.showError('设置保存失败');
