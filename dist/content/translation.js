@@ -1068,54 +1068,242 @@ function detectCurrentPage() {
   console.warn("Unable to detect specific DS-160 page, defaulting to page1");
   return "page1";
 }
-function executeGentleRefresh() {
-  console.log("🌸 GENTLE: Starting gentle page refresh...");
+let userActivityTrackingActive = false;
+let lastUserGestureTime = Date.now();
+function initializeUserActivityTracking() {
+  if (userActivityTrackingActive) {
+    console.log("🎯 User activity tracking already active");
+    return;
+  }
+  console.log("🎯 Initializing user activity tracking for gesture-based refresh...");
+  const gestureEvents = ["click", "keydown", "touchstart", "mousedown"];
+  gestureEvents.forEach((eventType) => {
+    document.addEventListener(eventType, () => {
+      lastUserGestureTime = Date.now();
+      console.log(`👆 User gesture detected: ${eventType}`);
+    }, { passive: true });
+  });
+  userActivityTrackingActive = true;
+  console.log("✅ User activity tracking initialized");
+}
+function executeUserGestureRefresh(saveCallback) {
+  return new Promise((resolve) => {
+    console.log("👆 Executing user gesture refresh...");
+    if (saveCallback) {
+      try {
+        saveCallback();
+        console.log("💾 Form data saved before refresh");
+      } catch (error) {
+        console.warn("Failed to save form data:", error);
+      }
+    }
+    const timeSinceGesture = Date.now() - lastUserGestureTime;
+    const hasRecentGesture = timeSinceGesture < 3e4;
+    if (document.hasStoredUserActivation || hasRecentGesture) {
+      console.log("✅ User gesture available, proceeding with immediate refresh...");
+      setTimeout(() => {
+        performGentleRefresh();
+        resolve();
+      }, 100);
+    } else {
+      console.log("⏳ No recent user gesture, using alternative refresh method...");
+      setTimeout(() => {
+        performAlternativeRefresh();
+        resolve();
+      }, 200);
+    }
+  });
+}
+function performGentleRefresh() {
+  console.log("🌸 Performing gentle user gesture refresh...");
   try {
-    performSafeRefresh();
+    window.location.reload();
   } catch (error) {
-    console.error("Gentle refresh failed:", error);
-    fallbackGentleRefresh();
+    console.log("Standard reload failed, trying href method:", error);
+    window.location.href = window.location.href;
   }
 }
-function performSafeRefresh() {
-  console.log("🔄 Performing safe refresh...");
-  setTimeout(() => {
-    try {
-      console.log("🌸 Using gentle location.reload()...");
-      window.location.reload();
-    } catch (error) {
-      console.log("Location.reload failed:", error);
-      performURLRefresh();
-    }
-  }, 100);
-}
-function performURLRefresh() {
-  console.log("🔗 Performing URL refresh...");
+function performAlternativeRefresh() {
+  console.log("🔄 Performing alternative refresh (no user gesture)...");
   try {
     const currentURL = window.location.href;
-    window.location.href = currentURL;
+    window.history.pushState({}, "", currentURL);
+    setTimeout(() => {
+      window.location.replace(currentURL);
+    }, 100);
   } catch (error) {
-    console.log("URL refresh failed:", error);
-    fallbackGentleRefresh();
-  }
-}
-function fallbackGentleRefresh() {
-  console.log("🆘 Fallback gentle refresh...");
-  window.location = window.location;
-}
-function safeGentleRefresh(saveCallback) {
-  console.log("💾 Safe gentle refresh initiated...");
-  if (saveCallback) {
+    console.log("Alternative method 1 failed:", error);
     try {
-      saveCallback();
-      console.log("✅ Data saved before gentle refresh");
-    } catch (error) {
-      console.error("❌ Failed to save data:", error);
+      window.location.replace(window.location.href);
+    } catch (error2) {
+      console.log("Alternative method 2 failed:", error2);
+      window.location.href = window.location.href;
     }
   }
+}
+let formProtectionActive = false;
+let emergencySaveActive = false;
+function activateEnhancedFormProtection() {
+  if (formProtectionActive) {
+    console.log("🛡️ Enhanced form protection already active");
+    return;
+  }
+  console.log("🛡️ Activating enhanced form protection...");
+  setupMultiLayerBackup();
+  setupIntelligentRecovery();
+  setupEmergencyProtection();
+  formProtectionActive = true;
+  console.log("✅ Enhanced form protection activated");
+}
+function setupMultiLayerBackup() {
+  console.log("📦 Setting up multi-layer backup system...");
+  const throttledSave = throttle(() => {
+    console.log("💾 Auto-save (throttled 30s)...");
+    saveFormData();
+  }, 3e4);
+  const formChangeEvents = ["input", "change", "blur", "select"];
+  formChangeEvents.forEach((eventType) => {
+    document.addEventListener(eventType, (event) => {
+      const target = event.target;
+      if (target && (target.tagName === "INPUT" || target.tagName === "SELECT" || target.tagName === "TEXTAREA")) {
+        throttledSave();
+      }
+    }, { passive: true });
+  });
+  window.setInterval(() => {
+    console.log("🕐 Periodic auto-save (60s interval)...");
+    saveFormData();
+  }, 6e4);
+  console.log("✅ Multi-layer backup system ready");
+}
+function setupIntelligentRecovery() {
+  console.log("🔄 Setting up intelligent recovery...");
+  const savedData = sessionStorage.getItem("ds160-form-data");
+  if (!savedData) {
+    console.log("📝 No saved form data found");
+    return;
+  }
+  console.log("📁 Saved form data detected, preparing recovery...");
   setTimeout(() => {
-    executeGentleRefresh();
-  }, 300);
+    try {
+      restoreFormData();
+      showRecoveryNotification();
+      console.log("✅ Form data recovery completed");
+    } catch (error) {
+      console.error("❌ Form data recovery failed:", error);
+    }
+  }, 500);
+}
+function setupEmergencyProtection() {
+  console.log("🚨 Setting up emergency protection listeners...");
+  if (emergencySaveActive) {
+    console.log("Emergency protection already active");
+    return;
+  }
+  const emergencySave = () => {
+    console.log("🚨 Emergency save triggered!");
+    try {
+      saveFormData();
+    } catch (error) {
+      console.error("Emergency save failed:", error);
+    }
+  };
+  window.addEventListener("beforeunload", emergencySave);
+  window.addEventListener("pagehide", emergencySave);
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      console.log("📱 Page hidden, triggering emergency save");
+      emergencySave();
+    }
+  });
+  window.addEventListener("blur", () => {
+    console.log("👁️ Window blur, triggering save");
+    emergencySave();
+  });
+  emergencySaveActive = true;
+  console.log("✅ Emergency protection listeners ready");
+}
+function showRecoveryNotification() {
+  if (document.querySelector(".ds160-recovery-notification")) {
+    return;
+  }
+  const notification = document.createElement("div");
+  notification.className = "ds160-recovery-notification";
+  notification.innerHTML = `
+    <div class="notification-content">
+      <span class="icon">📁</span>
+      <span class="message">表单数据已自动恢复</span>
+      <button class="close-btn" onclick="this.parentElement.parentElement.remove()">×</button>
+    </div>
+  `;
+  notification.style.cssText = `
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 10000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    max-width: 300px;
+    animation: slideIn 0.3s ease-out;
+  `;
+  const style = document.createElement("style");
+  style.textContent = `
+    @keyframes slideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    
+    .ds160-recovery-notification .notification-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .ds160-recovery-notification .icon {
+      font-size: 18px;
+    }
+    
+    .ds160-recovery-notification .message {
+      flex: 1;
+      font-weight: 500;
+    }
+    
+    .ds160-recovery-notification .close-btn {
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .ds160-recovery-notification .close-btn:hover {
+      background: rgba(255,255,255,0.3);
+    }
+  `;
+  document.head.appendChild(style);
+  document.body.appendChild(notification);
+  setTimeout(() => {
+    if (notification.parentElement) {
+      notification.style.animation = "slideIn 0.3s ease-in reverse";
+      setTimeout(() => {
+        notification.remove();
+        style.remove();
+      }, 300);
+    }
+  }, 3e3);
+  console.log("📢 Recovery notification displayed");
 }
 let injector = null;
 let uiController = null;
@@ -1163,6 +1351,8 @@ async function initializeTranslation() {
     setTimeout(() => {
       restoreFormData();
     }, AUTO_REFRESH_CONFIG.RESTORE_DELAY);
+    initializeUserActivityTracking();
+    activateEnhancedFormProtection();
     setupOptimizedAutoRefresh();
     console.log("DS-160 Chinese Helper: Translation initialized successfully");
   } catch (error) {
@@ -1194,7 +1384,7 @@ function setupOptimizedAutoRefresh() {
     const inactiveTime = Date.now() - lastActivityTime;
     if (inactiveTime > AUTO_REFRESH_CONFIG.INACTIVE_THRESHOLD) {
       console.log(`⏰ User inactive for ${Math.floor(inactiveTime / 1e3)}s (threshold: ${AUTO_REFRESH_CONFIG.INACTIVE_THRESHOLD / 1e3}s), triggering refresh...`);
-      safeGentleRefresh(saveFormData);
+      executeUserGestureRefresh(saveFormData);
     } else {
       const remainingTime = AUTO_REFRESH_CONFIG.INACTIVE_THRESHOLD - inactiveTime;
       console.log(`🟢 User active, ${Math.floor(remainingTime / 1e3)}s until refresh threshold`);
@@ -1249,7 +1439,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       sendResponse({ success: true });
       break;
     case "REFRESH_TRANSLATION":
-      safeGentleRefresh(saveFormData);
+      executeUserGestureRefresh(saveFormData);
       sendResponse({ success: true });
       break;
     case "TOGGLE_TRANSLATION":

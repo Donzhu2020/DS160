@@ -3,7 +3,8 @@ import { TranslationUIController } from './ui-controller';
 import { loadMergedTranslationData, detectCurrentPage } from './translation-loader';
 import { getSettings, onSettingsChange } from '@/shared/storage';
 import { waitForDOM, saveFormData, restoreFormData, throttle } from '@/shared/dom-utils';
-import { safeGentleRefresh } from './gentle-refresh';
+import { executeUserGestureRefresh, initializeUserActivityTracking } from './user-gesture-refresh';
+import { activateEnhancedFormProtection } from './enhanced-form-protection';
 
 // 全局实例
 let injector: TranslationInjector | null = null;
@@ -82,6 +83,12 @@ async function initializeTranslation(): Promise<void> {
       restoreFormData();
     }, AUTO_REFRESH_CONFIG.RESTORE_DELAY);
     
+    // 初始化用户活动跟踪
+    initializeUserActivityTracking();
+    
+    // 激活增强的表单保护
+    activateEnhancedFormProtection();
+    
     // 设置用户活动监听器和自动刷新机制
     setupOptimizedAutoRefresh();
     
@@ -132,8 +139,8 @@ function setupOptimizedAutoRefresh(): void {
     if (inactiveTime > AUTO_REFRESH_CONFIG.INACTIVE_THRESHOLD) {
       console.log(`⏰ User inactive for ${Math.floor(inactiveTime / 1000)}s (threshold: ${AUTO_REFRESH_CONFIG.INACTIVE_THRESHOLD / 1000}s), triggering refresh...`);
       
-      // 使用温和刷新方法
-      safeGentleRefresh(saveFormData);
+      // 使用用户手势刷新方法
+      executeUserGestureRefresh(saveFormData);
     } else {
       // 显示活动状态（开发调试用）
       const remainingTime = AUTO_REFRESH_CONFIG.INACTIVE_THRESHOLD - inactiveTime;
@@ -205,8 +212,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       break;
       
     case 'REFRESH_TRANSLATION':
-      // 使用温和刷新方法
-      safeGentleRefresh(saveFormData);
+      // 使用用户手势刷新方法
+      executeUserGestureRefresh(saveFormData);
       sendResponse({ success: true });
       break;
       
