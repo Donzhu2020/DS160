@@ -255,6 +255,125 @@ function throttle(func, delay) {
     }
   };
 }
+function saveFormData() {
+  const formData = {};
+  try {
+    document.querySelectorAll("input, select, textarea").forEach((element) => {
+      const formElement = element;
+      const identifier = getElementIdentifier(formElement);
+      if (!identifier) return;
+      if (formElement instanceof HTMLInputElement) {
+        if (formElement.type === "checkbox" || formElement.type === "radio") {
+          formData[identifier] = formElement.checked ? "checked" : "unchecked";
+        } else {
+          formData[identifier] = formElement.value;
+        }
+      } else if (formElement instanceof HTMLSelectElement) {
+        formData[identifier] = formElement.value;
+        formData[identifier + "_selectedIndex"] = formElement.selectedIndex.toString();
+      } else if (formElement instanceof HTMLTextAreaElement) {
+        formData[identifier] = formElement.value;
+      }
+    });
+    sessionStorage.setItem("ds160_form_data", JSON.stringify(formData));
+    console.log("Form data saved successfully:", Object.keys(formData).length, "fields");
+  } catch (error) {
+    console.error("Failed to save form data:", error);
+  }
+}
+function restoreFormData() {
+  try {
+    const savedData = sessionStorage.getItem("ds160_form_data");
+    if (!savedData) {
+      console.log("No saved form data found");
+      return;
+    }
+    const formData = JSON.parse(savedData);
+    let restoredCount = 0;
+    document.querySelectorAll("input, select, textarea").forEach((element) => {
+      const formElement = element;
+      const identifier = getElementIdentifier(formElement);
+      if (!identifier || formData[identifier] === void 0) return;
+      try {
+        if (formElement instanceof HTMLInputElement) {
+          if (formElement.type === "checkbox" || formElement.type === "radio") {
+            formElement.checked = formData[identifier] === "checked";
+          } else {
+            formElement.value = formData[identifier];
+          }
+          restoredCount++;
+        } else if (formElement instanceof HTMLSelectElement) {
+          if (formData[identifier]) {
+            formElement.value = formData[identifier];
+          } else if (formData[identifier + "_selectedIndex"]) {
+            const selectedIndex = parseInt(formData[identifier + "_selectedIndex"]);
+            if (selectedIndex >= 0 && selectedIndex < formElement.options.length) {
+              formElement.selectedIndex = selectedIndex;
+            }
+          }
+          restoredCount++;
+        } else if (formElement instanceof HTMLTextAreaElement) {
+          formElement.value = formData[identifier];
+          restoredCount++;
+        }
+        formElement.dispatchEvent(new Event("change", { bubbles: true }));
+      } catch (error) {
+        console.warn("Failed to restore data for element:", identifier, error);
+      }
+    });
+    console.log("Form data restored successfully:", restoredCount, "fields");
+    sessionStorage.removeItem("ds160_form_data");
+  } catch (error) {
+    console.error("Failed to restore form data:", error);
+  }
+}
+function getElementIdentifier(element) {
+  if (element.getAttribute("name")) {
+    return `name:${element.getAttribute("name")}`;
+  }
+  if (element.id) {
+    return `id:${element.id}`;
+  }
+  for (const attr of element.attributes) {
+    if (attr.name.startsWith("data-") && attr.value) {
+      return `${attr.name}:${attr.value}`;
+    }
+  }
+  const label = findLabelForElement(element);
+  if (label) {
+    return `label:${label}`;
+  }
+  const parent = element.parentElement;
+  if (parent) {
+    const siblings = Array.from(parent.children).filter((el) => el.tagName === element.tagName);
+    const index = siblings.indexOf(element);
+    return `position:${element.tagName.toLowerCase()}_${index}`;
+  }
+  return null;
+}
+function findLabelForElement(element) {
+  if (element.id) {
+    const label = document.querySelector(`label[for="${element.id}"]`);
+    if (label && label.textContent) {
+      return label.textContent.trim();
+    }
+  }
+  const parentLabel = element.closest("label");
+  if (parentLabel && parentLabel.textContent) {
+    return parentLabel.textContent.trim();
+  }
+  let sibling = element.previousElementSibling;
+  while (sibling) {
+    if (sibling.tagName === "LABEL" && sibling.textContent) {
+      return sibling.textContent.trim();
+    }
+    if (sibling.textContent && sibling.textContent.trim().length < 100) {
+      return sibling.textContent.trim();
+    }
+    sibling = sibling.previousElementSibling;
+  }
+  return null;
+}
 class TranslationInjector {
   constructor(settings) {
     this.translationData = null;
@@ -949,8 +1068,69 @@ function detectCurrentPage() {
   console.warn("Unable to detect specific DS-160 page, defaulting to page1");
   return "page1";
 }
+function executeGentleRefresh() {
+  console.log("🌸 GENTLE: Starting gentle page refresh...");
+  try {
+    performSafeRefresh();
+  } catch (error) {
+    console.error("Gentle refresh failed:", error);
+    fallbackGentleRefresh();
+  }
+}
+function performSafeRefresh() {
+  console.log("🔄 Performing safe refresh...");
+  setTimeout(() => {
+    try {
+      console.log("🌸 Using gentle location.reload()...");
+      window.location.reload();
+    } catch (error) {
+      console.log("Location.reload failed:", error);
+      performURLRefresh();
+    }
+  }, 100);
+}
+function performURLRefresh() {
+  console.log("🔗 Performing URL refresh...");
+  try {
+    const currentURL = window.location.href;
+    window.location.href = currentURL;
+  } catch (error) {
+    console.log("URL refresh failed:", error);
+    fallbackGentleRefresh();
+  }
+}
+function fallbackGentleRefresh() {
+  console.log("🆘 Fallback gentle refresh...");
+  window.location = window.location;
+}
+function safeGentleRefresh(saveCallback) {
+  console.log("💾 Safe gentle refresh initiated...");
+  if (saveCallback) {
+    try {
+      saveCallback();
+      console.log("✅ Data saved before gentle refresh");
+    } catch (error) {
+      console.error("❌ Failed to save data:", error);
+    }
+  }
+  setTimeout(() => {
+    executeGentleRefresh();
+  }, 300);
+}
 let injector = null;
 let uiController = null;
+let lastActivityTime = Date.now();
+let autoRefreshTimer = null;
+const AUTO_REFRESH_CONFIG = {
+  // 自动保存间隔：30秒（之前是5秒，减少性能影响）
+  AUTO_SAVE_THROTTLE: 30 * 1e3,
+  // 无活动阈值：2分钟（保持不变，这个合理）
+  INACTIVE_THRESHOLD: 2 * 60 * 1e3,
+  // 检查间隔：60秒（之前是5分钟，更及时检测）
+  CHECK_INTERVAL: 60 * 1e3,
+  // 表单数据恢复延迟
+  RESTORE_DELAY: 100
+};
 async function initializeTranslation() {
   try {
     console.log("DS-160 Chinese Helper: Initializing translation...");
@@ -980,12 +1160,64 @@ async function initializeTranslation() {
         uiController.updateSettings(newSettings);
       }
     });
+    setTimeout(() => {
+      restoreFormData();
+    }, AUTO_REFRESH_CONFIG.RESTORE_DELAY);
+    setupOptimizedAutoRefresh();
     console.log("DS-160 Chinese Helper: Translation initialized successfully");
   } catch (error) {
     console.error("Failed to initialize translation:", error);
   }
 }
+function updateActivityTime() {
+  lastActivityTime = Date.now();
+}
+function setupOptimizedAutoRefresh() {
+  const activityEvents = ["mousemove", "keydown", "click", "scroll", "touchstart"];
+  activityEvents.forEach((eventType) => {
+    document.addEventListener(eventType, updateActivityTime, { passive: true });
+  });
+  const throttledSave = throttle(() => {
+    console.log("📝 Auto-saving form data (30s throttle)...");
+    saveFormData();
+  }, AUTO_REFRESH_CONFIG.AUTO_SAVE_THROTTLE);
+  const formEvents = ["input", "change", "blur"];
+  formEvents.forEach((eventType) => {
+    document.addEventListener(eventType, (event) => {
+      const target = event.target;
+      if (target && (target.tagName === "INPUT" || target.tagName === "SELECT" || target.tagName === "TEXTAREA")) {
+        throttledSave();
+      }
+    }, { passive: true });
+  });
+  autoRefreshTimer = window.setInterval(() => {
+    const inactiveTime = Date.now() - lastActivityTime;
+    if (inactiveTime > AUTO_REFRESH_CONFIG.INACTIVE_THRESHOLD) {
+      console.log(`⏰ User inactive for ${Math.floor(inactiveTime / 1e3)}s (threshold: ${AUTO_REFRESH_CONFIG.INACTIVE_THRESHOLD / 1e3}s), triggering refresh...`);
+      safeGentleRefresh(saveFormData);
+    } else {
+      const remainingTime = AUTO_REFRESH_CONFIG.INACTIVE_THRESHOLD - inactiveTime;
+      console.log(`🟢 User active, ${Math.floor(remainingTime / 1e3)}s until refresh threshold`);
+    }
+  }, AUTO_REFRESH_CONFIG.CHECK_INTERVAL);
+  console.log(`🔄 Optimized auto refresh initialized:`);
+  console.log(`  - Save interval: ${AUTO_REFRESH_CONFIG.AUTO_SAVE_THROTTLE / 1e3}s`);
+  console.log(`  - Inactive threshold: ${AUTO_REFRESH_CONFIG.INACTIVE_THRESHOLD / 1e3}s`);
+  console.log(`  - Check interval: ${AUTO_REFRESH_CONFIG.CHECK_INTERVAL / 1e3}s`);
+}
 function cleanup() {
+  if (autoRefreshTimer) {
+    clearInterval(autoRefreshTimer);
+    autoRefreshTimer = null;
+  }
+  const activityEvents = ["mousemove", "keydown", "click", "scroll", "touchstart"];
+  activityEvents.forEach((eventType) => {
+    document.removeEventListener(eventType, updateActivityTime);
+  });
+  const formEvents = ["input", "change", "select"];
+  formEvents.forEach((eventType) => {
+    document.removeEventListener(eventType, updateActivityTime);
+  });
   if (injector) {
     injector.destroy();
     injector = null;
@@ -1017,12 +1249,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       sendResponse({ success: true });
       break;
     case "REFRESH_TRANSLATION":
-      if (injector) {
-        injector.removeAllTranslations();
-        setTimeout(() => {
-          injector == null ? void 0 : injector.injectTranslations();
-        }, 100);
-      }
+      safeGentleRefresh(saveFormData);
       sendResponse({ success: true });
       break;
     case "TOGGLE_TRANSLATION":

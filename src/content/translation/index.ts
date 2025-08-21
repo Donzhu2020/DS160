@@ -2,11 +2,31 @@ import { TranslationInjector } from './translation-injector';
 import { TranslationUIController } from './ui-controller';
 import { loadMergedTranslationData, detectCurrentPage } from './translation-loader';
 import { getSettings, onSettingsChange } from '@/shared/storage';
-import { waitForDOM } from '@/shared/dom-utils';
+import { waitForDOM, saveFormData, restoreFormData, throttle } from '@/shared/dom-utils';
+import { safeGentleRefresh } from './gentle-refresh';
 
 // 全局实例
 let injector: TranslationInjector | null = null;
 let uiController: TranslationUIController | null = null;
+
+// 用户活动跟踪
+let lastActivityTime = Date.now();
+let autoRefreshTimer: number | null = null;
+
+// 🎯 优化后的配置参数
+const AUTO_REFRESH_CONFIG = {
+  // 自动保存间隔：30秒（之前是5秒，减少性能影响）
+  AUTO_SAVE_THROTTLE: 30 * 1000,
+  
+  // 无活动阈值：2分钟（保持不变，这个合理）
+  INACTIVE_THRESHOLD: 2 * 60 * 1000,
+  
+  // 检查间隔：60秒（之前是5分钟，更及时检测）
+  CHECK_INTERVAL: 60 * 1000,
+  
+  // 表单数据恢复延迟
+  RESTORE_DELAY: 100
+};
 
 /**
  * 初始化翻译功能
@@ -57,6 +77,14 @@ async function initializeTranslation(): Promise<void> {
       }
     });
     
+    // 恢复表单数据（如果有的话）
+    setTimeout(() => {
+      restoreFormData();
+    }, AUTO_REFRESH_CONFIG.RESTORE_DELAY);
+    
+    // 设置用户活动监听器和自动刷新机制
+    setupOptimizedAutoRefresh();
+    
     console.log('DS-160 Chinese Helper: Translation initialized successfully');
     
   } catch (error) {
@@ -65,9 +93,82 @@ async function initializeTranslation(): Promise<void> {
 }
 
 /**
+ * 更新用户活动时间
+ */
+function updateActivityTime(): void {
+  lastActivityTime = Date.now();
+}
+
+/**
+ * 设置优化后的自动刷新机制
+ */
+function setupOptimizedAutoRefresh(): void {
+  // 添加用户活动监听器
+  const activityEvents = ['mousemove', 'keydown', 'click', 'scroll', 'touchstart'];
+  activityEvents.forEach(eventType => {
+    document.addEventListener(eventType, updateActivityTime, { passive: true });
+  });
+
+  // 添加表单输入监听器，优化后的保存频率
+  const throttledSave = throttle(() => {
+    console.log('📝 Auto-saving form data (30s throttle)...');
+    saveFormData();
+  }, AUTO_REFRESH_CONFIG.AUTO_SAVE_THROTTLE); // 30秒节流，合理的保存频率
+  
+  const formEvents = ['input', 'change', 'blur'];
+  formEvents.forEach(eventType => {
+    document.addEventListener(eventType, (event) => {
+      const target = event.target as HTMLElement;
+      if (target && (target.tagName === 'INPUT' || target.tagName === 'SELECT' || target.tagName === 'TEXTAREA')) {
+        throttledSave();
+      }
+    }, { passive: true });
+  });
+
+  // 设置定时器，每60秒检查一次用户活动（之前是5分钟，更及时）
+  autoRefreshTimer = window.setInterval(() => {
+    const inactiveTime = Date.now() - lastActivityTime;
+    
+    if (inactiveTime > AUTO_REFRESH_CONFIG.INACTIVE_THRESHOLD) {
+      console.log(`⏰ User inactive for ${Math.floor(inactiveTime / 1000)}s (threshold: ${AUTO_REFRESH_CONFIG.INACTIVE_THRESHOLD / 1000}s), triggering refresh...`);
+      
+      // 使用温和刷新方法
+      safeGentleRefresh(saveFormData);
+    } else {
+      // 显示活动状态（开发调试用）
+      const remainingTime = AUTO_REFRESH_CONFIG.INACTIVE_THRESHOLD - inactiveTime;
+      console.log(`🟢 User active, ${Math.floor(remainingTime / 1000)}s until refresh threshold`);
+    }
+  }, AUTO_REFRESH_CONFIG.CHECK_INTERVAL); // 每60秒检查一次
+
+  console.log(`🔄 Optimized auto refresh initialized:`);
+  console.log(`  - Save interval: ${AUTO_REFRESH_CONFIG.AUTO_SAVE_THROTTLE / 1000}s`);
+  console.log(`  - Inactive threshold: ${AUTO_REFRESH_CONFIG.INACTIVE_THRESHOLD / 1000}s`);
+  console.log(`  - Check interval: ${AUTO_REFRESH_CONFIG.CHECK_INTERVAL / 1000}s`);
+}
+
+/**
  * 清理资源
  */
 function cleanup(): void {
+  // 清理自动刷新定时器
+  if (autoRefreshTimer) {
+    clearInterval(autoRefreshTimer);
+    autoRefreshTimer = null;
+  }
+
+  // 移除用户活动监听器
+  const activityEvents = ['mousemove', 'keydown', 'click', 'scroll', 'touchstart'];
+  activityEvents.forEach(eventType => {
+    document.removeEventListener(eventType, updateActivityTime);
+  });
+
+  // 移除表单输入监听器
+  const formEvents = ['input', 'change', 'select'];
+  formEvents.forEach(eventType => {
+    document.removeEventListener(eventType, updateActivityTime);
+  });
+
   if (injector) {
     injector.destroy();
     injector = null;
@@ -104,12 +205,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       break;
       
     case 'REFRESH_TRANSLATION':
-      if (injector) {
-        injector.removeAllTranslations();
-        setTimeout(() => {
-          injector?.injectTranslations();
-        }, 100);
-      }
+      // 使用温和刷新方法
+      safeGentleRefresh(saveFormData);
       sendResponse({ success: true });
       break;
       

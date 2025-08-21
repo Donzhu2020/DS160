@@ -6,9 +6,9 @@
 export function findElementBySelectors(selectors: string[]): Element | null {
   for (const selector of selectors) {
     try {
-      // 处理文本选择器 "text:xxxxx"
-      if (selector.startsWith('text:')) {
-        const text = selector.substring(5);
+          // 处理文本选择器 "text:xxxxx"
+    if (selector.startsWith('text:')) {
+      const text = selector.substring(5);
         // 查找所有可能包含文本的元素
         const elements = document.querySelectorAll('*');
         let exactMatch = null;
@@ -290,4 +290,189 @@ export function throttle<T extends (...args: any[]) => void>(
       }, delay - (currentTime - lastExecTime));
     }
   };
+}
+
+/**
+ * 保存表单数据到sessionStorage
+ */
+export function saveFormData(): void {
+  const formData: { [key: string]: string } = {};
+  
+  try {
+    // 保存所有表单元素的数据
+    document.querySelectorAll('input, select, textarea').forEach((element) => {
+      const formElement = element as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
+      
+      // 使用多种策略生成唯一标识符
+      const identifier = getElementIdentifier(formElement);
+      if (!identifier) return;
+      
+      if (formElement instanceof HTMLInputElement) {
+        if (formElement.type === 'checkbox' || formElement.type === 'radio') {
+          formData[identifier] = formElement.checked ? 'checked' : 'unchecked';
+        } else {
+          formData[identifier] = formElement.value;
+        }
+      } else if (formElement instanceof HTMLSelectElement) {
+        formData[identifier] = formElement.value;
+        // 同时保存选中的索引，以备value不可用时使用
+        formData[identifier + '_selectedIndex'] = formElement.selectedIndex.toString();
+      } else if (formElement instanceof HTMLTextAreaElement) {
+        formData[identifier] = formElement.value;
+      }
+    });
+    
+    // 保存到sessionStorage
+    sessionStorage.setItem('ds160_form_data', JSON.stringify(formData));
+    console.log('Form data saved successfully:', Object.keys(formData).length, 'fields');
+    
+  } catch (error) {
+    console.error('Failed to save form data:', error);
+  }
+}
+
+/**
+ * 从sessionStorage恢复表单数据
+ */
+export function restoreFormData(): void {
+  try {
+    const savedData = sessionStorage.getItem('ds160_form_data');
+    if (!savedData) {
+      console.log('No saved form data found');
+      return;
+    }
+    
+    const formData = JSON.parse(savedData);
+    let restoredCount = 0;
+    
+    // 恢复所有表单元素的数据
+    document.querySelectorAll('input, select, textarea').forEach((element) => {
+      const formElement = element as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
+      
+      const identifier = getElementIdentifier(formElement);
+      if (!identifier || formData[identifier] === undefined) return;
+      
+      try {
+        if (formElement instanceof HTMLInputElement) {
+          if (formElement.type === 'checkbox' || formElement.type === 'radio') {
+            formElement.checked = formData[identifier] === 'checked';
+          } else {
+            formElement.value = formData[identifier];
+          }
+          restoredCount++;
+        } else if (formElement instanceof HTMLSelectElement) {
+          // 优先使用value，失败时使用selectedIndex
+          if (formData[identifier]) {
+            formElement.value = formData[identifier];
+          } else if (formData[identifier + '_selectedIndex']) {
+            const selectedIndex = parseInt(formData[identifier + '_selectedIndex']);
+            if (selectedIndex >= 0 && selectedIndex < formElement.options.length) {
+              formElement.selectedIndex = selectedIndex;
+            }
+          }
+          restoredCount++;
+        } else if (formElement instanceof HTMLTextAreaElement) {
+          formElement.value = formData[identifier];
+          restoredCount++;
+        }
+        
+        // 触发change事件，确保页面逻辑能正确响应
+        formElement.dispatchEvent(new Event('change', { bubbles: true }));
+        
+      } catch (error) {
+        console.warn('Failed to restore data for element:', identifier, error);
+      }
+    });
+    
+    console.log('Form data restored successfully:', restoredCount, 'fields');
+    
+    // 恢复完成后清理旧数据
+    sessionStorage.removeItem('ds160_form_data');
+    
+  } catch (error) {
+    console.error('Failed to restore form data:', error);
+  }
+}
+
+/**
+ * 为表单元素生成唯一标识符
+ */
+function getElementIdentifier(element: HTMLElement): string | null {
+  // 优先使用name属性
+  if (element.getAttribute('name')) {
+    return `name:${element.getAttribute('name')}`;
+  }
+  
+  // 使用id属性
+  if (element.id) {
+    return `id:${element.id}`;
+  }
+  
+  // 使用data-*属性
+  for (const attr of element.attributes) {
+    if (attr.name.startsWith('data-') && attr.value) {
+      return `${attr.name}:${attr.value}`;
+    }
+  }
+  
+  // 使用标签名和文本内容组合
+  const label = findLabelForElement(element);
+  if (label) {
+    return `label:${label}`;
+  }
+  
+  // 使用相对位置（最后的备选方案）
+  const parent = element.parentElement;
+  if (parent) {
+    const siblings = Array.from(parent.children).filter(el => el.tagName === element.tagName);
+    const index = siblings.indexOf(element);
+    return `position:${element.tagName.toLowerCase()}_${index}`;
+  }
+  
+  return null;
+}
+
+/**
+ * 查找与表单元素关联的标签文本
+ */
+function findLabelForElement(element: HTMLElement): string | null {
+  // 查找通过for属性关联的label
+  if (element.id) {
+    const label = document.querySelector(`label[for="${element.id}"]`);
+    if (label && label.textContent) {
+      return label.textContent.trim();
+    }
+  }
+  
+  // 查找父级label
+  const parentLabel = element.closest('label');
+  if (parentLabel && parentLabel.textContent) {
+    return parentLabel.textContent.trim();
+  }
+  
+  // 查找前面的兄弟元素中的标签文本
+  let sibling = element.previousElementSibling;
+  while (sibling) {
+    if (sibling.tagName === 'LABEL' && sibling.textContent) {
+      return sibling.textContent.trim();
+    }
+    if (sibling.textContent && sibling.textContent.trim().length < 100) {
+      return sibling.textContent.trim();
+    }
+    sibling = sibling.previousElementSibling;
+  }
+  
+  return null;
+}
+
+/**
+ * 清理已保存的表单数据
+ */
+export function clearSavedFormData(): void {
+  try {
+    sessionStorage.removeItem('ds160_form_data');
+    console.log('Saved form data cleared');
+  } catch (error) {
+    console.error('Failed to clear saved form data:', error);
+  }
 }
