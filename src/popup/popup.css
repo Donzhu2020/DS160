@@ -13,7 +13,7 @@ body {
 }
 
 .popup-container {
-  width: 320px;
+  width: 280px;
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -22,7 +22,7 @@ body {
 
 /* 头部样式 */
 .popup-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
   color: white;
   padding: 16px 20px;
   text-align: center;
@@ -94,16 +94,20 @@ body {
 }
 
 .control-group {
-  margin-bottom: 16px;
+  margin-bottom: 0;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
 }
 
 .control-label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 14px;
+  font-size: 15px;
   color: #374151;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
 }
 

@@ -78,14 +78,8 @@ class PopupController {
 
     // 设置控件值
     const enabledCheckbox = document.getElementById('enabled-checkbox') as HTMLInputElement;
-    const modeSelect = document.getElementById('mode-select') as HTMLSelectElement;
-    const notesCheckbox = document.getElementById('notes-checkbox') as HTMLInputElement;
-    const positionSelect = document.getElementById('position-select') as HTMLSelectElement;
 
     if (enabledCheckbox) enabledCheckbox.checked = this.settings.enabled;
-    if (modeSelect) modeSelect.value = this.settings.mode;
-    if (notesCheckbox) notesCheckbox.checked = this.settings.showNotes;
-    if (positionSelect) positionSelect.value = this.settings.position;
 
     // 禁用非DS-160页面的控件
     if (!this.isCurrentPageDS160) {
@@ -106,24 +100,6 @@ class PopupController {
     const enabledCheckbox = document.getElementById('enabled-checkbox') as HTMLInputElement;
     enabledCheckbox?.addEventListener('change', () => {
       this.updateSetting('enabled', enabledCheckbox.checked);
-    });
-
-    // 模式切换
-    const modeSelect = document.getElementById('mode-select') as HTMLSelectElement;
-    modeSelect?.addEventListener('change', () => {
-      this.updateSetting('mode', modeSelect.value as 'brief' | 'detailed');
-    });
-
-    // 注释显示
-    const notesCheckbox = document.getElementById('notes-checkbox') as HTMLInputElement;
-    notesCheckbox?.addEventListener('change', () => {
-      this.updateSetting('showNotes', notesCheckbox.checked);
-    });
-
-    // 位置设置
-    const positionSelect = document.getElementById('position-select') as HTMLSelectElement;
-    positionSelect?.addEventListener('change', () => {
-      this.updateSetting('position', positionSelect.value as 'right' | 'below');
     });
 
     // 刷新按钮
@@ -158,12 +134,7 @@ class PopupController {
             settings: this.settings 
           });
           
-          // 对于影响显示的设置，显示特别的反馈
-          if (key === 'mode' || key === 'position' || key === 'showNotes') {
-            this.showSuccess('设置已更新，翻译已刷新');
-          } else {
-            this.showSuccess('设置已保存');
-          }
+          this.showSuccess('设置已保存');
         }
       } else {
         this.showSuccess('设置已保存');

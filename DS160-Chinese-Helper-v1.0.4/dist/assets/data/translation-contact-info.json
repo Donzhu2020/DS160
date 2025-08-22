@@ -1,0 +1,120 @@
+{
+  "version": "2025-01-01",
+  "pageId": "contactInfo",
+  "description": "DS-160联系信息页面翻译数据",
+  "fields": [
+    {
+      "key": "home_address",
+      "selectors": [
+        "text:Home Address",
+        "label[for*='HomeAddress']"
+      ],
+      "en": "Home Address",
+      "zh": "家庭住址",
+      "note": "填写当前居住地址",
+      "level": "brief"
+    },
+    {
+      "key": "address_line1",
+      "selectors": [
+        "label[for*='AddressLine1']",
+        "text:Address Line 1"
+      ],
+      "en": "Address Line 1",
+      "zh": "地址第1行",
+      "note": "街道地址或门牌号",
+      "level": "brief"
+    },
+    {
+      "key": "address_line2",
+      "selectors": [
+        "label[for*='AddressLine2']",
+        "text:Address Line 2"
+      ],
+      "en": "Address Line 2",
+      "zh": "地址第2行",
+      "note": "补充地址信息（可选）",
+      "level": "brief"
+    },
+    {
+      "key": "city",
+      "selectors": [
+        "label[for*='City']",
+        "text:City"
+      ],
+      "en": "City",
+      "zh": "城市",
+      "note": "居住城市名称",
+      "level": "brief"
+    },
+    {
+      "key": "state_province",
+      "selectors": [
+        "text:State/Province",
+        "label[for*='State']",
+        "label[for*='Province']"
+      ],
+      "en": "State/Province",
+      "zh": "省/州",
+      "note": "选择或填写省份",
+      "level": "brief"
+    },
+    {
+      "key": "postal_code",
+      "selectors": [
+        "text:Postal Code",
+        "text:ZIP Code",
+        "label[for*='Postal']",
+        "label[for*='Zip']"
+      ],
+      "en": "Postal Code/ZIP Code",
+      "zh": "邮政编码",
+      "note": "6位邮政编码",
+      "level": "brief"
+    },
+    {
+      "key": "country",
+      "selectors": [
+        "label[for*='Country']",
+        "text:Country"
+      ],
+      "en": "Country",
+      "zh": "国家",
+      "note": "选择居住国家",
+      "level": "brief"
+    },
+    {
+      "key": "phone_number",
+      "selectors": [
+        "text:Phone Number",
+        "label[for*='Phone']"
+      ],
+      "en": "Phone Number",
+      "zh": "电话号码",
+      "note": "包含国家代码，格式：+86-138xxxxxxxx",
+      "level": "detailed"
+    },
+    {
+      "key": "email_address",
+      "selectors": [
+        "text:Email Address",
+        "label[for*='Email']"
+      ],
+      "en": "Email Address",
+      "zh": "电子邮箱",
+      "note": "有效的邮箱地址，用于接收通知",
+      "level": "brief"
+    },
+    {
+      "key": "confirm_email",
+      "selectors": [
+        "text:Confirm Email",
+        "text:Re-enter Email"
+      ],
+      "en": "Confirm Email Address",
+      "zh": "确认电子邮箱",
+      "note": "重新输入相同邮箱地址",
+      "level": "brief"
+    }
+  ]
+}

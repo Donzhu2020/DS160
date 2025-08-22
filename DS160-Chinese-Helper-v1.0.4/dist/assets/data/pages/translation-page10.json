@@ -1,0 +1,322 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page10",
+  "description": "Family Information: Spouse - 家庭信息：配偶",
+  "fields": [
+    {
+      "key": "lblSpouseInfo",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblSpouseInfo"
+      ],
+      "en": "lbl Spouse Info",
+      "zh": {
+        "brief": "家庭信息：配偶",
+        "detailed": "家庭信息：配偶"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPageNote1",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPageNote1"
+      ],
+      "en": "lbl Page Note1",
+      "zh": {
+        "brief": "注意：请输入现任配偶信息。",
+        "detailed": "注意：请输入现任配偶信息。"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblSpouseNameInfo",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblSpouseNameInfo"
+      ],
+      "en": "lbl Spouse Name Info",
+      "zh": {
+        "brief": "配偶的全名",
+        "detailed": "配偶的全名（包括婚前姓名）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblSpouseSurname",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblSpouseSurname"
+      ],
+      "en": "lbl Spouse Surname",
+      "zh": {
+        "brief": "配偶的姓氏",
+        "detailed": "配偶的姓氏"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblSpouseGivenName",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblSpouseGivenName"
+      ],
+      "en": "lbl Spouse Given Name",
+      "zh": {
+        "brief": "配偶的名字",
+        "detailed": "配偶的名字"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblSpouseDOB",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblSpouseDOB"
+      ],
+      "en": "lbl Spouse D O B",
+      "zh": {
+        "brief": "配偶的出生日期",
+        "detailed": "配偶的出生日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "SpouseNatLabel",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_SpouseNatLabel"
+      ],
+      "en": "Spouse Nat Label",
+      "zh": {
+        "brief": "配偶的所属国家/地区",
+        "detailed": "配偶的所属国家/地区（国籍）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblSPOUSE_ADDR_LN1",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblSPOUSE_ADDR_LN1"
+      ],
+      "en": "L N1",
+      "zh": {
+        "brief": "街道地址",
+        "detailed": "街道地址（第一行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblSPOUSE_ADDR_LN2",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblSPOUSE_ADDR_LN2"
+      ],
+      "en": "L N2",
+      "zh": {
+        "brief": "街道地址",
+        "detailed": "街道地址（第二行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblSPOUSE_ADDR_CITY",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblSPOUSE_ADDR_CITY"
+      ],
+      "en": "C I T Y",
+      "zh": {
+        "brief": "城市",
+        "detailed": "城市"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblSPOUSE_ADDR_STATE",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblSPOUSE_ADDR_STATE"
+      ],
+      "en": "S T A T E",
+      "zh": {
+        "brief": "州/省",
+        "detailed": "州/省"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblSPOUSE_ADDR_POSTAL_CD",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblSPOUSE_ADDR_POSTAL_CD"
+      ],
+      "en": "C D",
+      "zh": {
+        "brief": "邮政编码",
+        "detailed": "邮政编码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "spouse_s_full_name__include_maiden_name_",
+      "selectors": [
+        "text:\"Spouse\"s Full Name (include Maiden Name)\""
+      ],
+      "en": "Spouse\"s Full Name (include Maiden Name)",
+      "zh": {
+        "brief": "配偶的全名",
+        "detailed": "配偶的全名（包括婚前姓名）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "spouse_s_surnames",
+      "selectors": [
+        "text:\"Spouse\"s Surnames\""
+      ],
+      "en": "Spouse\"s Surnames",
+      "zh": {
+        "brief": "配偶的姓氏",
+        "detailed": "配偶的姓氏"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "spouse_s_given_names",
+      "selectors": [
+        "text:\"Spouse\"s Given Names\""
+      ],
+      "en": "Spouse\"s Given Names",
+      "zh": {
+        "brief": "配偶的名字",
+        "detailed": "配偶的名字"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "spouse_s_date_of_birth",
+      "selectors": [
+        "text:\"Spouse\"s Date of Birth\""
+      ],
+      "en": "Spouse\"s Date of Birth",
+      "zh": {
+        "brief": "配偶的出生日期",
+        "detailed": "配偶的出生日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "spouse_s_country_region_of_origin__nationality_",
+      "selectors": [
+        "text:\"Spouse\"s Country/Region of Origin (Nationality)\""
+      ],
+      "en": "Spouse\"s Country/Region of Origin (Nationality)",
+      "zh": {
+        "brief": "配偶的所属国家/地区",
+        "detailed": "配偶的所属国家/地区（国籍）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "spouse_place_of_birth",
+      "selectors": [
+        "text:Spouse's Place of Birth"
+      ],
+      "en": "Spouse's Place of Birth",
+      "zh": {
+        "brief": "配偶出生地",
+        "detailed": "配偶出生地"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "spouse_birth_city",
+      "selectors": [
+        "text:City"
+      ],
+      "en": "City",
+      "zh": {
+        "brief": "城市",
+        "detailed": "城市"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "spouse_birth_country",
+      "selectors": [
+        "text:Country/Region"
+      ],
+      "en": "Country/Region",
+      "zh": {
+        "brief": "国家/地区",
+        "detailed": "国家/地区"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "spouse_address",
+      "selectors": [
+        "text:Spouse's Address"
+      ],
+      "en": "Spouse's Address",
+      "zh": {
+        "brief": "配偶地址",
+        "detailed": "配偶地址"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    }
+  ]
+}

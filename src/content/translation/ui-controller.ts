@@ -53,29 +53,6 @@ export class TranslationUIController {
           </div>
         </div>
         
-        <div class="ds160-translation-option">
-          <label for="translation-mode">显示模式</label>
-          <select class="ds160-translation-select" data-action="change-mode" id="translation-mode">
-            <option value="brief">简洁</option>
-            <option value="detailed">详细</option>
-          </select>
-        </div>
-        
-        <div class="ds160-translation-option">
-          <label for="show-notes">显示注释</label>
-          <div class="ds160-translation-switch" data-action="toggle-notes">
-            <input type="checkbox" id="show-notes" style="display: none;" />
-          </div>
-        </div>
-        
-        <div class="ds160-translation-option">
-          <label for="translation-position">位置</label>
-          <select class="ds160-translation-select" data-action="change-position" id="translation-position">
-            <option value="right">右侧</option>
-            <option value="below">下方</option>
-          </select>
-        </div>
-        
         <div class="ds160-translation-status" id="translation-status">
           已准备就绪
         </div>
@@ -123,18 +100,6 @@ export class TranslationUIController {
         case 'toggle-enabled':
           await this.toggleEnabled();
           break;
-          
-        case 'toggle-notes':
-          await this.toggleNotes();
-          break;
-          
-        case 'change-mode':
-          await this.changeMode((target as HTMLSelectElement).value as 'brief' | 'detailed');
-          break;
-          
-        case 'change-position':
-          await this.changePosition((target as HTMLSelectElement).value as 'right' | 'below');
-          break;
       }
     } catch (error) {
       console.error('Error handling action:', action, error);
@@ -168,33 +133,7 @@ export class TranslationUIController {
     this.showStatus(this.settings.enabled ? '翻译已启用' : '翻译已禁用', 'success');
   }
 
-  /**
-   * 切换注释显示
-   */
-  private async toggleNotes(): Promise<void> {
-    this.settings.showNotes = !this.settings.showNotes;
-    await saveSettings({ showNotes: this.settings.showNotes });
-    this.updateUI();
-    this.showStatus('设置已保存', 'success');
-  }
 
-  /**
-   * 更改显示模式
-   */
-  private async changeMode(mode: 'brief' | 'detailed'): Promise<void> {
-    this.settings.mode = mode;
-    await saveSettings({ mode });
-    this.showStatus(`已切换到${mode === 'brief' ? '简洁' : '详细'}模式`, 'success');
-  }
-
-  /**
-   * 更改位置
-   */
-  private async changePosition(position: 'right' | 'below'): Promise<void> {
-    this.settings.position = position;
-    await saveSettings({ position });
-    this.showStatus(`位置已设为${position === 'right' ? '右侧' : '下方'}`, 'success');
-  }
 
   /**
    * 更新UI状态
@@ -205,22 +144,6 @@ export class TranslationUIController {
     // 更新启用状态开关
     const enabledSwitch = this.container.querySelector('[data-action="toggle-enabled"]');
     enabledSwitch?.classList.toggle('active', this.settings.enabled);
-
-    // 更新注释开关
-    const notesSwitch = this.container.querySelector('[data-action="toggle-notes"]');
-    notesSwitch?.classList.toggle('active', this.settings.showNotes);
-
-    // 更新模式选择
-    const modeSelect = this.container.querySelector('#translation-mode') as HTMLSelectElement;
-    if (modeSelect) {
-      modeSelect.value = this.settings.mode;
-    }
-
-    // 更新位置选择
-    const positionSelect = this.container.querySelector('#translation-position') as HTMLSelectElement;
-    if (positionSelect) {
-      positionSelect.value = this.settings.position;
-    }
   }
 
   /**

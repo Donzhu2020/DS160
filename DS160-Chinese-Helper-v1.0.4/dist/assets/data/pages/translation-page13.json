@@ -1,0 +1,802 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page13",
+  "description": "Additional Work/Education/Training Information - 额外工作/教育/培训信息",
+  "fields": [
+    {
+      "key": "lblPageNote1",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPageNote1"
+      ],
+      "en": "lbl Page Note1",
+      "zh": {
+        "brief": "注意：请提供以下有关工作、学历或培训的信息。对于所有要求解释的问题，请提供完整、准确的信息。",
+        "detailed": "注意：请提供以下有关工作、学历或培训的信息。对于所有要求解释的问题，请提供完整、准确的信息。"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblCLAN_TRIBE_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblCLAN_TRIBE_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否属于一个宗族或者部落？",
+        "detailed": "您是否属于一个宗族或者部落？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblCLAN_TRIBE_INFO",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblCLAN_TRIBE_INFO"
+      ],
+      "en": "I N F O",
+      "zh": {
+        "brief": "请提供以下信息：",
+        "detailed": "请提供以下信息："
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblCLAN_TRIBE_NAME",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblCLAN_TRIBE_NAME"
+      ],
+      "en": "N A M E",
+      "zh": {
+        "brief": "宗族或者部落名称",
+        "detailed": "宗族或者部落名称"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblLANGUAGE_INFO",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblLANGUAGE_INFO"
+      ],
+      "en": "I N F O",
+      "zh": {
+        "brief": "请列出您所说语言的种类",
+        "detailed": "请列出您所说语言的种类"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlLANGUAGES_ctl00_lblLANGUAGE_NAME",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlLANGUAGES_ctl00_lblLANGUAGE_NAME"
+      ],
+      "en": "N A M E",
+      "zh": {
+        "brief": "语言名字",
+        "detailed": "语言名字（只讲中文请填mandarin）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblSPECIALIZED_SKILLS_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblSPECIALIZED_SKILLS_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否具有特殊技能或接受过特殊培训，例如有关枪械、炸药、核装置、生物或化学方面的经验？",
+        "detailed": "您是否具有特殊技能或接受过特殊培训，例如有关枪械、炸药、核装置、生物或化学方面的经验？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblSPECIALIZED_SKILLS_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblSPECIALIZED_SKILLS_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "解释",
+        "detailed": "解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblORGANIZATION_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblORGANIZATION_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否隶属于、捐助过或为任何专业、社会或慈善组织工作过？",
+        "detailed": "您是否隶属于、捐助过或为任何专业、社会或慈善组织工作过？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblORGANIZATION_INFO",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblORGANIZATION_INFO"
+      ],
+      "en": "I N F O",
+      "zh": {
+        "brief": "请提供组织列表",
+        "detailed": "请提供组织列表"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblMILITARY_SERVICE_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblMILITARY_SERVICE_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾在军队服役？",
+        "detailed": "您是否曾在军队服役？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblMILITARY_SERVICE_INFO",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblMILITARY_SERVICE_INFO"
+      ],
+      "en": "I N F O",
+      "zh": {
+        "brief": "请提供以下信息：",
+        "detailed": "请提供以下信息："
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlMILITARY_ctl00_lblMILITARY_CNTRY",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlMILITARY_ctl00_lblMILITARY_CNTRY"
+      ],
+      "en": "C N T R Y",
+      "zh": {
+        "brief": "服役国家/地区名称",
+        "detailed": "服役国家/地区名称"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlMILITARY_ctl00_lblMILITARY_BRANCH",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlMILITARY_ctl00_lblMILITARY_BRANCH"
+      ],
+      "en": "B R A N C H",
+      "zh": {
+        "brief": "服役部门",
+        "detailed": "服役部门"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlMILITARY_ctl00_lblMILITARY_RANK",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlMILITARY_ctl00_lblMILITARY_RANK"
+      ],
+      "en": "R A N K",
+      "zh": {
+        "brief": "军衔/职位",
+        "detailed": "军衔/职位"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlMILITARY_ctl00_lblMILITARY_SPECIALTY",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlMILITARY_ctl00_lblMILITARY_SPECIALTY"
+      ],
+      "en": "S P E C I A L T Y",
+      "zh": {
+        "brief": "军事专业",
+        "detailed": "军事专业"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlMILITARY_ctl00_lblMILITARY_SVC_FROM",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlMILITARY_ctl00_lblMILITARY_SVC_FROM"
+      ],
+      "en": "F R O M",
+      "zh": {
+        "brief": "服役开始日期",
+        "detailed": "服役开始日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlMILITARY_ctl00_lblMILITARY_SVC_TO",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlMILITARY_ctl00_lblMILITARY_SVC_TO"
+      ],
+      "en": "T O",
+      "zh": {
+        "brief": "服役结束日期",
+        "detailed": "服役结束日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPARAMILITARY_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPARAMILITARY_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾在准军事部队、民兵组织、叛乱集团、游击队或叛乱组织中服役、成为成员或参与其中？",
+        "detailed": "您是否曾在准军事部队、民兵组织、叛乱集团、游击队或叛乱组织中服役、成为成员或参与其中？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblCOUNTRIES_VISITED_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblCOUNTRIES_VISITED_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否在过去五年内前往过任何国家/地区？",
+        "detailed": "您是否在过去五年内前往过任何国家/地区？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlCountriesVisited_ctl00_lblCOUNTRIES_VISITED",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlCountriesVisited_ctl00_lblCOUNTRIES_VISITED"
+      ],
+      "en": "V I S I T E D",
+      "zh": {
+        "brief": "国家/地区",
+        "detailed": "国家/地区"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlORGANIZATIONS_ctl00_lblORGANIZATION_NAME",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlORGANIZATIONS_ctl00_lblORGANIZATION_NAME"
+      ],
+      "en": "N A M E",
+      "zh": {
+        "brief": "组织名称",
+        "detailed": "组织名称"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlMILITARY_SERVICE_ctl00_lblMILITARY_SVC_CNTRY",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlMILITARY_SERVICE_ctl00_lblMILITARY_SVC_CNTRY"
+      ],
+      "en": "C N T R Y",
+      "zh": {
+        "brief": "服役国家/地区名称",
+        "detailed": "服役国家/地区名称"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "additional_work_education_training_information",
+      "selectors": [
+        "text:\"Additional Work/Education/Training Information\""
+      ],
+      "en": "Additional Work/Education/Training Information",
+      "zh": {
+        "brief": "附加工作/教育/培训信息",
+        "detailed": "附加工作/教育/培训信息"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "do_you_belong_to_a_clan_or_tribe_",
+      "selectors": [
+        "text:\"Do you belong to a clan or tribe?\""
+      ],
+      "en": "Do you belong to a clan or tribe?",
+      "zh": {
+        "brief": "您是否属于一个宗族或者部落？",
+        "detailed": "您是否属于一个宗族或者部落？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "clan_or_tribe_name",
+      "selectors": [
+        "text:\"Clan or Tribe Name\""
+      ],
+      "en": "Clan or Tribe Name",
+      "zh": {
+        "brief": "宗族或者部落名称",
+        "detailed": "宗族或者部落名称"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "provide_a_list_of_languages_you_speak",
+      "selectors": [
+        "text:\"Provide a List of Languages You Speak\""
+      ],
+      "en": "Provide a List of Languages You Speak",
+      "zh": {
+        "brief": "请列出您所说语言的种类",
+        "detailed": "请列出您所说语言的种类"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "language_name",
+      "selectors": [
+        "text:\"Language Name\""
+      ],
+      "en": "Language Name",
+      "zh": {
+        "brief": "语言名字",
+        "detailed": "语言名字（只讲中文请填mandarin）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "add_another",
+      "selectors": [
+        "text:\"Add Another\""
+      ],
+      "en": "Add Another",
+      "zh": {
+        "brief": "增加另一个",
+        "detailed": "增加另一个"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "remove",
+      "selectors": [
+        "text:\"Remove\""
+      ],
+      "en": "Remove",
+      "zh": {
+        "brief": "移走",
+        "detailed": "移走"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "do_you_have_any_specialized_skills_or_training__such_as_firearms__explosives__nuclear__biological__or_chemical_experience_",
+      "selectors": [
+        "text:\"Do you have any specialized skills or training, such as firearms, explosives, nuclear, biological, or chemical experience?\""
+      ],
+      "en": "Do you have any specialized skills or training, such as firearms, explosives, nuclear, biological, or chemical experience?",
+      "zh": {
+        "brief": "您是否具有特殊技能或接受过特殊培训，例如有关枪械、炸药、核装置、生物或化学方面的经验？",
+        "detailed": "您是否具有特殊技能或接受过特殊培训，例如有关枪械、炸药、核装置、生物或化学方面的经验？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "explain",
+      "selectors": [
+        "text:\"Explain\""
+      ],
+      "en": "Explain",
+      "zh": {
+        "brief": "解释",
+        "detailed": "解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "yes",
+      "selectors": [
+        "text:\"Yes\""
+      ],
+      "en": "Yes",
+      "zh": {
+        "brief": "是",
+        "detailed": "是"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "no",
+      "selectors": [
+        "text:\"No\""
+      ],
+      "en": "No",
+      "zh": {
+        "brief": "否",
+        "detailed": "否"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_belonged_to__contributed_to__or_worked_for_any_professional__social__or_charitable_organization_",
+      "selectors": [
+        "text:\"Have you belonged to, contributed to, or worked for any professional, social, or charitable organization?\""
+      ],
+      "en": "Have you belonged to, contributed to, or worked for any professional, social, or charitable organization?",
+      "zh": {
+        "brief": "您是否隶属于、捐助过或为任何专业、社会或慈善组织工作过？",
+        "detailed": "您是否隶属于、捐助过或为任何专业、社会或慈善组织工作过？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_ever_served_in_the_military_",
+      "selectors": [
+        "text:\"Have you ever served in the military?\""
+      ],
+      "en": "Have you ever served in the military?",
+      "zh": {
+        "brief": "您是否曾在军队服役？",
+        "detailed": "您是否曾在军队服役？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "name_of_country_region",
+      "selectors": [
+        "text:\"Name of Country/Region\""
+      ],
+      "en": "Name of Country/Region",
+      "zh": {
+        "brief": "服役国家/地区名称",
+        "detailed": "服役国家/地区名称"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "branch_of_service",
+      "selectors": [
+        "text:\"Branch of Service\""
+      ],
+      "en": "Branch of Service",
+      "zh": {
+        "brief": "服役部门",
+        "detailed": "服役部门"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "rank_position",
+      "selectors": [
+        "text:\"Rank/Position\""
+      ],
+      "en": "Rank/Position",
+      "zh": {
+        "brief": "军衔/职位",
+        "detailed": "军衔/职位"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "military_specialty",
+      "selectors": [
+        "text:\"Military Specialty\""
+      ],
+      "en": "Military Specialty",
+      "zh": {
+        "brief": "军事专业",
+        "detailed": "军事专业"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "date_of_service_from",
+      "selectors": [
+        "text:\"Date of Service From\""
+      ],
+      "en": "Date of Service From",
+      "zh": {
+        "brief": "服役开始日期",
+        "detailed": "服役开始日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "date_of_service_to",
+      "selectors": [
+        "text:\"Date of Service To\""
+      ],
+      "en": "Date of Service To",
+      "zh": {
+        "brief": "服役结束日期",
+        "detailed": "服役结束日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_ever_served_in__been_a_member_of__or_been_involved_with_a_paramilitary_unit__vigilante_unit__rebel_group__guerrilla_group__or_insurgent_organization_",
+      "selectors": [
+        "text:\"Have you ever served in, been a member of, or been involved with a paramilitary unit, vigilante unit, rebel group, guerrilla group, or insurgent organization?\""
+      ],
+      "en": "Have you ever served in, been a member of, or been involved with a paramilitary unit, vigilante unit, rebel group, guerrilla group, or insurgent organization?",
+      "zh": {
+        "brief": "您是否曾在准军事部队、民兵组织、叛乱集团、游击队或叛乱组织中服役、成为成员或参与其中？",
+        "detailed": "您是否曾在准军事部队、民兵组织、叛乱集团、游击队或叛乱组织中服役、成为成员或参与其中？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_traveled_to_any_countries_regions_within_the_last_five_years_",
+      "selectors": [
+        "text:\"Have you traveled to any countries/regions within the last five years?\""
+      ],
+      "en": "Have you traveled to any countries/regions within the last five years?",
+      "zh": {
+        "brief": "您是否在过去五年内前往过任何国家/地区？",
+        "detailed": "您是否在过去五年内前往过任何国家/地区？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "provide_a_list_of_organizations",
+      "selectors": [
+        "text:\"Provide a List of Organizations\""
+      ],
+      "en": "Provide a List of Organizations",
+      "zh": {
+        "brief": "请提供组织列表",
+        "detailed": "请提供组织列表"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "organization_name",
+      "selectors": [
+        "text:\"Organization Name\""
+      ],
+      "en": "Organization Name",
+      "zh": {
+        "brief": "组织名称",
+        "detailed": "组织名称"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "branch_of_service",
+      "selectors": [
+        "text:Branch of Service"
+      ],
+      "en": "Branch of Service",
+      "zh": {
+        "brief": "服役部门",
+        "detailed": "服役部门"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "rank_position",
+      "selectors": [
+        "text:Rank/Position"
+      ],
+      "en": "Rank/Position",
+      "zh": {
+        "brief": "军衔/职位",
+        "detailed": "军衔/职位"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "military_specialty",
+      "selectors": [
+        "text:Military Specialty"
+      ],
+      "en": "Military Specialty",
+      "zh": {
+        "brief": "军事专业",
+        "detailed": "军事专业"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "date_of_service_from",
+      "selectors": [
+        "text:Date of Service From"
+      ],
+      "en": "Date of Service From",
+      "zh": {
+        "brief": "服役开始日期",
+        "detailed": "服役开始日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "date_of_service_to",
+      "selectors": [
+        "text:Date of Service To"
+      ],
+      "en": "Date of Service To",
+      "zh": {
+        "brief": "服役结束日期",
+        "detailed": "服役结束日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "paramilitary_involvement",
+      "selectors": [
+        "text:Have you ever served in, been a member of, or been involved with a paramilitary unit, vigilante unit, rebel group, guerrilla group, or insurgent organization?"
+      ],
+      "en": "Have you ever served in, been a member of, or been involved with a paramilitary unit, vigilante unit, rebel group, guerrilla group, or insurgent organization?",
+      "zh": {
+        "brief": "您是否曾在准军事部队、治安队、反叛组织、游击队或叛乱组织中服役、成为成员或参与其中？",
+        "detailed": "您是否曾在准军事部队、治安队、反叛组织、游击队或叛乱组织中服役、成为成员或参与其中？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "explain_military",
+      "selectors": [
+        "text:Explain"
+      ],
+      "en": "Explain",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    }
+  ]
+}

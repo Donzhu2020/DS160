@@ -1,0 +1,838 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page12",
+  "description": "Previous Work/Education/Training Information - 以前的工作/教育/培训信息",
+  "fields": [
+    {
+      "key": "lblPageNote1",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPageNote1"
+      ],
+      "en": "lbl Page Note1",
+      "zh": {
+        "brief": "注意：请提供您在过去五年中的工作信息。",
+        "detailed": "注意：请提供您在过去五年中的工作信息（如适用）。"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPreviouslyEmployed",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPreviouslyEmployed"
+      ],
+      "en": "lbl Previously Employed",
+      "zh": {
+        "brief": "您之前有工作吗？",
+        "detailed": "您之前有工作吗？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblEmployerInfo",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblEmployerInfo"
+      ],
+      "en": "lbl Employer Info",
+      "zh": {
+        "brief": "雇主/工作信息：",
+        "detailed": "雇主/工作信息："
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEmpl_ctl00_lblEmployerName",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEmpl_ctl00_lblEmployerName"
+      ],
+      "en": "lbl Employer Name",
+      "zh": {
+        "brief": "雇主名称",
+        "detailed": "雇主名称"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEmpl_ctl00_lblEmployerStreetAddress1",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEmpl_ctl00_lblEmployerStreetAddress1"
+      ],
+      "en": "lbl Employer Street Address1",
+      "zh": {
+        "brief": "雇主街道地址",
+        "detailed": "雇主街道地址（第一行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEmpl_ctl00_lblEmployerStreetAddress2",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEmpl_ctl00_lblEmployerStreetAddress2"
+      ],
+      "en": "lbl Employer Street Address2",
+      "zh": {
+        "brief": "雇主街道地址",
+        "detailed": "雇主街道地址（第二行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEmpl_ctl00_lblStreetAddress2Optional",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEmpl_ctl00_lblStreetAddress2Optional"
+      ],
+      "en": "lbl Street Address2 Optional",
+      "zh": {
+        "brief": "*可选",
+        "detailed": "*可选"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEmpl_ctl00_lblEmployerCity",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEmpl_ctl00_lblEmployerCity"
+      ],
+      "en": "lbl Employer City",
+      "zh": {
+        "brief": "城市",
+        "detailed": "城市"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEmpl_ctl00_lblEmployerStateProvince",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEmpl_ctl00_lblEmployerStateProvince"
+      ],
+      "en": "lbl Employer State Province",
+      "zh": {
+        "brief": "州/省",
+        "detailed": "州/省"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEmpl_ctl00_lblJobTitle",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEmpl_ctl00_lblJobTitle"
+      ],
+      "en": "lbl Job Title",
+      "zh": {
+        "brief": "职位",
+        "detailed": "职位"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEmpl_ctl00_lblEmploymentDateFrom",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEmpl_ctl00_lblEmploymentDateFrom"
+      ],
+      "en": "lbl Employment Date From",
+      "zh": {
+        "brief": "工作开始日期",
+        "detailed": "工作开始日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEmpl_ctl00_lblEmploymentDateTo",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEmpl_ctl00_lblEmploymentDateTo"
+      ],
+      "en": "lbl Employment Date To",
+      "zh": {
+        "brief": "工作结束日期",
+        "detailed": "工作结束日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEmpl_ctl00_lblDescribeDuties",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEmpl_ctl00_lblDescribeDuties"
+      ],
+      "en": "lbl Describe Duties",
+      "zh": {
+        "brief": "简要描述您的职责：",
+        "detailed": "简要描述您的职责："
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblOtherEduc",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblOtherEduc"
+      ],
+      "en": "lbl Other Educ",
+      "zh": {
+        "brief": "您是否在任何相当于中学水平或以上的教育机构里学习过？",
+        "detailed": "您是否在任何相当于中学水平或以上的教育机构里学习过？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Label21",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_Label21"
+      ],
+      "en": "Label21",
+      "zh": {
+        "brief": "请提供您所就读教育机构的以下信息。",
+        "detailed": "请提供您所就读教育机构的以下信息。"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEduc_ctl00_lblSchoolName",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEduc_ctl00_lblSchoolName"
+      ],
+      "en": "lbl School Name",
+      "zh": {
+        "brief": "机构名称",
+        "detailed": "机构名称"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEduc_ctl00_lblSchoolAddr1",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEduc_ctl00_lblSchoolAddr1"
+      ],
+      "en": "lbl School Addr1",
+      "zh": {
+        "brief": "街道地址",
+        "detailed": "街道地址（第一行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEduc_ctl00_lblSchoolAddr2",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEduc_ctl00_lblSchoolAddr2"
+      ],
+      "en": "lbl School Addr2",
+      "zh": {
+        "brief": "街道地址",
+        "detailed": "街道地址（第二行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEduc_ctl00_lblSchoolCity",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEduc_ctl00_lblSchoolCity"
+      ],
+      "en": "lbl School City",
+      "zh": {
+        "brief": "城市",
+        "detailed": "城市"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEduc_ctl00_lblSchoolCountry",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEduc_ctl00_lblSchoolCountry"
+      ],
+      "en": "lbl School Country",
+      "zh": {
+        "brief": "国家/地区",
+        "detailed": "国家/地区"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEduc_ctl00_lblSchoolCourseOfStudy",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEduc_ctl00_lblSchoolCourseOfStudy"
+      ],
+      "en": "lbl School Course Of Study",
+      "zh": {
+        "brief": "课程",
+        "detailed": "课程"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEduc_ctl00_lblSchoolDteOfAttendanceFrom",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEduc_ctl00_lblSchoolDteOfAttendanceFrom"
+      ],
+      "en": "lbl School Dte Of Attendance From",
+      "zh": {
+        "brief": "入学日期",
+        "detailed": "入学日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEduc_ctl00_lblSchoolDteOfAttendanceTo",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEduc_ctl00_lblSchoolDteOfAttendanceTo"
+      ],
+      "en": "lbl School Dte Of Attendance To",
+      "zh": {
+        "brief": "毕业日期",
+        "detailed": "毕业日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEmpl_ctl00_lblEmployerCountry",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEmpl_ctl00_lblEmployerCountry"
+      ],
+      "en": "lbl Employer Country",
+      "zh": {
+        "brief": "国家/地区",
+        "detailed": "国家/地区"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEmpl_ctl00_lblEmployerTelephoneNumber",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEmpl_ctl00_lblEmployerTelephoneNumber"
+      ],
+      "en": "lbl Employer Telephone Number",
+      "zh": {
+        "brief": "电话号码",
+        "detailed": "电话号码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEmpl_ctl00_lblSupervisorSurname",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEmpl_ctl00_lblSupervisorSurname"
+      ],
+      "en": "lbl Supervisor Surname",
+      "zh": {
+        "brief": "主管姓氏",
+        "detailed": "主管姓氏"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEmpl_ctl00_lblSupervisorGivenNames",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEmpl_ctl00_lblSupervisorGivenNames"
+      ],
+      "en": "lbl Supervisor Given Names",
+      "zh": {
+        "brief": "主管名字",
+        "detailed": "主管名字"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEmpl_ctl00_lblEmployerPostalZone",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEmpl_ctl00_lblEmployerPostalZone"
+      ],
+      "en": "lbl Employer Postal Zone",
+      "zh": {
+        "brief": "邮政编码",
+        "detailed": "邮政编码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlPrevEduc_ctl00_lblEDUC_INST_POSTAL_CD",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEduc_ctl00_lblEDUC_INST_POSTAL_CD"
+      ],
+      "en": "C D",
+      "zh": {
+        "brief": "邮政编码",
+        "detailed": "邮政编码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "previous_work_education_training_information",
+      "selectors": [
+        "text:\"Previous Work/Education/Training Information\""
+      ],
+      "en": "Previous Work/Education/Training Information",
+      "zh": {
+        "brief": "之前工作/教育/培训信息",
+        "detailed": "之前工作/教育/培训信息"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "were_you_previously_employed_",
+      "selectors": [
+        "text:\"Were you previously employed?\""
+      ],
+      "en": "Were you previously employed?",
+      "zh": {
+        "brief": "您之前有工作吗？",
+        "detailed": "您之前有工作吗？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "employer_name",
+      "selectors": [
+        "text:\"Employer Name\""
+      ],
+      "en": "Employer Name",
+      "zh": {
+        "brief": "雇主名称",
+        "detailed": "雇主名称"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "employer_street_address__line_1_",
+      "selectors": [
+        "text:\"Employer Street Address (Line 1)\""
+      ],
+      "en": "Employer Street Address (Line 1)",
+      "zh": {
+        "brief": "雇主街道地址",
+        "detailed": "雇主街道地址（第一行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "employer_street_address__line_2_",
+      "selectors": [
+        "text:\"Employer Street Address (Line 2)\""
+      ],
+      "en": "Employer Street Address (Line 2)",
+      "zh": {
+        "brief": "雇主街道地址",
+        "detailed": "雇主街道地址（第二行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "_optional",
+      "selectors": [
+        "text:\"*Optional\""
+      ],
+      "en": "*Optional",
+      "zh": {
+        "brief": "*可选",
+        "detailed": "*可选"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "city",
+      "selectors": [
+        "text:\"City\""
+      ],
+      "en": "City",
+      "zh": {
+        "brief": "城市",
+        "detailed": "城市"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "state_province",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEmpl_ctl00_lblEmployerState"
+      ],
+      "en": "State/Province",
+      "zh": {
+        "brief": "州/省",
+        "detailed": "州/省"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "job_title",
+      "selectors": [
+        "text:\"Job Title\""
+      ],
+      "en": "Job Title",
+      "zh": {
+        "brief": "职位",
+        "detailed": "职位"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "employment_date_from",
+      "selectors": [
+        "text:\"Employment Date From\""
+      ],
+      "en": "Employment Date From",
+      "zh": {
+        "brief": "工作开始日期",
+        "detailed": "工作开始日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "employment_date_to",
+      "selectors": [
+        "text:\"Employment Date To\""
+      ],
+      "en": "Employment Date To",
+      "zh": {
+        "brief": "工作结束日期",
+        "detailed": "工作结束日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "yes",
+      "selectors": [
+        "text:\"Yes\""
+      ],
+      "en": "Yes",
+      "zh": {
+        "brief": "是",
+        "detailed": "是"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "no",
+      "selectors": [
+        "text:\"No\""
+      ],
+      "en": "No",
+      "zh": {
+        "brief": "否",
+        "detailed": "否"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "does_not_apply",
+      "selectors": [
+        "text:\"Does Not Apply\""
+      ],
+      "en": "Does Not Apply",
+      "zh": {
+        "brief": "不适用",
+        "detailed": "不适用"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_attended_any_educational_institutions_at_a_secondary_level_or_above_",
+      "selectors": [
+        "text:\"Have you attended any educational institutions at a secondary level or above?\""
+      ],
+      "en": "Have you attended any educational institutions at a secondary level or above?",
+      "zh": {
+        "brief": "您是否在任何相当于中学水平或以上的教育机构里学习过？",
+        "detailed": "您是否在任何相当于中学水平或以上的教育机构里学习过？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "provide_the_following_information_on_the_educational_institution_s__you_have_attended_",
+      "selectors": [
+        "text:\"Provide the following information on the educational institution(s) you have attended.\""
+      ],
+      "en": "Provide the following information on the educational institution(s) you have attended.",
+      "zh": {
+        "brief": "请提供您所就读教育机构的以下信息。",
+        "detailed": "请提供您所就读教育机构的以下信息。"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "name_of_institution",
+      "selectors": [
+        "text:\"Name of Institution\""
+      ],
+      "en": "Name of Institution",
+      "zh": {
+        "brief": "机构名称",
+        "detailed": "机构名称"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "course_of_study",
+      "selectors": [
+        "text:\"Course of Study\""
+      ],
+      "en": "Course of Study",
+      "zh": {
+        "brief": "课程",
+        "detailed": "课程"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "date_of_attendance_from",
+      "selectors": [
+        "text:\"Date of Attendance From\""
+      ],
+      "en": "Date of Attendance From",
+      "zh": {
+        "brief": "入学日期",
+        "detailed": "入学日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "date_of_attendance_to",
+      "selectors": [
+        "text:\"Date of Attendance To\""
+      ],
+      "en": "Date of Attendance To",
+      "zh": {
+        "brief": "毕业日期",
+        "detailed": "毕业日期"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "telephone_number",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEmpl_ctl00_lblEmployerTelephoneNumber",
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlEducation_ctl00_lblTelephoneNumber",
+        "label:contains(Telephone Number)",
+        "text:Telephone Number"
+      ],
+      "en": "Telephone Number",
+      "zh": {
+        "brief": "电话号码",
+        "detailed": "电话号码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "supervisor_s_surname",
+      "selectors": [
+        "text:\"Supervisor\"s Surname\""
+      ],
+      "en": "Supervisor\"s Surname",
+      "zh": {
+        "brief": "主管姓氏",
+        "detailed": "主管姓氏"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "supervisor_s_given_names",
+      "selectors": [
+        "text:\"Supervisor\"s Given Names\""
+      ],
+      "en": "Supervisor\"s Given Names",
+      "zh": {
+        "brief": "主管名字",
+        "detailed": "主管名字"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "do_not_know",
+      "selectors": [
+        "text:\"Do Not Know\""
+      ],
+      "en": "Do Not Know",
+      "zh": {
+        "brief": "不知道",
+        "detailed": "不知道"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "supervisor_given_names_text",
+      "selectors": [
+        "text:Supervisor's Given Names"
+      ],
+      "en": "Supervisor's Given Names",
+      "zh": {
+        "brief": "主管名字",
+        "detailed": "主管的名字"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "state_province_2",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlEducation_ctl00_lblState",
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlEducation_ctl00_lblSchoolState",
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlPrevEducation_ctl00_lblState",
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlSchool_ctl00_lblState"
+      ],
+      "en": "State/Province",
+      "zh": {
+        "brief": "州/省",
+        "detailed": "州/省"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    }
+  ]
+}

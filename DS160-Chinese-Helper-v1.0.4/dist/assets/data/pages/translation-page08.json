@@ -1,0 +1,502 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page8",
+  "description": "Family Information: Spouse - 家庭信息：配偶",
+  "fields": [
+    {
+      "key": "lblUSPOC",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblUSPOC"
+      ],
+      "en": "lbl U S P O C",
+      "zh": {
+        "brief": "美国联系人信息",
+        "detailed": "美国联系人信息"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblContactPerson",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblContactPerson"
+      ],
+      "en": "lbl Contact Person",
+      "zh": {
+        "brief": "在美国的联系人或组织",
+        "detailed": "在美国的联系人或组织"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblContactPerson2",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblContactPerson2"
+      ],
+      "en": "lbl Contact Person2",
+      "zh": {
+        "brief": "联系人",
+        "detailed": "联系人"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblUS_POC_SURNAME",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblUS_POC_SURNAME"
+      ],
+      "en": "S U R N A M E",
+      "zh": {
+        "brief": "姓氏",
+        "detailed": "姓氏"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblUS_POC_GIVEN_NAME",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblUS_POC_GIVEN_NAME"
+      ],
+      "en": "N A M E",
+      "zh": {
+        "brief": "名字",
+        "detailed": "名字"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblUS_POC_ORGANIZATION",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblUS_POC_ORGANIZATION"
+      ],
+      "en": "O R G A N I Z A T I O N",
+      "zh": {
+        "brief": "组织名称",
+        "detailed": "组织名称"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblUS_POC_REL_TO_APP",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblUS_POC_REL_TO_APP"
+      ],
+      "en": "A P P",
+      "zh": {
+        "brief": "与您的关系",
+        "detailed": "与您的关系"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblPOCAddressPhoneInfo",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblPOCAddressPhoneInfo"
+      ],
+      "en": "lbl P O C Address Phone Info",
+      "zh": {
+        "brief": "联系人的地址和电话号码",
+        "detailed": "联系人的地址和电话号码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblUS_POC_ADDR_LN1",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblUS_POC_ADDR_LN1"
+      ],
+      "en": "L N1",
+      "zh": {
+        "brief": "美国街道地址",
+        "detailed": "美国街道地址（第一行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblUS_POC_ADDR_LN2",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblUS_POC_ADDR_LN2"
+      ],
+      "en": "L N2",
+      "zh": {
+        "brief": "美国街道地址",
+        "detailed": "美国街道地址（第二行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblUS_POC_ADDR_CITY",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblUS_POC_ADDR_CITY"
+      ],
+      "en": "C I T Y",
+      "zh": {
+        "brief": "城市",
+        "detailed": "城市"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblUS_POC_ADDR_STATE",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblUS_POC_ADDR_STATE"
+      ],
+      "en": "S T A T E",
+      "zh": {
+        "brief": "州",
+        "detailed": "州"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblUS_POC_ADDR_POSTAL_CD",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblUS_POC_ADDR_POSTAL_CD"
+      ],
+      "en": "C D",
+      "zh": {
+        "brief": "邮政编码",
+        "detailed": "邮政编码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblUS_POC_ADDR_POSTAL_CD_IK",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblUS_POC_ADDR_POSTAL_CD_IK"
+      ],
+      "en": "I K",
+      "zh": {
+        "brief": "",
+        "detailed": "（如知道）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblUS_POC_HOME_TEL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblUS_POC_HOME_TEL"
+      ],
+      "en": "T E L",
+      "zh": {
+        "brief": "电话号码",
+        "detailed": "电话号码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblUS_POC_EMAIL_ADDR",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblUS_POC_EMAIL_ADDR"
+      ],
+      "en": "A D D R",
+      "zh": {
+        "brief": "电子邮件地址",
+        "detailed": "电子邮件地址"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "contact_person_or_organization_in_the_united_states",
+      "selectors": [
+        "text:\"Contact Person or Organization in the United States\""
+      ],
+      "en": "Contact Person or Organization in the United States",
+      "zh": {
+        "brief": "在美国的联系人或组织",
+        "detailed": "在美国的联系人或组织"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "contact_person",
+      "selectors": [
+        "text:\"Contact Person\""
+      ],
+      "en": "Contact Person",
+      "zh": {
+        "brief": "联系人",
+        "detailed": "联系人"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "surnames",
+      "selectors": [
+        "text:\"Surnames\""
+      ],
+      "en": "Surnames",
+      "zh": {
+        "brief": "姓氏",
+        "detailed": "姓氏"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "given_names",
+      "selectors": [
+        "text:\"Given Names\""
+      ],
+      "en": "Given Names",
+      "zh": {
+        "brief": "名字",
+        "detailed": "名字"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "organization_name",
+      "selectors": [
+        "text:\"Organization Name\""
+      ],
+      "en": "Organization Name",
+      "zh": {
+        "brief": "组织名称",
+        "detailed": "组织名称"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "relationship_to_you",
+      "selectors": [
+        "text:\"Relationship to You\""
+      ],
+      "en": "Relationship to You",
+      "zh": {
+        "brief": "与您的关系",
+        "detailed": "与您的关系"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "address_and_phone_number_of_point_of_contact",
+      "selectors": [
+        "text:\"Address and Phone Number of Point of Contact\""
+      ],
+      "en": "Address and Phone Number of Point of Contact",
+      "zh": {
+        "brief": "联系人的地址和电话号码",
+        "detailed": "联系人的地址和电话号码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "u_s__street_address__line_1_",
+      "selectors": [
+        "text:\"U.S. Street Address (Line 1)\""
+      ],
+      "en": "U.S. Street Address (Line 1)",
+      "zh": {
+        "brief": "美国街道地址",
+        "detailed": "美国街道地址（第一行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "u_s__street_address__line_2_",
+      "selectors": [
+        "text:\"U.S. Street Address (Line 2)\""
+      ],
+      "en": "U.S. Street Address (Line 2)",
+      "zh": {
+        "brief": "美国街道地址",
+        "detailed": "美国街道地址（第二行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "city",
+      "selectors": [
+        "text:\"City\""
+      ],
+      "en": "City",
+      "zh": {
+        "brief": "城市",
+        "detailed": "城市"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "state",
+      "selectors": [
+        "text:\"State\""
+      ],
+      "en": "State",
+      "zh": {
+        "brief": "州",
+        "detailed": "州"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "zip_code",
+      "selectors": [
+        "text:\"ZIP Code\""
+      ],
+      "en": "ZIP Code",
+      "zh": {
+        "brief": "邮政编码",
+        "detailed": "邮政编码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "_if_known_",
+      "selectors": [
+        "text:\"(if known)\""
+      ],
+      "en": "(if known)",
+      "zh": {
+        "brief": "",
+        "detailed": "（如知道）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "phone_number",
+      "selectors": [
+        "text:\"Phone Number\""
+      ],
+      "en": "Phone Number",
+      "zh": {
+        "brief": "电话号码",
+        "detailed": "电话号码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "email_address",
+      "selectors": [
+        "text:\"Email Address\""
+      ],
+      "en": "Email Address",
+      "zh": {
+        "brief": "电子邮件地址",
+        "detailed": "电子邮件地址"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "add_another",
+      "selectors": [
+        "text:\"Add Another\""
+      ],
+      "en": "Add Another",
+      "zh": {
+        "brief": "添加另一个",
+        "detailed": "添加另一个"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "remove",
+      "selectors": [
+        "text:\"Remove\""
+      ],
+      "en": "Remove",
+      "zh": {
+        "brief": "移除",
+        "detailed": "移除"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    }
+  ]
+}

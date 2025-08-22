@@ -1,0 +1,367 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page15",
+  "description": "Security and Background: Part 4 - 安全和背景信息第4部分",
+  "fields": [
+    {
+      "key": "lblARREST_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblARREST_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾因任何罪行或犯罪被逮捕或定罪，即使已获得赦免、大赦或其他类似行动？",
+        "detailed": "您是否曾因任何罪行或犯罪被逮捕或定罪，即使已获得赦免、大赦或其他类似行动？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblARREST_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblARREST_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblSUBSTANCE_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblSUBSTANCE_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾违反或参与阴谋违反任何有关管制物质的法律？",
+        "detailed": "您是否曾违反或参与阴谋违反任何有关管制物质的法律？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblSUBSTANCE_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblSUBSTANCE_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblVICE_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblVICE_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否来美国从事卖淫或非法商业化色情活动，或在过去10年内从事过卖淫或拉皮条？",
+        "detailed": "您是否来美国从事卖淫或非法商业化色情活动，或在过去10年内从事过卖淫或拉皮条？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lbl_VICE_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lbl_VICE_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblMONEY_LAUNDER_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblMONEY_LAUNDER_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾参与或寻求参与洗钱活动？",
+        "detailed": "您是否曾参与或寻求参与洗钱活动？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblMONEY_LAUNDER_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblMONEY_LAUNDER_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblHUMAN_TRAFFICKING_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblHUMAN_TRAFFICKING_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您有没有在美国或国外从事过人口贩卖活动，或者密谋做过这件事？",
+        "detailed": "您有没有在美国或国外从事过人口贩卖活动，或者密谋做过这件事？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblHUMAN_TRAFFICKING_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblHUMAN_TRAFFICKING_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblASSIST_PERSON_TRAFFIC_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblASSIST_PERSON_TRAFFIC_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您有没有故意帮助过在美国或国外从事严重人口贩卖活动的人？",
+        "detailed": "您有没有故意帮助过在美国或国外从事严重人口贩卖活动的人？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblASSIST_PERSON_TRAFFIC_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblASSIST_PERSON_TRAFFIC_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblHUMAN_TRAFFICKING_RELATED_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblHUMAN_TRAFFICKING_RELATED_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "你是不是在美国或国外犯下人口贩运罪的人的配偶或子女？而且在最近五年内，你是否明知那些贩运活动，并且从中得到了好处？",
+        "detailed": "你是不是在美国或国外犯下人口贩运罪的人的配偶或子女？而且在最近五年内，你是否明知那些贩运活动，并且从中得到了好处？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblHUMAN_TRAFFICKING_RELATED_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblHUMAN_TRAFFICKING_RELATED_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_ever_been_arrested_or_convicted_for_any_offense_or_crime__even_though_subject_of_a_pardon__amnesty__or_other_similar_action_",
+      "selectors": [
+        "text:\"Have you ever been arrested or convicted for any offense or crime, even though subject of a pardon, amnesty, or other similar action?\""
+      ],
+      "en": "Have you ever been arrested or convicted for any offense or crime, even though subject of a pardon, amnesty, or other similar action?",
+      "zh": {
+        "brief": "您是否曾因任何罪行或犯罪被逮捕或定罪，即使已获得赦免、大赦或其他类似行动？",
+        "detailed": "您是否曾因任何罪行或犯罪被逮捕或定罪，即使已获得赦免、大赦或其他类似行动？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_ever_violated__or_engaged_in_a_conspiracy_to_violate__any_law_relating_to_controlled_substances_",
+      "selectors": [
+        "text:\"Have you ever violated, or engaged in a conspiracy to violate, any law relating to controlled substances?\""
+      ],
+      "en": "Have you ever violated, or engaged in a conspiracy to violate, any law relating to controlled substances?",
+      "zh": {
+        "brief": "您是否曾违反或密谋违反任何与受管制物品相关的法律？",
+        "detailed": "您是否曾违反或密谋违反任何与受管制物品相关的法律？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "are_you_coming_to_the_united_states_to_engage_in_prostitution_or_unlawful_commercialized_vice_or_have_you_been_engaged_in_prostitution_or_procuring_prostitutes_within_the_past_10_years_",
+      "selectors": [
+        "text:\"Are you coming to the United States to engage in prostitution or unlawful commercialized vice or have you been engaged in prostitution or procuring prostitutes within the past 10 years?\""
+      ],
+      "en": "Are you coming to the United States to engage in prostitution or unlawful commercialized vice or have you been engaged in prostitution or procuring prostitutes within the past 10 years?",
+      "zh": {
+        "brief": "您是否来美国从事卖淫或非法商业化色情活动，或在过去10年内从事过卖淫或拉皮条？",
+        "detailed": "您是否来美国从事卖淫或非法商业化色情活动，或在过去10年内从事过卖淫或拉皮条？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_ever_been_involved_in__or_do_you_seek_to_engage_in__money_laundering_",
+      "selectors": [
+        "text:\"Have you ever been involved in, or do you seek to engage in, money laundering?\""
+      ],
+      "en": "Have you ever been involved in, or do you seek to engage in, money laundering?",
+      "zh": {
+        "brief": "您是否曾参与或寻求参与洗钱活动？",
+        "detailed": "您是否曾参与或寻求参与洗钱活动？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_ever_committed_or_conspired_to_commit_a_human_trafficking_offense_in_the_united_states_or_outside_the_united_states_",
+      "selectors": [
+        "text:\"Have you ever committed or conspired to commit a human trafficking offense in the United States or outside the United States?\""
+      ],
+      "en": "Have you ever committed or conspired to commit a human trafficking offense in the United States or outside the United States?",
+      "zh": {
+        "brief": "您是否曾在美国或美国境外犯有或阴谋犯有人口贩卖罪？",
+        "detailed": "您是否曾在美国或美国境外犯有或阴谋犯有人口贩卖罪？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_ever_knowingly_aided__abetted__assisted_or_colluded_with_an_individual_who_has_committed__or_conspired_to_commit_a_severe_human_trafficking_offense_in_the_united_states_or_outside_the_united_states_",
+      "selectors": [
+        "text:\"Have you ever knowingly aided, abetted, assisted or colluded with an individual who has committed, or conspired to commit a severe human trafficking offense in the United States or outside the United States?\""
+      ],
+      "en": "Have you ever knowingly aided, abetted, assisted or colluded with an individual who has committed, or conspired to commit a severe human trafficking offense in the United States or outside the United States?",
+      "zh": {
+        "brief": "您是否曾故意帮助、教唆、协助或与在美国或美国境外犯有或阴谋犯有严重人口贩卖罪的个人勾结？",
+        "detailed": "您是否曾故意帮助、教唆、协助或与在美国或美国境外犯有或阴谋犯有严重人口贩卖罪的个人勾结？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "are_you_the_spouse__son__or_daughter_of_an_individual_who_has_committed_or_conspired_to_commit_a_human_trafficking_offense_in_the_united_states_or_outside_the_united_states_and_have_you_within_the_last_five_years__knowingly_benefited_from_the_trafficking_activities_",
+      "selectors": [
+        "text:\"Are you the spouse, son, or daughter of an individual who has committed or conspired to commit a human trafficking offense in the United States or outside the United States and have you within the last five years, knowingly benefited from the trafficking activities?\""
+      ],
+      "en": "Are you the spouse, son, or daughter of an individual who has committed or conspired to commit a human trafficking offense in the United States or outside the United States and have you within the last five years, knowingly benefited from the trafficking activities?",
+      "zh": {
+        "brief": "您是否是在美国或美国境外犯有或阴谋犯有人口贩卖罪的个人的配偶、儿子或女儿，并且在过去五年内故意从贩卖活动中受益？",
+        "detailed": "您是否是在美国或美国境外犯有或阴谋犯有人口贩卖罪的个人的配偶、儿子或女儿，并且在过去五年内故意从贩卖活动中受益？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "explain",
+      "selectors": [
+        "text:\"Explain\""
+      ],
+      "en": "Explain",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "yes",
+      "selectors": [
+        "text:\"Yes\""
+      ],
+      "en": "Yes",
+      "zh": {
+        "brief": "是",
+        "detailed": "是"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "no",
+      "selectors": [
+        "text:\"No\""
+      ],
+      "en": "No",
+      "zh": {
+        "brief": "否",
+        "detailed": "否"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    }
+  ]
+}

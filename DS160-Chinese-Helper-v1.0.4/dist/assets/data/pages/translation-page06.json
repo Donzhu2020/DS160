@@ -1,0 +1,622 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page6",
+  "description": "US Point of Contact Information - 美国联系人信息",
+  "fields": [
+    {
+      "key": "lblHomeAdressInfo",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblHomeAdressInfo"
+      ],
+      "en": "lbl Home Adress Info",
+      "zh": {
+        "brief": "家庭地址",
+        "detailed": "家庭地址"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_ADDR_LN1",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_ADDR_LN1"
+      ],
+      "en": "L N1",
+      "zh": {
+        "brief": "街道地址",
+        "detailed": "街道地址（第一行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_ADDR_LN2",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_ADDR_LN2"
+      ],
+      "en": "L N2",
+      "zh": {
+        "brief": "街道地址",
+        "detailed": "街道地址（第二行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_ADDR_CITY",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_ADDR_CITY"
+      ],
+      "en": "C I T Y",
+      "zh": {
+        "brief": "城市",
+        "detailed": "城市"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_ADDR_STATE",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_ADDR_STATE"
+      ],
+      "en": "S T A T E",
+      "zh": {
+        "brief": "州/省",
+        "detailed": "州/省"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_ADDR_POSTAL_CD",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_ADDR_POSTAL_CD"
+      ],
+      "en": "C D",
+      "zh": {
+        "brief": "邮政编码/邮政编码",
+        "detailed": "邮政编码/邮政编码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_ADDR_CNTRY",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_ADDR_CNTRY"
+      ],
+      "en": "C N T R Y",
+      "zh": {
+        "brief": "国家/地区",
+        "detailed": "国家/地区"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblMAILING_ADDR_SAME_AS_APP_ADDR",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblMAILING_ADDR_SAME_AS_APP_ADDR"
+      ],
+      "en": "A D D R",
+      "zh": {
+        "brief": "您的邮寄地址是否与您的家庭地址相同？",
+        "detailed": "您的邮寄地址是否与您的家庭地址相同？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblCompleteInfo",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblCompleteInfo"
+      ],
+      "en": "lbl Complete Info",
+      "zh": {
+        "brief": "请提供您的邮寄地址：",
+        "detailed": "请提供您的邮寄地址："
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblMAILING_ADDR_LN1",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblMAILING_ADDR_LN1"
+      ],
+      "en": "L N1",
+      "zh": {
+        "brief": "街道地址",
+        "detailed": "街道地址（第一行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblMAILING_ADDR_LN2",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblMAILING_ADDR_LN2"
+      ],
+      "en": "L N2",
+      "zh": {
+        "brief": "街道地址",
+        "detailed": "街道地址（第二行）"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblMAILING_ADDR_LN2Optional",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblMAILING_ADDR_LN2Optional"
+      ],
+      "en": "L N2 Optional",
+      "zh": {
+        "brief": "*可选的",
+        "detailed": "*可选的"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblMAILING_ADDR_CITY",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblMAILING_ADDR_CITY"
+      ],
+      "en": "C I T Y",
+      "zh": {
+        "brief": "城市",
+        "detailed": "城市"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblMAILING_ADDR_STATE",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblMAILING_ADDR_STATE"
+      ],
+      "en": "S T A T E",
+      "zh": {
+        "brief": "州/省",
+        "detailed": "州/省"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblMAILING_ADDR_POSTAL_CD",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblMAILING_ADDR_POSTAL_CD"
+      ],
+      "en": "C D",
+      "zh": {
+        "brief": "邮政编码/邮政编码",
+        "detailed": "邮政编码/邮政编码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblMAILING_ADDR_CNTRY",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblMAILING_ADDR_CNTRY"
+      ],
+      "en": "C N T R Y",
+      "zh": {
+        "brief": "国家/地区",
+        "detailed": "国家/地区"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_HOME_TEL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_HOME_TEL"
+      ],
+      "en": "T E L",
+      "zh": {
+        "brief": "主要电话号码",
+        "detailed": "主要电话号码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_MOBILE_TEL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_MOBILE_TEL"
+      ],
+      "en": "T E L",
+      "zh": {
+        "brief": "次要电话号码",
+        "detailed": "次要电话号码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_BUS_TEL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_BUS_TEL"
+      ],
+      "en": "T E L",
+      "zh": {
+        "brief": "工作电话号码",
+        "detailed": "工作电话号码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAPP_EMAIL_ADDR",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAPP_EMAIL_ADDR"
+      ],
+      "en": "A D D R",
+      "zh": {
+        "brief": "电子邮箱地址",
+        "detailed": "电子邮箱地址"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAddEmail",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAddEmail"
+      ],
+      "en": "lbl Add Email",
+      "zh": {
+        "brief": "您在过去五年中是否使用过其他电子邮箱地址？",
+        "detailed": "您在过去五年中是否使用过其他电子邮箱地址？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlAddEmail_ctl00_lblAddEmailInfo",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlAddEmail_ctl00_lblAddEmailInfo"
+      ],
+      "en": "lbl Add Email Info",
+      "zh": {
+        "brief": "其他电子邮箱地址",
+        "detailed": "其他电子邮箱地址"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAddPhone",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAddPhone"
+      ],
+      "en": "lbl Add Phone",
+      "zh": {
+        "brief": "您在过去五年中是否使用过其他电话号码？",
+        "detailed": "您在过去五年中是否使用过其他电话号码？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlAddPhone_ctl00_lblAddPhoneInfo",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlAddPhone_ctl00_lblAddPhoneInfo"
+      ],
+      "en": "lbl Add Phone Info",
+      "zh": {
+        "brief": "其他电话号码",
+        "detailed": "其他电话号码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblSocialMediaQuestion",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblSocialMediaQuestion"
+      ],
+      "en": "lbl Social Media Question",
+      "zh": {
+        "brief": "您是否有社交媒体账户？",
+        "detailed": "您是否有社交媒体账户？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlSocial_ctl00_lblSocialMediaPlatform",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlSocial_ctl00_lblSocialMediaPlatform"
+      ],
+      "en": "lbl Social Media Platform",
+      "zh": {
+        "brief": "社交媒体提供商/平台",
+        "detailed": "社交媒体提供商/平台"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlSocial_ctl00_lblSocialMediaIdent",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlSocial_ctl00_lblSocialMediaIdent"
+      ],
+      "en": "lbl Social Media Ident",
+      "zh": {
+        "brief": "社交媒体标识符",
+        "detailed": "社交媒体标识符"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAddSocial",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAddSocial"
+      ],
+      "en": "lbl Add Social",
+      "zh": {
+        "brief": "您是否希望提供有关您在过去五年中用于创建或分享内容的任何其他网站或应用程序的信息？",
+        "detailed": "您是否希望提供有关您在过去五年中用于创建或分享内容（照片、视频、状态更新等）的任何其他网站或应用程序的信息？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblAddSociaInfo",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblAddSociaInfo"
+      ],
+      "en": "lbl Add Socia Info",
+      "zh": {
+        "brief": "请提供您想要列出的每个社交媒体平台的平台名称和相关的唯一社交媒体标识符。这不包括个人对个人消息服务上的私人消息。",
+        "detailed": "请提供您想要列出的每个社交媒体平台的平台名称和相关的唯一社交媒体标识符（用户名或昵称）。这不包括个人对个人消息服务（如WhatsApp）上的私人消息。"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlAddSocial_ctl00_lblAddSocialPlat",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlAddSocial_ctl00_lblAddSocialPlat"
+      ],
+      "en": "lbl Add Social Plat",
+      "zh": {
+        "brief": "其他社交媒体平台",
+        "detailed": "其他社交媒体平台"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "dtlAddSocial_ctl00_lblAddSocialHand",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_dtlAddSocial_ctl00_lblAddSocialHand"
+      ],
+      "en": "lbl Add Social Hand",
+      "zh": {
+        "brief": "其他社交媒体账号",
+        "detailed": "其他社交媒体账号"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "_optional",
+      "selectors": [
+        "text:\"*Optional\""
+      ],
+      "en": "*Optional",
+      "zh": {
+        "brief": "*可选的",
+        "detailed": "*可选的"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "additional_email_address",
+      "selectors": [
+        "text:\"Additional Email Address\""
+      ],
+      "en": "Additional Email Address",
+      "zh": {
+        "brief": "其他电子邮箱地址",
+        "detailed": "其他电子邮箱地址"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "additional_phone_number",
+      "selectors": [
+        "text:\"Additional Phone Number\""
+      ],
+      "en": "Additional Phone Number",
+      "zh": {
+        "brief": "其他电话号码",
+        "detailed": "其他电话号码"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "do_you_have_a_social_media_presence_",
+      "selectors": [
+        "text:\"Do you have a social media presence?\""
+      ],
+      "en": "Do you have a social media presence?",
+      "zh": {
+        "brief": "您是否有社交媒体账户？",
+        "detailed": "您是否有社交媒体账户？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "social_media_provider_platform",
+      "selectors": [
+        "text:\"Social Media Provider/Platform\""
+      ],
+      "en": "Social Media Provider/Platform",
+      "zh": {
+        "brief": "社交媒体提供商/平台",
+        "detailed": "社交媒体提供商/平台"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "social_media_identifier",
+      "selectors": [
+        "text:\"Social Media Identifier\""
+      ],
+      "en": "Social Media Identifier",
+      "zh": {
+        "brief": "社交媒体标识符",
+        "detailed": "社交媒体标识符"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "additional_social_media_platform",
+      "selectors": [
+        "text:\"Additional Social Media Platform\""
+      ],
+      "en": "Additional Social Media Platform",
+      "zh": {
+        "brief": "其他社交媒体平台",
+        "detailed": "其他社交媒体平台"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "additional_social_media_handle",
+      "selectors": [
+        "text:\"Additional Social Media Handle\""
+      ],
+      "en": "Additional Social Media Handle",
+      "zh": {
+        "brief": "其他社交媒体账号",
+        "detailed": "其他社交媒体账号"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "add_another",
+      "selectors": [
+        "text:\"Add Another\""
+      ],
+      "en": "Add Another",
+      "zh": {
+        "brief": "添加另一个",
+        "detailed": "添加另一个"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "remove",
+      "selectors": [
+        "text:\"Remove\""
+      ],
+      "en": "Remove",
+      "zh": {
+        "brief": "移除",
+        "detailed": "移除"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    }
+  ]
+}

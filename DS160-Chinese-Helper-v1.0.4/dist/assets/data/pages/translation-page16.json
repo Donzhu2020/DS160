@@ -1,0 +1,592 @@
+{
+  "version": "2025-01-01",
+  "pageId": "page16",
+  "description": "Security and Background: Part 5 - 安全和背景信息第5部分",
+  "fields": [
+    {
+      "key": "lblILLEGAL_ACTIVITY_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblILLEGAL_ACTIVITY_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否计划在美国从事间谍活动、破坏活动、违反出口管制或任何其他非法活动？",
+        "detailed": "您是否计划在美国从事间谍活动、破坏活动、违反出口管制或任何其他非法活动？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblILLEGAL_ACTIVITY_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblILLEGAL_ACTIVITY_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblTERROR_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblTERROR_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否计划在美国从事恐怖活动，或您是否曾经从事过恐怖活动？",
+        "detailed": "您是否计划在美国从事恐怖活动，或您是否曾经从事过恐怖活动？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblTERROR_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblTERROR_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblTERROR_SUPP_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblTERROR_SUPP_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾经或打算为恐怖分子或恐怖组织提供经济援助或其他支持？",
+        "detailed": "您是否曾经或打算为恐怖分子或恐怖组织提供经济援助或其他支持？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblTERROR_SUPP_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblTERROR_SUPP_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblTERROR_MBR_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblTERROR_MBR_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是恐怖组织的成员或代表吗？",
+        "detailed": "您是恐怖组织的成员或代表吗？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblTERROR_MBR_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblTERROR_MBR_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblTERROR_REL_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblTERROR_REL_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否是在过去五年内从事恐怖活动的个人的配偶、儿子或女儿？",
+        "detailed": "您是否是在过去五年内从事恐怖活动（包括为恐怖分子或恐怖组织提供经济援助或其他支持）的个人的配偶、儿子或女儿？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "Label2",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_Label2"
+      ],
+      "en": "Label2",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblGENOCIDE_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblGENOCIDE_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾经下令、煽动、犯下、协助或以其他方式参与种族灭绝？",
+        "detailed": "您是否曾经下令、煽动、犯下、协助或以其他方式参与种族灭绝？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblGENOCIDE_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblGENOCIDE_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblVIOLENCE_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblVIOLENCE_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾经犯下、下令、煽动、协助或以其他方式参与酷刑？",
+        "detailed": "您是否曾经犯下、下令、煽动、协助或以其他方式参与酷刑？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblVIOLENCE_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblVIOLENCE_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblCHILD_SOLDIER_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblCHILD_SOLDIER_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾经从事招募或使用儿童兵？",
+        "detailed": "您是否曾经从事招募或使用儿童兵？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblCHILD_SOLDIER_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblCHILD_SOLDIER_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblABORTION_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblABORTION_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾经直接参与制定或执行人口控制政策，强迫妇女违背自由意愿进行堕胎或强迫男性或女性违背自由意愿进行绝育？",
+        "detailed": "您是否曾经直接参与制定或执行人口控制政策，强迫妇女违背自由意愿进行堕胎或强迫男性或女性违背自由意愿进行绝育？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblABORTION_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblABORTION_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblTRANSPLANT_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblTRANSPLANT_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾经直接参与强制移植人体器官或身体组织？",
+        "detailed": "您是否曾经直接参与强制移植人体器官或身体组织？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblTRANSPLANT_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblTRANSPLANT_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblEX_VIOLENCE_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblEX_VIOLENCE_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您是否曾经犯下、下令、煽动、协助或以其他方式参与法外杀戮、政治谋杀或其他暴力行为？",
+        "detailed": "您是否曾经犯下、下令、煽动、协助或以其他方式参与法外杀戮、政治谋杀或其他暴力行为？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblEX_VIOLENCE_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblEX_VIOLENCE_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblRELIGIOUS_FREEDOM_IND",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblRELIGIOUS_FREEDOM_IND"
+      ],
+      "en": "I N D",
+      "zh": {
+        "brief": "您在担任政府官员期间，是否曾经负责或直接实施过特别严重的宗教自由侵犯行为？",
+        "detailed": "您在担任政府官员期间，是否曾经负责或直接实施过特别严重的宗教自由侵犯行为？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "lblRELIGIOUS_FREEDOM_EXPL",
+      "selectors": [
+        "#ctl00_SiteContentPlaceHolder_FormView1_lblRELIGIOUS_FREEDOM_EXPL"
+      ],
+      "en": "E X P L",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "do_you_seek_to_engage_in_espionage__sabotage__export_control_violations__or_any_other_illegal_activity_while_in_the_united_states_",
+      "selectors": [
+        "text:\"Do you seek to engage in espionage, sabotage, export control violations, or any other illegal activity while in the United States?\""
+      ],
+      "en": "Do you seek to engage in espionage, sabotage, export control violations, or any other illegal activity while in the United States?",
+      "zh": {
+        "brief": "您是否计划在美国从事间谍活动、破坏活动、违反出口管制或任何其他非法活动？",
+        "detailed": "您是否计划在美国从事间谍活动、破坏活动、违反出口管制或任何其他非法活动？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "do_you_seek_to_engage_in_terrorist_activities_while_in_the_united_states_or_have_you_ever_engaged_in_terrorist_activities_",
+      "selectors": [
+        "text:\"Do you seek to engage in terrorist activities while in the United States or have you ever engaged in terrorist activities?\""
+      ],
+      "en": "Do you seek to engage in terrorist activities while in the United States or have you ever engaged in terrorist activities?",
+      "zh": {
+        "brief": "您是否计划在美国从事恐怖活动，或您是否曾经从事过恐怖活动？",
+        "detailed": "您是否计划在美国从事恐怖活动，或您是否曾经从事过恐怖活动？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_ever_or_do_you_intend_to_provide_financial_assistance_or_other_support_to_terrorists_or_terrorist_organizations_",
+      "selectors": [
+        "text:\"Have you ever or do you intend to provide financial assistance or other support to terrorists or terrorist organizations?\""
+      ],
+      "en": "Have you ever or do you intend to provide financial assistance or other support to terrorists or terrorist organizations?",
+      "zh": {
+        "brief": "您是否曾经或打算为恐怖分子或恐怖组织提供经济援助或其他支持？",
+        "detailed": "您是否曾经或打算为恐怖分子或恐怖组织提供经济援助或其他支持？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "are_you_a_member_or_representative_of_a_terrorist_organization_",
+      "selectors": [
+        "text:\"Are you a member or representative of a terrorist organization?\""
+      ],
+      "en": "Are you a member or representative of a terrorist organization?",
+      "zh": {
+        "brief": "您是恐怖组织的成员或代表吗？",
+        "detailed": "您是恐怖组织的成员或代表吗？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "are_you_the_spouse__son__or_daughter_of_an_individual_who_has_engaged_in_terrorist_activity__including_providing_financial_assistance_or_other_support_to_terrorists_or_terrorist_organizations__in_the_last_five_years_",
+      "selectors": [
+        "text:\"Are you the spouse, son, or daughter of an individual who has engaged in terrorist activity, including providing financial assistance or other support to terrorists or terrorist organizations, in the last five years?\""
+      ],
+      "en": "Are you the spouse, son, or daughter of an individual who has engaged in terrorist activity, including providing financial assistance or other support to terrorists or terrorist organizations, in the last five years?",
+      "zh": {
+        "brief": "您是否是在过去五年内从事恐怖活动的个人的配偶、儿子或女儿？",
+        "detailed": "您是否是在过去五年内从事恐怖活动（包括为恐怖分子或恐怖组织提供经济援助或其他支持）的个人的配偶、儿子或女儿？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_ever_ordered__incited__committed__assisted__or_otherwise_participated_in_genocide_",
+      "selectors": [
+        "text:\"Have you ever ordered, incited, committed, assisted, or otherwise participated in genocide?\""
+      ],
+      "en": "Have you ever ordered, incited, committed, assisted, or otherwise participated in genocide?",
+      "zh": {
+        "brief": "您是否曾经下令、煽动、犯下、协助或以其他方式参与种族灭绝？",
+        "detailed": "您是否曾经下令、煽动、犯下、协助或以其他方式参与种族灭绝？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_ever_committed__ordered__incited__assisted__or_otherwise_participated_in_torture_",
+      "selectors": [
+        "text:\"Have you ever committed, ordered, incited, assisted, or otherwise participated in torture?\""
+      ],
+      "en": "Have you ever committed, ordered, incited, assisted, or otherwise participated in torture?",
+      "zh": {
+        "brief": "您是否曾经犯下、下令、煽动、协助或以其他方式参与酷刑？",
+        "detailed": "您是否曾经犯下、下令、煽动、协助或以其他方式参与酷刑？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_ever_engaged_in_the_recruitment_or_the_use_of_child_soldiers_",
+      "selectors": [
+        "text:\"Have you ever engaged in the recruitment or the use of child soldiers?\""
+      ],
+      "en": "Have you ever engaged in the recruitment or the use of child soldiers?",
+      "zh": {
+        "brief": "您是否曾经从事招募或使用儿童兵？",
+        "detailed": "您是否曾经从事招募或使用儿童兵？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_ever_been_directly_involved_in_the_establishment_or_enforcement_of_population_controls_forcing_a_woman_to_undergo_an_abortion_against_her_free_choice_or_a_man_or_a_woman_to_undergo_sterilization_against_his_or_her_free_will_",
+      "selectors": [
+        "text:\"Have you ever been directly involved in the establishment or enforcement of population controls forcing a woman to undergo an abortion against her free choice or a man or a woman to undergo sterilization against his or her free will?\""
+      ],
+      "en": "Have you ever been directly involved in the establishment or enforcement of population controls forcing a woman to undergo an abortion against her free choice or a man or a woman to undergo sterilization against his or her free will?",
+      "zh": {
+        "brief": "您是否曾经直接参与制定或执行人口控制政策，强迫妇女违背自由意愿进行堕胎或强迫男性或女性违背自由意愿进行绝育？",
+        "detailed": "您是否曾经直接参与制定或执行人口控制政策，强迫妇女违背自由意愿进行堕胎或强迫男性或女性违背自由意愿进行绝育？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_ever_been_directly_involved_in_the_coercive_transplantation_of_human_organs_or_bodily_tissue_",
+      "selectors": [
+        "text:\"Have you ever been directly involved in the coercive transplantation of human organs or bodily tissue?\""
+      ],
+      "en": "Have you ever been directly involved in the coercive transplantation of human organs or bodily tissue?",
+      "zh": {
+        "brief": "您是否曾经直接参与强制移植人体器官或身体组织？",
+        "detailed": "您是否曾经直接参与强制移植人体器官或身体组织？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you_committed__ordered__incited__assisted__or_otherwise_participated_in_extrajudicial_killings__political_killings__or_other_acts_of_violence_",
+      "selectors": [
+        "text:\"Have you committed, ordered, incited, assisted, or otherwise participated in extrajudicial killings, political killings, or other acts of violence?\""
+      ],
+      "en": "Have you committed, ordered, incited, assisted, or otherwise participated in extrajudicial killings, political killings, or other acts of violence?",
+      "zh": {
+        "brief": "您是否曾经犯下、下令、煽动、协助或以其他方式参与法外杀戮、政治谋杀或其他暴力行为？",
+        "detailed": "您是否曾经犯下、下令、煽动、协助或以其他方式参与法外杀戮、政治谋杀或其他暴力行为？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "have_you__while_serving_as_a_government_official__been_responsible_for_or_directly_carried_out__at_any_time__particularly_severe_violations_of_religious_freedom_",
+      "selectors": [
+        "text:\"Have you, while serving as a government official, been responsible for or directly carried out, at any time, particularly severe violations of religious freedom?\""
+      ],
+      "en": "Have you, while serving as a government official, been responsible for or directly carried out, at any time, particularly severe violations of religious freedom?",
+      "zh": {
+        "brief": "您在担任政府官员期间，是否曾经负责或直接实施过特别严重的宗教自由侵犯行为？",
+        "detailed": "您在担任政府官员期间，是否曾经负责或直接实施过特别严重的宗教自由侵犯行为？"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "explain",
+      "selectors": [
+        "text:\"Explain\""
+      ],
+      "en": "Explain",
+      "zh": {
+        "brief": "请解释",
+        "detailed": "请解释"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "yes",
+      "selectors": [
+        "text:\"Yes\""
+      ],
+      "en": "Yes",
+      "zh": {
+        "brief": "是",
+        "detailed": "是"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    },
+    {
+      "key": "no",
+      "selectors": [
+        "text:\"No\""
+      ],
+      "en": "No",
+      "zh": {
+        "brief": "否",
+        "detailed": "否"
+      },
+      "note": {
+        "brief": "",
+        "detailed": ""
+      }
+    }
+  ]
+}
